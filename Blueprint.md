@@ -100,6 +100,7 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 > *[Beschrijven aan de hand van dit huidig proces. Wat zijn de problemen dat opgelost moeten worden*
 
+<<<<<<< HEAD
 
 Momenteel is het project, dankzij de studenten van het 3de jaar al redelijk ver gevorderd. Hun doel was om een mobile sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken en in verbinding staan met een databank. De eerste prototypes zijn al afgeleverd en lijken te werken. De sensor moet beschikken over een commuincatietechniek die weinig stroom verbuikt en een goot bereik heeft. De eerste prototypes van de sensor werken.
 
@@ -137,6 +138,8 @@ Momenteel wordt volgende data opgemeten:
 
 
 
+=======
+>>>>>>> 455e4b8891ee9eaabe81260125b6ca523e2f5da9
 # Situatie To-Be
 
 > *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
@@ -163,13 +166,47 @@ Momenteel wordt volgende data opgemeten:
 
 > *[Agile of Waterfall? Scrum of Kanban?* *Wekelijkse sprints of per maand? Hoe omgaan met stories die niet goedgekeurd zijn op demo? Welke tools om alles op te volgen? We hebben nog 6 weken ofzo. Gaat over de analyse. Kaban zit in github]*
 
+We gebruiken een kaban board in GitKraken om onze planning bij te houden. Dit board is ook gesyncroniseerd met "GitHub issues" waardoor we een beter overzicht krijgen van onze afgewerkte en nog af te werken onderdelen.
+
+In het kaban board zijn de mogelijke statussen van de individuele delen zichtbaar als kolommen om elk deel apart te kunnen opvolgen.  De mogelijkheden zijn de volgende:
+
+- To do
+
+- In progress
+
+- Review in progress
+
+- Review approved
+
+- Done
+
+Het project bestaat uit 2 fase's: de pré-review en de review fase. De eerste 2 statussen (To do en In progress) worden door ons aan elk onderdeel toegekend tijdens de pré-review fase. Hierna  geven wij de controle van dat deel over onze begeleiders tijdens de Review fase. Zij zullen deze onderdelen vervolgens beoordelen en feedback doorsturen naar ons waarop wij terug aanpassingen zullen maken.
+
+Elk individueel onderdeel bevat 3 taken: Raw, Semi-Raw en Polished. Deze taken tonen ons de staat van het onderdeel vóór de review fase's zoals hierboven uitgelegd. Hierdoor hebben wij een overzicht over de vooruitgang van elk onderdeel  in ons project.
+
+Onze methodologie voor de gehele analyse is Waterfall omdat we met een strak tijdschema rekening moeten houden en elk deel van analyse apart in zijn volledigheid afgewerkt kan worden zonder dat het invloed heeft op de andere delen van het project.
+
+
+
+![](C:\Users\olivi\gitRepository\Luchtkwaliteitssensor\assets\2021-11-25-12-13-25-image.png)
+
 ## Hoofdlijnen
 
 > *[Korte beschrijving van de planning met de grootste deadlines.]*
 
+De planning werkt met wekelijkse of 2-wekelijkse deadlines. Hierbij wordt er een volledige "Polished" versie van bepaalde onderdelen verwacht. De planning houdt niet rekening met de andere taken zoals Raw en Semi-Raw. Er wordt verwacht dat deze taken afzonderlijk afgewerkt worden voor de "Polished" versie doorgestuurd wordt.
+
+Zoals reeds eerder gezegd wordt onze planning door het kaban board in GitKraken bij gehouden, onder "Detailplanning" kan u ons volledig tijdsschema terugvinden.
+
+De algemene deadline voor het project staat op 23/12/2021.    
+
+    
+
 ## Toelichting fases
 
 > *[Indien de planning in fases of iteraties verloopt, bespreek dan kort hoe deze opgebouwd zijn.]*
+
+Er zijn geen fase's voor het gehele project, alleen voor de individuele onderdelen.
 
 ## Detailplanning
 
@@ -177,7 +214,11 @@ Momenteel wordt volgende data opgemeten:
 
 
 
+<<<<<<< HEAD
 
+=======
+![](C:\Users\olivi\gitRepository\Luchtkwaliteitssensor\assets\2021-11-25-12-12-58-image.png)
+>>>>>>> 455e4b8891ee9eaabe81260125b6ca523e2f5da9
 
 # Functioneel design
 
