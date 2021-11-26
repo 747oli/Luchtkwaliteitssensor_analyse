@@ -76,7 +76,7 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 - De maximale batterijduur bedraagt momenteel minder dan 1 maand.
 
-- Buiten deze tekortkomingen zouden wij graag nog extra functionaliteiten toevoegen of        verwijderen die als volgende punten kunnen samengevat worden:
+- Buiten deze tekortkomingen zouden wij graag nog extra functionaliteiten toevoegen of verwijderen die als volgende punten kunnen samengevat worden:
 
 - Het verminderen van het aantal onnodige temperatuurmeettoestellen.
 
@@ -92,7 +92,7 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 # Situatie As-Is
 
-> *[De beschrijving van het huidig project of de huidige werkwijze en probleemstelling.Werkwijze kan ook manuele handelingen zijn. Wat bestaat er al en wat is de noodzaak tot de verandering]*
+> *[De beschrijving van het huidig project of de huidige werkwijze en probleemstelling. Werkwijze kan ook manuele handelingen zijn. Wat bestaat er al en wat is de noodzaak tot de verandering]*
 
 > *[TIP ! Dit kan m.b.v. diagrammen zoals activiteitsdiagrammen voor processen, BPMN, toestandsdiagrammen voor toestandsveranderingen, sequentiediagrammen… Kan ook blokdiagram zijn]*
 
@@ -100,17 +100,57 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 > *[Beschrijven aan de hand van dit huidig proces. Wat zijn de problemen dat opgelost moeten worden*
 
+<<<<<<< HEAD
+
+Momenteel is het project, dankzij de studenten van het 3de jaar al redelijk ver gevorderd. Hun doel was om een mobile sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken en in verbinding staan met een databank. De eerste prototypes zijn al afgeleverd en lijken te werken. De sensor moet beschikken over een commuincatietechniek die weinig stroom verbuikt en een goot bereik heeft. De eerste prototypes van de sensor werken.
+
+In figuur 1 is de mindmap van de sensor te zien. Je kan zien dat de hardware en software vereisten al zijn ingevuld. De basis zal bij ons grotendeels hetzelfde zijn. 
+
+<figure>
+<img src="./assets/Mindmap.jpg" alt="Mindmap"/>
+<figcaption >Figuur 1: Mindmap</figcaption>
+</figure>
+
+In het hardware schama is uitgebreid weergegeven hoe de verschillende sensoren en componenten van de juiste spanning worden voorzien en hoe ze zullen communiceren met de gekozen ESP32 module. 
+
+<figure>
+<img src="./assets/Hardware-schema.jpg" alt="Mindmap"/>
+<figcaption >Figuur 2: Hardware schema</figcaption>
+</figure>
+
+Er is gekozen voor een ESP32-WROVER omdat deze beschikt over genoeg opslag en I/O aansluitingen. Er is een kans dat er nog wordt overgeschakeld op de ATSAMD21G18A-AUT voor zijn low-power eigenschappen. De keuze van modules en sensoren is ook gemaakt met stroomverbruik in het achterhoofd. De sensoren en modules zijn in onderstaande tebal terug te vinden. 
+
+| Naam                                             | Eigenschappen                                                | Argumentatie                                                 | Links                                                        |
+| ------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| GY-NEO6MV2                                       | **GPS Module** Vcc = 3.3V-5V; Imax = 67mA; UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) protocol 3.3V; Baudrate: 9600                Leessnelheid: 1Hz (1s) | De GPS module GY-NEO6MV2 is een zeer snele, kleine en  compacte module om de locatie te bepalen. Het is makkelijk  implementeerbaar en makkelijk codeerbaar. | [Winkel](https://www.tinytronics.nl/shop/nl/communicatie/gps/gy-neo6mv2-gps-module)             [Datasheet](https://www.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_(GPS.G6-HW-09005).pdf)             [Bibliotheek](https://github.com/mikalhart/TinyGPSPlus) |
+| 0.96 inch OLED Display 128*64 pixels blauw - I2C | **OLED (Organic Light Emitting Diode)**                Vcc = 3.3V-5V; 128*64 pixels;             Kijkhoek van 160°; I²C module om pinnen te verminderen Andere soort ook met SPI of minder/meer pixels | Een OLED display is populair om zijn compactheid en  scherpheid. Het is ondersteund door elke MCU en maakt gebruik van de 2  meest voorkomende spannings niveaus (3.3V en 5V). Om pinnen te besparen, is het makkelijk dat we de OLED kunnen aansturen via I²C. Daarnaast is de groote en plaats van de letters & tekens is  vrij te kiezen. Deze   functionaliteit hebben we niet bij een LCD. | [Winkel](https://www.tinytronics.nl/shop/nl/displays/oled/0.96-inch-oled-display-128*64-pixels-blauw-i2c)             [Datasheet](https://www.elecrow.com/download/SSD1306 Datasheet.pdf)             [Bibliotheek](https://github.com/olikraus/u8g2) |
+| RN2483A-I/RM104                                  | **RN2483A LoRa module** Vcc = 2.1V - 3.6V; Imax = 60 mA; Vermogen van +14.1 dBm met 38.9mA; ASCII Command Interface over UART, Payload lenght max 64 bytes; 5km bereik in urban en 15km in suburban area | LoRa staat bekend om zijn low-power functionaliteiten en  zeer lange afstanden (10km en langer). Daarom gebruiken we deze module  om de data van al onze AQS nodes naar de server te krijgen. Daarnaast is deze module simpel aan te sturen dankzij de ASCII  commando's via UART interface en ook bruikbaar bij 5V IC's zoals Arduino Nano en Uno. | [Winkel](https://be.farnell.com/microchip/rn2483a-i-rm104/transceiver-module-300kbps-870mhz/dp/2920841)             [Datasheet](https://www.farnell.com/datasheets/2648020.pdf)             [Datasheet-Commands](https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf)             [Bibliotheek](https://github.com/axelelettronica/sme-RN2483-library) |
+| CCS811                                           | **Temperatuur, eCO en eTVOC2**                Vcc = 1.8V-3.3V; Imax = 54mA; [I²C](https://en.wikipedia.org/wiki/I²C) protocol 3.3V; Meetbereik temperatuur: -40°C ~ +85°C,Meetbereik luchtvochtigheid: 10% ~ 95% Meetbereik eCO²: 400ppm1 ~ 32768ppm; Meetbereik eTVOC: 0ppb5 ~ 29206ppb; Leessnelheid: 100kHz (0.01ms) | Een minder bekende sensor maar zeker wel bekend in IoT  toepassingen. Het kan temperatuur, eCO² en eTVOC meten. Het heeft geen  opwarm tijd dus is direct bruikbaar en is ook een SMD component wat  zeker een voordeel is om het zo compact mogelijk te maken. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)             [Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)             [Bibliotheek](https://github.com/adafruit/Adafruit_CCS811) |
+| SDS011                                           | **Fijnstof** Vcc = 5V; Imax = 200mA                [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) protocol 3.3V; Baudrate: 9600                Meetbereik PM2.53 & PM104: 0μg/m3 ~ 999.9 μg/m3; Meetbereik luchtvochtigheid: 10% ~ 95% Leessnelheid: 1Hz (1s) | De SDS011 is een veel gebruikte fijnstof sensor voor  DIY-projecten. Het zal niet de nauwkeurigste zijn, maar het geeft toch  al een sterke indicatie van wat het fijnstof gehalte is in de lucht.  Daarnaast het een goedkope modele. Het werkt met een ventilator die de lucht binnentrekt. Het zal  dus eerst moeten opgezet wordne om de huidige lucht erin te trekken  vooraleer we kunnen meten. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/nova-sds011-hoge-precisie-laser-stofsensor)             [Datasheet](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)             [Bibliotheek](https://www.arduinolibraries.info/libraries/sds011-sensor-library) |
+| BME280                                           | **Temperatuur, Barometer & Luchtvochtigheid** Vcc = 3.3V                Imax = 4.5mA; [I²C](https://en.wikipedia.org/wiki/I²C) protocol 3.3V; Meetbereik temperatuur: -40°C ~ +85°C; Meetbereik luchtvochtigheid: 0% ~ 100%; Meetbereik luchtdruk: 300hPa ~ 1100hPa; Leessnelheid: 1Hz (1s) | Deze IC heeft een tal van metingen aanboord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  integreerbaar op een pcb. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)             [Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)             [Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library) |
+| MHZ19                                            | **CO²** Vcc = 4.9V - 5.1V; Imax = 125mA                [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) protocol 3.3V; Meetbereik: 400ppm ~ 2000ppm; opwarmtijd: ~1min; leessnelheid: 1Hz (1s) | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)             [Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared Gas Sensor/NDIR CO2 SENSOR/MH-Z19 CO2 Ver1.0.pdf)             [Bibliotheek](https://github.com/strange-v/MHZ19) |
+
+Momenteel wordt volgende data opgemeten:  
+
+
+
+
+
+
+
+=======
+>>>>>>> 455e4b8891ee9eaabe81260125b6ca523e2f5da9
 # Situatie To-Be
 
 > *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
 
 ## Projectdefinitie
 
-## Doelstelling
+### Doelstelling
 
 > *[Uitschrijven van de doelstellingen van het voorgestelde project]*
 
-## Scope
+### Scope
 
 > - *[Opsommen van de functionaliteit en onderdelen dit bij het uitvoeren van het project horen. Probeer dit zo sluitend mogelijk te doen, dit voorkomt discussies.]*
 > 
@@ -118,7 +158,7 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 > 
 > - *[TIP ! Gebruik use case diagram en use case scenario’s]*
 
-## Niet in Scope
+### Niet in Scope
 
 > - *[Expliciet vernoemen wat niet tot de draagwijdte (scope) van het project hoort, bv. het aanleveren van onderdelen,  opleiding, maintenance, onderhoud van servers, … Wat gaan we niet realisere.]*
 
@@ -174,7 +214,11 @@ Er zijn geen fase's voor het gehele project, alleen voor de individuele onderdel
 
 
 
+<<<<<<< HEAD
+
+=======
 ![](C:\Users\olivi\gitRepository\Luchtkwaliteitssensor\assets\2021-11-25-12-12-58-image.png)
+>>>>>>> 455e4b8891ee9eaabe81260125b6ca523e2f5da9
 
 # Functioneel design
 
