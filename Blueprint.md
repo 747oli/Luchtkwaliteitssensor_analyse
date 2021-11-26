@@ -100,7 +100,6 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 > *[Beschrijven aan de hand van dit huidig proces. Wat zijn de problemen dat opgelost moeten worden*
 
-<<<<<<< HEAD
 
 Momenteel is het project, dankzij de studenten van het 3de jaar al redelijk ver gevorderd. Hun doel was om een mobile sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken en in verbinding staan met een databank. De eerste prototypes zijn al afgeleverd en lijken te werken. De sensor moet beschikken over een commuincatietechniek die weinig stroom verbuikt en een goot bereik heeft. De eerste prototypes van de sensor werken.
 
@@ -138,8 +137,6 @@ Momenteel wordt volgende data opgemeten:
 
 
 
-=======
->>>>>>> 455e4b8891ee9eaabe81260125b6ca523e2f5da9
 # Situatie To-Be
 
 > *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
@@ -214,11 +211,8 @@ Er zijn geen fase's voor het gehele project, alleen voor de individuele onderdel
 
 
 
-<<<<<<< HEAD
 
-=======
 ![](C:\Users\olivi\gitRepository\Luchtkwaliteitssensor\assets\2021-11-25-12-12-58-image.png)
->>>>>>> 455e4b8891ee9eaabe81260125b6ca523e2f5da9
 
 # Functioneel design
 
