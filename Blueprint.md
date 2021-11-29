@@ -52,7 +52,7 @@ Inhoudstafel
 | Term | Omschrijving                         |
 | ---- | ------------------------------------ |
 | PoA  | Port of Antwerp; Haven van Antwerpen |
-|      |                                      |
+| MCU  | Microcontroller                      |
 
 # Opdrachtgever
 
@@ -100,7 +100,7 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 > *[Beschrijven aan de hand van dit huidig proces. Wat zijn de problemen dat opgelost moeten worden*
 
-Momenteel is het project, dankzij de studenten van het 3de jaar al redelijk ver gevorderd. Hun doel was om een mobile sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken en in verbinding staan met een databank. De eerste prototypes zijn al afgeleverd en lijken te werken. De sensor moet beschikken over een commuincatietechniek die weinig stroom verbuikt en een goot bereik heeft. De eerste prototypes van de sensor werken.
+Momenteel is het project, dankzij de studenten van het 3de jaar al redelijk ver gevorderd [1]. Hun doel was om een mobile sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken en in verbinding staan met een databank. De eerste prototypes zijn al afgeleverd en lijken te werken. De sensor moet beschikken over een commuincatietechniek die weinig stroom verbuikt en een goot bereik heeft. De eerste prototypes van de sensor werken.
 
 In figuur 1 is de mindmap van de sensor te zien. Je kan zien dat de hardware en software vereisten al zijn ingevuld. De basis zal bij ons grotendeels hetzelfde zijn. 
 
@@ -128,7 +128,9 @@ Er is gekozen voor een ESP32-WROVER omdat deze beschikt over genoeg opslag en I/
 | BME280                                           | **Temperatuur, Barometer & Luchtvochtigheid** Vcc = 3.3V                Imax = 4.5mA; [I²C](https://en.wikipedia.org/wiki/I²C) protocol 3.3V; Meetbereik temperatuur: -40°C ~ +85°C; Meetbereik luchtvochtigheid: 0% ~ 100%; Meetbereik luchtdruk: 300hPa ~ 1100hPa; Leessnelheid: 1Hz (1s)                             | Deze IC heeft een tal van metingen aanboord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  integreerbaar op een pcb.                                                                                                                                                                                                                                             | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)             [Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)             [Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                    |
 | MHZ19                                            | **CO²** Vcc = 4.9V - 5.1V; Imax = 125mA                [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) protocol 3.3V; Meetbereik: 400ppm ~ 2000ppm; opwarmtijd: ~1min; leessnelheid: 1Hz (1s)                                                                                         | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig.                                                                                                                                                                                                                                                            | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)             [Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared Gas Sensor/NDIR CO2 SENSOR/MH-Z19 CO2 Ver1.0.pdf)             [Bibliotheek](https://github.com/strange-v/MHZ19)                                                                              |
 
-Momenteel wordt volgende data opgemeten:  
+Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Nog niet alle metingen zijn accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
+
+
 
 # Situatie To-Be
 
@@ -345,6 +347,6 @@ Voorbeeld:
 
 > [Vermeld hier al je bronnen volgens de APA stijlgids (https://apastyle.apa.org/). Denk eraan dat elk brontype (website/rapport/wetenschappelijk artikel/hoofdstuk uit boek/…) zijn eigen stijl heeft. ]
 
-| [1] | Jan, A. (2015-04-12). De titel van deze  pagina. Opgehaald van http://xxxxxxxxx. |
-| --- | -------------------------------------------------------------------------------- |
-|     |                                                                                  |
+| [1]  | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/ |
+| ---- | ------------------------------------------------------------ |
+|      |                                                              |
