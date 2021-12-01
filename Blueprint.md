@@ -134,6 +134,23 @@ Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijn
 
 > *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
 
+Onze opgave is een klein beetje anders dan die waar de derdejaars momenteel aan werken. Daarom zullen wij een aantal aspecten van de sensor anders aanpakken. Bij de opgave van vorig jaar was het doel om een mobiele sensor te hebben die in en rond Antwerpen de luchtkwaliteit kan meten. De uiteindelijke sensor was bedoeld voor studenten chemie. Onze opgave is om sensoren te maken die een vaste plaats krijgen en daar een hele tijd op batterij zullen moeten werken. 
+
+Ons idee is om, omdat de locatie van de sensor vast staat, de GPS module te verwijderen. Dit kan ons ook voordelen opleveren op vlak van stroomgebruik. Het OLED display is voor ons project ook niet nodig dus die component zullen we ook laten vallen. Metingen die we nog moeten toevoegen is NO<sub>X</sub> (Stikstofoxiden). 
+
+De communicatie via LoRaWAN is bij ons ook nog steeds een vereiste. 
+
+Figuur 1 is onze mindmap die gebaseerd is op het ontwerp van de derdejaars. Bij de metingen is Stikstofoxiden toegevoegd en er zijn verschillende modules weggehaald die we niet meer nodig hebben.
+
+<figure>
+<img src="./assets/Mindmap.drawio.svg" alt="Mindmap"/>
+<figcaption >Figuur 1: Mindmap</figcaption>
+</figure>
+
+Als microcontroller willen we ons focussen op de ATSAMD21G18A-AUT omdat deze een zeer laag stroomverbruik heeft. Het enige nadeel is dat het gebruik van deze MCU ons meer moeite gaat kosten omdat er in vergelijking met de ESP32 minder ondersteuning voor is. Moest het ons lukken om de sensor met de ATSAMD21G18A-AUT aan de praat te krijgen zou dit een zeer groot voordeel opleveren qua batterijleven. 
+
+
+
 ## Projectdefinitie
 
 ### Doelstelling
