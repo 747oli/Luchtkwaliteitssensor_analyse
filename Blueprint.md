@@ -147,7 +147,71 @@ Figuur 1 is onze mindmap die gebaseerd is op het ontwerp van de derdejaars. Bij 
 <figcaption >Figuur 1: Mindmap</figcaption>
 </figure>
 
-Als microcontroller willen we ons focussen op de ATSAMD21G18A-AUT omdat deze een zeer laag stroomverbruik heeft. Het enige nadeel is dat het gebruik van deze MCU ons meer moeite gaat kosten omdat er in vergelijking met de ESP32 minder ondersteuning voor is. Moest het ons lukken om de sensor met de ATSAMD21G18A-AUT aan de praat te krijgen zou dit een zeer groot voordeel opleveren qua batterijleven. 
+Als microcontroller willen we ons focussen op de ATSAMD21G18A-AUT omdat deze een zeer laag stroomverbruik heeft. Het enige nadeel is dat het gebruik van deze MCU ingewikkelder is in vergelijking met de ESP32 die meer ondersteuning heeft. Indien de integratie van de haalbaar ATSAMD21G18A-AUT zou zijn,dan zou dit een zeer groot voordeel opleveren qua batterijleven. 
+
+### Epics
+
+Zoals eerder gezegd zullen we bij het project in het 2de semester met agile werken. Hieronder volgt een korte beschrijving van de verschillende epics waarin het project in onderverdeeld.
+
+
+
+#### Componenten onderzoeken, testen en documenteren
+
+Bij elk individuele component zullen we afzonderlijk moeten onderzoeken op welke manier we deze kunnen integreren. Dat wil zeggen dat we features van deze component moeten testen en de code en schakeling ervoor moeten ontwikkelen om deze te implementeren in ons project. Vervolgens moeten we uitvoerig testen of de werking ervan correct is. Tenslotte zullen we de implementatie documenteren.
+
+
+
+#### Componenten toevoegen aan het project
+
+Nadat de component getest en correct bevonden is, moeten we deze implementeren in ons project. Dit is natuurlijk een wederkerend proces voor elke nieuwe component. We bekijken de samenwerking van de componenten en lossen problemen op die voorkomen. Dit wordt gedaan een breadbord of dergelijke.
+
+
+
+#### PCB ontwikkelen
+
+Pas wanneer, bij de vorige stap, het gehele project aan onze eisen voldoet, zullen we een PCB maken van de huidige staat van het project. Opnieuw zullen we verschillende testen ondernemen om een correcte werking te garanderen. De PCB's zullen dan besteld worden wat redelijk wat tijd in beslag zal nemen.
+
+
+
+#### UI software onderzoeken en testen
+
+Nadat we zeker zijn dat alle componenten correct werken in ons project zullen we de User Interface ontwikkelen die de waardes van ons project op een visuele manier voorstellen. Deze wordt aangepast wanneer er nieuwe componenten toegevoegd worden aan het project.
+
+
+
+#### Ontwikkeling case
+
+De case is een zeer belangrijk deel van ons project omdat het de integriteit van onze schakeling waarborgt. Bij elke nieuwe PCB moeten we kijken of onze huidige case nog voldoet aan de vereisten en zo niet updaten en opnieuw printen.
+
+
+
+#### Live testen project
+
+Tenslotte zullen we ter plaatste ons project meerdere keren moeten uittesten om te zien of het correct werkt.
+
+
+
+### MVP
+
+Een stationaire sensor met behuizing voor buiten gebruik waarin onderstaande metingen gebeuren:
+
+- Omgevingstemperatuur
+
+- Luchtvochtigheid
+
+- Luchtdruk
+
+- CO²/eCO²
+
+- TVOC/eTVOC
+
+- Fijnstof
+
+- Stikstofoxiden
+
+
+
+Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd en weergegeven worden op een UI. 
 
 
 
@@ -157,6 +221,8 @@ Als microcontroller willen we ons focussen op de ATSAMD21G18A-AUT omdat deze een
 
 > *[Uitschrijven van de doelstellingen van het voorgestelde project]*
 
+
+
 ### Scope
 
 > - *[Opsommen van de functionaliteit en onderdelen dit bij het uitvoeren van het project horen. Probeer dit zo sluitend mogelijk te doen, dit voorkomt discussies.]*
@@ -164,6 +230,13 @@ Als microcontroller willen we ons focussen op de ATSAMD21G18A-AUT omdat deze een
 > - *Maak assumpties indien nodig.*
 > 
 > - *[TIP ! Gebruik use case diagram en use case scenario’s]*
+
+# 
+
+<figure>
+<img src="./assets/UseCase-SituationToBe.svg" alt="UseCaseSTB"/>
+<figcaption >Figuur 2 : Use Case Situation-to-be</figcaption>
+</figure>
 
 ### Niet in Scope
 
