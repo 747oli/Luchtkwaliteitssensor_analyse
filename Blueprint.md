@@ -140,7 +140,7 @@ Ons idee is om, omdat de locatie van de sensor vast staat, de GPS module te verw
 
 De communicatie via LoRaWAN is bij ons ook nog steeds een vereiste. 
 
-Figuur 1 is onze mindmap die gebaseerd is op het ontwerp van de derdejaars. Bij de metingen is Stikstofoxiden toegevoegd en er zijn verschillende modules weggehaald die we niet meer nodig hebben.
+Figuur 1 is onze mindmap die gebaseerd is op het ontwerp van de derdejaars. De grijze ballonnen zijn in ons project weggelaten, groene ballonnen zijn nieuw toegevoegd. Bij de metingen is Stikstofoxiden toegevoegd en er zijn verschillende modules weggehaald die we niet nodig hebben.
 
 <figure>
 <img src="./assets/Mindmap.drawio.svg" alt="Mindmap"/>
