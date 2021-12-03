@@ -216,12 +216,72 @@ Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd e
 
 #### Luchtkwaliteitssensor
 
+##### Onderdelen
+
+- CCS81: Temperatuur, eCO2 en TVOC
+
+- SDS011: Fijnstof
+
+- BME280: Temperatuur, luchtdruk en luchtvochtigheid
+
+- Batterij: Voltage
+
+- MHZ19: CO²
+
+- RN483A-I/RM104: LoRa
+
+- xxxx: NOx
+
+- ATSAMD21G18A-AUT: MCU
+
+##### Functionaliteiten
+
+- Op interval doorsturen van metingen naar een server via een LoRaWAN netwerk.
+
+- Batterijduur van meer dan 1 maand.
+
+- Externe temperatuur meten.
+
+- Externe CO² waardes meten.
+
+- Externe TVOC waardes meten.
+
+- Externe fijnstof waardes meten.
+
+- Externe luchtdruk waardes meten.
+
+- Externe luchtvochtigheid waardes meten.
+
+- Externe stikstofoxiden waardes meten.
+
+- Het intern batterij voltage weergeven.
+
+- Capaciteit om terug te vallen op SD-opslag bij mislukte verzending via LoRa.
+
+- Het lezen van waardes via de seriële monitor voor test doeleinden.
+
 <figure>
 <img src="./assets/DataflowDiagram-SituationToBe.svg" alt="DFD-STB"/>
 <figcaption >Figuur 2 : Dataflow Diagram Situation-to-be</figcaption>
 </figure>
 
 #### Luchtkwaliteit monitoring dashboard
+
+##### Onderdelen
+
+- NodeRed: Opensource visuele tool voor het verbinden van hardware devices voor IoT.
+
+- Grafana: visueel voorstellen van gegevens in grafieken.
+
+- InfluxDB: database voor het opslaan van gegevens voor real-time applicaties in IoT.
+
+##### Functionaliteiten
+
+- Gegevens van server omzetten in grafieken
+
+- Het weergeven van grafieken op een internet dashboard.
+
+- De positie weergeven van de sensor op een kaart op het dashboard.
 
 <figure>
 <img src="./assets/UseCase-SituationToBe.svg" alt="UseCaseSTB"/>
@@ -230,7 +290,19 @@ Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd e
 
 ### Niet in Scope
 
-> - *[Expliciet vernoemen wat niet tot de draagwijdte (scope) van het project hoort, bv. het aanleveren van onderdelen,  opleiding, maintenance, onderhoud van servers, … Wat gaan we niet realisere.]*
+> - *[Expliciet vernoemen wat niet tot de draagwijdte (scope) van het project hoort, bv. het aanleveren van onderdelen,  opleiding, maintenance, onderhoud van servers, … Wat gaan we niet realisere.
+
+#### Een zelf ontwikkeld dashboard
+
+De LORAPayload gaat door NodeRed in een database geplaatst worden. De Database wordt influx-DB. Vanuit deze data gaan Grafana onze gegevens ophalen om de visualisaties te doen. Het dashboard zal qua design dus niet in huis ontwikkeld worden.
+
+#### LoRaWAN netwerk opzetten
+
+We zullen het LoRaWAN netwerk van de haven gebruiken om onze data te communiceren naar de server. Het opzetten en onderhouden van het LoRaWAN netwerk ligt niet binnen onze scope.
+
+#### Onderhoud en updates vanaf 2023
+
+Vanaf 2023 zullen het onderhoud en de updates van zowel het dashboard als de luchtkwaliteitssensor niet meer door ons gedaan worden.
 
 # Planning
 
