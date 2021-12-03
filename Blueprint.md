@@ -49,10 +49,13 @@ Inhoudstafel
 
 # Termen en Afkortingen
 
-| Term | Omschrijving                         |
-| ---- | ------------------------------------ |
-| PoA  | Port of Antwerp; Haven van Antwerpen |
-| MCU  | Microcontroller                      |
+| Term            | Omschrijving                                                 |
+| --------------- | ------------------------------------------------------------ |
+| PoA             | Port of Antwerp; Haven van Antwerpen                         |
+| MCU             | Microcontroller                                              |
+| eCO<sub>2</sub> | CO<sub>2</sub>-eq koolstofdioxide equivalent om het gas te kunnen vergelijken met ander ebroeikasgassen, de omrekening is gebaseerd op het Global Warming Potential (GWP). [2] |
+| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht. |
+| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). [3] |
 
 # Opdrachtgever
 
@@ -411,6 +414,9 @@ Voorbeeld:
 
 > [Vermeld hier al je bronnen volgens de APA stijlgids (https://apastyle.apa.org/). Denk eraan dat elk brontype (website/rapport/wetenschappelijk artikel/hoofdstuk uit boek/…) zijn eigen stijl heeft. ]
 
-| [1] | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/ |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-|     |                                                                                                                                                                    |
+| Nummer | APA-brondvermelding                                          |
+| ------ | ------------------------------------------------------------ |
+| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/ |
+| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent |
+| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox |
+| Nummer | APA-brondvermelding                                          |
