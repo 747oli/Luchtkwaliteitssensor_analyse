@@ -396,7 +396,10 @@ Hieronder kan je een voorbeeld vinden van elk diagram.
 
 In het blokdiagram deel je het hardware probleem op in grote delen en kan je zien hoe ze met elkaar gelinkt zijn.
 
-![Basic Block](https://luytsm.github.io/iot-cursus/img/basic_block.png)
+<figure>
+<img src="./assets/BlokDiagram-TechnischDesign.svg" alt="Blokdiagram"/>
+<figcaption >Figuur x: Blokdiagram</figcaption>
+</figure>
 
 ### [Specificaties](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=specificaties)
 
