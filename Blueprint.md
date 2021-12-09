@@ -378,29 +378,38 @@ In onderstaande diagram is de abstracte architectuur van ons ontwerp te zien. De
 
 ## [**Smart Object (Hardware Analyse)**](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=smart-object-hardware-analyse)
 
-IoT is een hardware project. De focus ligt op het ontwikkelen van een fysiek object.  Een Smart Object kan beschreven worden aan de hand van de 4 volgende criteria.
+> IoT is een hardware project. De focus ligt op het ontwikkelen van een fysiek object.  Een Smart Object kan beschreven worden aan de hand van de 4 volgende criteria.
+> 
+> 1. Monitoring
+> 2. Controle
+> 3. Optimalisatie
+> 4. Autonomie
+> 
+> De criteria zijn geordend volgens stijgende complexiteit. Monitoring is eenvoudiger dan een object volledig autonoom te maken. Hierdoor kan je de criteria ook gebruiken als leidraad doorheen het iteratief proces dat we gebruiken in IoT. Als je prototype ontwikkelt zorg er eerst voor dat het al data kan verzamelen vooraleer dat het volledig autonoom is.
+> 
+> Aan de hand van bovenstaand criteria wordt er een of meerdere Smart Objects gedefinieerd die een oplossing biedt voor de probleemstelling in het project.
+> 
+> Beschrijf in dit deel de nodige Smart Objects voor jullie project. Naast de beschrijving voorzie ook het volgende:
+> 
+> - Blokdiagram
+> - Specificaties
+> - Argumentatie
+> - Elektrisch schema
+> 
+> Hieronder kan je een voorbeeld vinden van elk diagram.
 
-1. Monitoring
-2. Controle
-3. Optimalisatie
-4. Autonomie
 
-De criteria zijn geordend volgens stijgende complexiteit. Monitoring is eenvoudiger dan een object volledig autonoom te maken. Hierdoor kan je de criteria ook gebruiken als leidraad doorheen het iteratief proces dat we gebruiken in IoT. Als je prototype ontwikkelt zorg er eerst voor dat het al data kan verzamelen vooraleer dat het volledig autonoom is.
 
-Aan de hand van bovenstaand criteria wordt er een of meerdere Smart Objects gedefinieerd die een oplossing biedt voor de probleemstelling in het project. 
 
-Beschrijf in dit deel de nodige Smart Objects voor jullie project. Naast de beschrijving voorzie ook het volgende:
-
-- Blokdiagram
-- Specificaties
-- Argumentatie
-- Elektrisch schema
-
-Hieronder kan je een voorbeeld vinden van elk diagram.
 
 ### [Blokdiagram](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=blokdiagram)
 
-In het blokdiagram deel je het hardware probleem op in grote delen en kan je zien hoe ze met elkaar gelinkt zijn.
+> In het blokdiagram deel je het hardware probleem op in grote delen en kan je zien hoe ze met elkaar gelinkt zijn.
+
+De data van de MCU wordt verstuurd via 3 protocollen: UART, I²C en SPI.
+Aangezien verschillende modules met dezelfde aansluitingen verbonden zijn, zullen we elke module een ander adres geven om te zorgen dat de data de juiste module bereikt.
+
+De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onze componenten waardoor we 2 lineaire serie regelaars nodig hebben om het voltage te verlagen. We verlagen de 7.4V naar zowel 5V als 3.3V. We sturen vervolgens de verschillende voltages uit naar de juiste modules.
 
 <figure>
 <img src="./assets/BlokDiagram-TechnischDesign.svg" alt="Blokdiagram"/>
@@ -409,7 +418,7 @@ In het blokdiagram deel je het hardware probleem op in grote delen en kan je zie
 
 ### [Specificaties](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=specificaties)
 
-Voor elke blok in het blokdiagram van een Smart Object stel je de specificaties en/of elektrische karakteristieken op. Deze worden in het volgende formaat meegeven in de analyse.
+> Voor elke blok in het blokdiagram van een Smart Object stel je de specificaties en/of elektrische karakteristieken op. Deze worden in het volgende formaat meegeven in de analyse.
 
 | **Blok**       | **Specificatie** | **Min** | **Nominaal** | **Max** |
 | -------------- | ---------------- | ------- | ------------ | ------- |
@@ -422,7 +431,7 @@ Voor elke blok in het blokdiagram van een Smart Object stel je de specificaties 
 
 ### [Onderliggende ](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=onderliggende-argumentatie)argumentatie
 
-Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze gebruikt wordt in de voorgestelde oplossing in de analyse. Geef ook mogelijke alternatieven. Geef deze informatie in het volgend formaat:
+> Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze gebruikt wordt in de voorgestelde oplossing in de analyse. Geef ook mogelijke alternatieven. Geef deze informatie in het volgend formaat:
 
 | **Blok**        | **Argumentatie**                                                                                                                                                                                                                                   | **Alternatieven**       |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
@@ -433,9 +442,11 @@ Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze
 
 ## [**Smart Object (Software Analyse)**](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=smart-object-hardware-analyse)
 
-Om software /datamigratie te analyseren is een top down methodologie aangeraden. Eerst moeten de datastromen vastgelegd worden.  Als bepaalt is welke data er in en uit een specifieke blok van het systeem komt, moet eveneens het formaat bepaald worden waarin dit gebeurt. Om dit succesvol te doen moet er ook rekening gehouden worden met de hardware restricties. Bv. JSON versturen over I²C met een Arduino is gedoemd om te falen.
+> Om software /datamigratie te analyseren is een top down methodologie aangeraden. Eerst moeten de datastromen vastgelegd worden.  Als bepaalt is welke data er in en uit een specifieke blok van het systeem komt, moet eveneens het formaat bepaald worden waarin dit gebeurt. Om dit succesvol te doen moet er ook rekening gehouden worden met de hardware restricties. Bv. JSON versturen over I²C met een Arduino is gedoemd om te falen.
+> 
+> Het aangeven van welke data eer specifiek in een bepaald blok ingaat of uitkomt geef je weer met volgend format:
 
-Het aangeven van welke data eer specifiek in een bepaald blok ingaat of uitkomt geef je weer met volgend format:
+
 
 #### 1.1.1.1    [Data in / Out](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=data-in-out) (voorbeeld)
 
@@ -450,11 +461,13 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 
 ![State Diagram nRF24L01](https://luytsm.github.io/iot-cursus/img/state_diagram_advanced.png)
 
-Flowchart
+> Flowchart
+> 
+> Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
+> 
+> Voorbeeld:
 
-Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
 
-Voorbeeld:
 
 ![Flowchart](https://luytsm.github.io/iot-cursus/img/flowchart.png)IoT
 
@@ -463,8 +476,10 @@ Voorbeeld:
 > - *[Beschrijf de mogelijke interfaces van je project en hoe de communicatie gebeurt.]*
 > 
 > - *[TIP ! Gebruik een context DFD om te verduidelijken en zoek nog eens op wat een context DFD ook al weer is.]*
+> 
+> - Als er een grafische interface nodig, dienen hiervoor mock ups gemaakt worden, moeten nog geen kunstwerken zijn.
 
-- Als er een grafische interface nodig, dienen hiervoor mock ups gemaakt worden, moeten nog geen kunstwerken zijn.  ![Mockup](https://luytsm.github.io/iot-cursus/img/mockup.png)
+- ![Mockup](https://luytsm.github.io/iot-cursus/img/mockup.png)
 
 # Beschrijving van eventuele datamigratie
 
