@@ -363,7 +363,7 @@ Er zijn geen fase's voor het gehele project, alleen voor de individuele onderdel
 > - [*Beschrijf hier wat er in het ontwerp reeds opgenomen worden m.b.t. functionaliteit, bv. alle schermen moeten volgens de huisstijl opgebouwd zijn, verduidelijkingen van business rules en beslissingen. Wat is de algemene lay-out, welke automatische acties moeten er achter je knoppen/processen zitten?]*
 > - *[TIP ! Denk aan wireframes,mock-ups, toestandsdiagrammen, beslissingstabellen, activitydiagrammen.]*
 
-In onderstaande diagram is de abstracte architectuur van ons ontwerp te zien. Deze diagram toont onze luchtkwaliteitssensor als draadloos apparaat dat verbonden is met een *gateway* of toegangspunt. De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal op zijn beurt de de informatie verwerken en op de juiste manier in onze *database* opslaan. Gebruikers kunnen het dashboard raadplegen met visualisaties van de gebeurde metingen. Het dashboard haalt deze gegevens rechtstreeks uit de database. 
+In onderstaande diagram is de abstracte architectuur van ons ontwerp te zien. Deze diagram toont onze luchtkwaliteitssensor als draadloos apparaat dat verbonden is met een *gateway* of toegangspunt. Uiteraard is het de bedoeling dat er meerdere verschillende luchtkwaliteitssensoren verbonden zijn met een gateway. De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal op zijn beurt de de informatie verwerken en op de juiste manier in onze *database* opslaan. Gebruikers kunnen het dashboard raadplegen met visualisaties van de gebeurde metingen. Het dashboard haalt deze gegevens rechtstreeks uit de database. 
 
 <figure>
 <img src="./assets/AbstracteArchitectuur.svg" alt="Abstracte Architectuur"/>
