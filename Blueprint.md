@@ -40,12 +40,11 @@ Inhoudstafel
 > 
 > Vergeet deze en andere cursief gedrukte sjabloontekst niet te verwijderen voor de document versies ≥ 1.0]
 
-| Nr.  | Datum      | Verspreiding | Status       | Wijziging                                         |
-| ---- | ---------- | ------------ | ------------ | ------------------------------------------------- |
-| 0.01 | 2021-11-08 | Inwendig     | Eerste draft | Titel blad (rough) + Samenvatting (ruig)          |
-| 0.02 | 2021-11-13 | Inwendig     | Eerste draft | Titel blad (semi-ruig) + Samenvatting (semi—ruig) |
-| 0.03 | 2021-11-14 | Inwendig     | Eerste draft | Titel blad (polished) + Samenvatting (polished)   |
-|      |            |              |              |                                                   |
+| Nr.  | Datum      | Verspreiding              | Status           | Wijziging                                                    |
+| ---- | ---------- | ------------------------- | ---------------- | ------------------------------------------------------------ |
+| 0.01 | 09/12/2021 | Prof. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design |
+|      |            |                           |                  |                                                              |
+
 
 # Termen en Afkortingen
 
