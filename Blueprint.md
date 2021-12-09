@@ -66,6 +66,8 @@ Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor h
 # Samenvatting
 
 >   *[Korte samenvatting van het project en context, 1 of 2 alinea’s]*
+> 
+> Nog is opnieuw bekijken! Aanpassingen voorstellen
 
 Onze medestudenten van het 3de jaar elektronica-ICT bouwen momenteel een module om de luchtkwaliteit in de haven van Antwerpen te meten. Zij hebben verschillende sensoren gebruikt waarmee zij diverse luchtkwaliteitsparameters opslaan, verwerken en analyseren.
 
@@ -99,7 +101,7 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 > *[TIP ! Dit kan m.b.v. diagrammen zoals activiteitsdiagrammen voor processen, BPMN, toestandsdiagrammen voor toestandsveranderingen, sequentiediagrammen… Kan ook blokdiagram zijn]*
 
-*Probleemstelling:*
+### *Probleemstelling:*
 
 > *[Beschrijven aan de hand van dit huidig proces. Wat zijn de problemen dat opgelost moeten worden*
 
@@ -213,6 +215,8 @@ Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd e
 > - *Maak assumpties indien nodig.*
 > 
 > - *[TIP ! Gebruik use case diagram en use case scenario’s]*
+> 
+> - Geef mee waaraan het aan moet voldoen en niet het component exact
 
 #### Luchtkwaliteitssensor
 
@@ -356,7 +360,7 @@ Er zijn geen fase's voor het gehele project, alleen voor de individuele onderdel
 
 ## Detailplanning
 
-> - *[TIP ! Kan een Gantt Chart zijn of een tabel.]*
+> - *[TIP ! Kan een Gantt Chart zijn of een tabel.] Milestones*
 
 # Functioneel design
 
@@ -398,10 +402,6 @@ In onderstaande diagram is de abstracte architectuur van ons ontwerp te zien. De
 > 
 > Hieronder kan je een voorbeeld vinden van elk diagram.
 
-
-
-
-
 ### [Blokdiagram](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=blokdiagram)
 
 > In het blokdiagram deel je het hardware probleem op in grote delen en kan je zien hoe ze met elkaar gelinkt zijn.
@@ -420,14 +420,32 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 
 > Voor elke blok in het blokdiagram van een Smart Object stel je de specificaties en/of elektrische karakteristieken op. Deze worden in het volgende formaat meegeven in de analyse.
 
-| **Blok**       | **Specificatie** | **Min** | **Nominaal** | **Max** |
-| -------------- | ---------------- | ------- | ------------ | ------- |
-| Motor Power    | Werkspanning     | 7V      | 7.2V         | 7.V     |
-| (Loodbatterij) | Stroom           |         | 500mA        | 2A      |
-|                | Capaciteit       |         | 2700mAh      |         |
-| ATmega328p     | Fcpu             |         | 16 MHz       |         |
-|                | Werkspanning     | 4.8V    | 5V           | 5.2V    |
-|                |                  |         |              |         |
+| **Blok**             | **Specificatie**    | **Min** | **Nominaal** | **Max**          |
+| -------------------- | ------------------- | ------- | ------------ | ---------------- |
+| **ATSAMD21G18A-AUT** | Werkspanning        | 1.62V   | 3.3V         | 3.8V             |
+|                      | Frequentie CPU      | -       | 48mHz        | -                |
+|                      | Stroomverbruik      | 1.17mA  | 3.37mA       | 6.32mA           |
+|                      | Stroomlimiet        | -       | -            | 92mA             |
+| **RN2483A-I/RM104**  | Werkspanning        | 2.1V    | 3.3V         | 3.6V             |
+|                      | Stroomverbruik      | 1.6µA   | 2.8mA        | 38.9mA           |
+|                      | Stroomlimiet        | -       | -            | 200mA (25mA/pin) |
+| **Li-Po 2 cell**     | Totale werkspanning | 6.0V    | 7.4V         | 8.2V             |
+|                      | Capaciteit          | -       | 2400mAh      | -                |
+| **LD1117**           |                     |         |              |                  |
+| **CCS811**           | Werkspanning        | 1.8V    | 3.3V         | 3.3V             |
+|                      | Stroomverbruik      | 19µA    | 26mA         | -                |
+|                      | Stroomlimiet        | -       | -            | 54mA             |
+| **SDS011**           | Werkspanning        | 4.7V    | 5V           | 5.3V             |
+|                      | Stroomverbruik      | <4mA    | 70mA         | 80mA             |
+|                      | Stroomlimiet        | -       | -            | 200mA            |
+| **BME280**           | Werkspanning        | 1.7V    | 3.3V         | 3.6V             |
+|                      | Stroomverbruik      | 0.1µA   | 3.6µA        | 630µA            |
+|                      | Stroomlimiet        | -       | -            | 4.5mA            |
+| **MH-Z19**           | Werkspanning        | 4.9V    | 5V           | 5.5V             |
+|                      | Stroomverbruik      | -       | <18mA        | -                |
+|                      | Stroomlimiet        | -       | -            | 125mA            |
+| **SD-Reader**        |                     |         |              |                  |
+| **NoX**              |                     |         |              |                  |
 
 ### [Onderliggende ](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=onderliggende-argumentatie)argumentatie
 
@@ -445,8 +463,6 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 > Om software /datamigratie te analyseren is een top down methodologie aangeraden. Eerst moeten de datastromen vastgelegd worden.  Als bepaalt is welke data er in en uit een specifieke blok van het systeem komt, moet eveneens het formaat bepaald worden waarin dit gebeurt. Om dit succesvol te doen moet er ook rekening gehouden worden met de hardware restricties. Bv. JSON versturen over I²C met een Arduino is gedoemd om te falen.
 > 
 > Het aangeven van welke data eer specifiek in een bepaald blok ingaat of uitkomt geef je weer met volgend format:
-
-
 
 #### 1.1.1.1    [Data in / Out](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=data-in-out) (voorbeeld)
 
@@ -466,8 +482,6 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 > Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
 > 
 > Voorbeeld:
-
-
 
 ![Flowchart](https://luytsm.github.io/iot-cursus/img/flowchart.png)IoT
 
