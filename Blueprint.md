@@ -45,7 +45,6 @@ Inhoudstafel
 | 0.01 | 09/12/2021 | Prof. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design |
 |      |            |                           |                  |                                                              |
 
-
 # Termen en Afkortingen
 
 | Term            | Omschrijving                                                                                                                                                                   |
@@ -419,41 +418,54 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 
 > Voor elke blok in het blokdiagram van een Smart Object stel je de specificaties en/of elektrische karakteristieken op. Deze worden in het volgende formaat meegeven in de analyse.
 
-| **Blok**             | **Specificatie**    | **Min** | **Nominaal** | **Max**          |
-| -------------------- | ------------------- | ------- | ------------ | ---------------- |
-| **ATSAMD21G18A-AUT** | Werkspanning        | 1.62V   | 3.3V         | 3.8V             |
-|                      | Frequentie CPU      | -       | 48mHz        | -                |
-|                      | Stroomverbruik      | 1.17mA  | 3.37mA       | 6.32mA           |
-|                      | Stroomlimiet        | -       | -            | 92mA             |
-| **RN2483A-I/RM104**  | Werkspanning        | 2.1V    | 3.3V         | 3.6V             |
-|                      | Stroomverbruik      | 1.6µA   | 2.8mA        | 38.9mA           |
-|                      | Stroomlimiet        | -       | -            | 200mA (25mA/pin) |
-| **Li-Po 2 cell**     | Totale werkspanning | 6.0V    | 7.4V         | 8.2V             |
-|                      | Capaciteit          | -       | 2400mAh      | -                |
-| **LD1117**           |                     |         |              |                  |
-| **CCS811**           | Werkspanning        | 1.8V    | 3.3V         | 3.3V             |
-|                      | Stroomverbruik      | 19µA    | 26mA         | -                |
-|                      | Stroomlimiet        | -       | -            | 54mA             |
-| **SDS011**           | Werkspanning        | 4.7V    | 5V           | 5.3V             |
-|                      | Stroomverbruik      | <4mA    | 70mA         | 80mA             |
-|                      | Stroomlimiet        | -       | -            | 200mA            |
-| **BME280**           | Werkspanning        | 1.7V    | 3.3V         | 3.6V             |
-|                      | Stroomverbruik      | 0.1µA   | 3.6µA        | 630µA            |
-|                      | Stroomlimiet        | -       | -            | 4.5mA            |
-| **MH-Z19**           | Werkspanning        | 4.9V    | 5V           | 5.5V             |
-|                      | Stroomverbruik      | -       | <18mA        | -                |
-|                      | Stroomlimiet        | -       | -            | 125mA            |
-| **SD-Reader**        |                     |         |              |                  |
-| **NoX**              |                     |         |              |                  |
+| **Blok**                                 | **Specificatie**    | **Min** | **Nominaal** | **Max**          |
+| ---------------------------------------- | ------------------- | ------- | ------------ | ---------------- |
+| **ATSAMD21G18A-AUT**                     | Werkspanning        | 1.62V   | 3.3V         | 3.8V             |
+|                                          | Frequentie CPU      | -       | 48mHz        | -                |
+|                                          | Stroomverbruik      | 1.17mA  | 3.37mA       | 6.32mA           |
+|                                          | Stroomlimiet        | -       | -            | 92mA             |
+| **RN2483A-I/RM104**                      | Werkspanning        | 2.1V    | 3.3V         | 3.6V             |
+|                                          | Stroomverbruik      | 1.6µA   | 2.8mA        | 38.9mA           |
+|                                          | Stroomlimiet        | -       | -            | 200mA (25mA/pin) |
+| **Li-Po 2 Cell**                         | Totale werkspanning | 6.0V    | 7.4V         | 8.2V             |
+|                                          | Capaciteit          | -       | 2400mAh      | -                |
+| **LD1117**                               | Werkspanning        | 1.2V    | -            | 15V              |
+| **CCS811**                               | Werkspanning        | 1.8V    | 3.3V         | 3.3V             |
+|                                          | Stroomverbruik      | 19µA    | 26mA         | -                |
+|                                          | Stroomlimiet        | -       | -            | 54mA             |
+| **SDS011**                               | Werkspanning        | 4.7V    | 5V           | 5.3V             |
+|                                          | Stroomverbruik      | <4mA    | 70mA         | 80mA             |
+|                                          | Stroomlimiet        | -       | -            | 200mA            |
+| **BME280**                               | Werkspanning        | 1.7V    | 3.3V         | 3.6V             |
+|                                          | Stroomverbruik      | 0.1µA   | 3.6µA        | 630µA            |
+|                                          | Stroomlimiet        | -       | -            | 4.5mA            |
+| **MH-Z19**                               | Werkspanning        | 4.9V    | 5V           | 5.5V             |
+|                                          | Stroomverbruik      | -       | <18mA        | -                |
+|                                          | Stroomlimiet        | -       | -            | 125mA            |
+| **SparkFun microSD Transflash breakout** | Werkspanning        | 2.8V    | 3.3V         | 3.6V             |
+| **SGP41-D-R4**                           | Werkspanning        | 1.7V    | 3.3V         | 3.6V             |
+|                                          | Stroomverbruik      | 34µA    | 3.2mA        | 4.6mA            |
+|                                          | Stroomlimiet        | -       | -            | 100mA            |
 
 ### [Onderliggende ](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=onderliggende-argumentatie)argumentatie
 
 > Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze gebruikt wordt in de voorgestelde oplossing in de analyse. Geef ook mogelijke alternatieven. Geef deze informatie in het volgend formaat:
 
-| **Blok**        | **Argumentatie**                                                                                                                                                                                                                                   | **Alternatieven**       |
-| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- |
-| Motor Power     | De loodbatterij is oplaadbaar en  levert de correcte spanning voor de motorsturing. De LiPo batterij is een  betere oplossing vooral door gewicht en beter behoud van capaciteit. De  loodbatterij was beschikbaar en moest niet aangekocht worden | LiPo, Powerbank         |
-| Wireless Driver | We maken gebruik van een nRF24L01  omdat de simpelste manier van communicatie is, geen protocol en een simpele  communicatie voorziet.                                                                                                             | Bluetooth, ZigBee, WiFi |
+| **Blok**          | Component                            | **Argumentatie**                                                                                                                                                                                                                                                                                                                                                                                    | **Alternatieven**    |
+| ----------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| CPU               | ATSAMD21G18A-AUT                     |                                                                                                                                                                                                                                                                                                                                                                                                     |                      |
+| Batterij          | Li-Po 2 Cell                         | De LiPo batterij heeft een goede capaciteit en zeer lange levensspan. Voorts is haar relatief gewicht laag t.o.v. haar volume. Ze is veel flexibeler dan een lithium-ion batterij. Tenslotte is ze beschikbaar in ons school.                                                                                                                                                                       | Lithium-ion batterij |
+| Voltage converter | LD1117                               | De LD1117 heeft het exacte bereik dat we nodig hebben. We kunnen van onze 7.4V batterij spanning naar 3.3V en 5V converteren.                                                                                                                                                                                                                                                                       |                      |
+| SD-Lezer          | SparkFun microSD Transflash breakout |                                                                                                                                                                                                                                                                                                                                                                                                     | LM 2931 T-5.0        |
+| Temperatuur       | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. Het temperatuur is perfect binnen de temperaturen van België.                                                                                                                                                    | CCS81                |
+| Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                                                                                                                                                  |                      |
+| Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                                                                                                                                                  |                      |
+| CO²               | MH-Z19                               | De positieve zaken van deze sensor Pluspunten van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART.                                                                                                                                                                   |                      |
+| eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                                                                                                                                                  |                      |
+| TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                                                                                                                                                  |                      |
+| Fijnstof          | SDS011                               | De SDS011 is een veel gebruikte fijnstof sensor voor DIY-projecten. Het zal niet de nauwkeurigste zijn, maar het geeft toch al een sterke indicatie van wat het fijnstof gehalte is in de lucht. Daarnaast is het een goedkoop model. Het werkt met een ventilator die de lucht binnentrekt. Het zal dus eerst moeten opgezet worden om de huidige lucht erin te trekken vooraleer we kunnen meten. |                      |
+| LoRA              | RN2483A-I/RM104                      | LoRa staat bekend om zijn low-power functionaliteiten en zeer lange afstanden (10km en langer). Daarom gebruiken we deze module om de data van al onze AQS nodes naar de server te krijgen. Daarnaast is deze module simpel aan te sturen dankzij de ASCII commando's via UART interface en ook bruikbaar bij 5V IC's zoals Arduino Nano en Uno.                                                    |                      |
+| NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor. NOx sensoren zijn zeer duur en zouden de kost vertweevoudigen.                                                                                                                                                                                                                                                                           |                      |
 
 ### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema) ![Elektrisch Schema](https://luytsm.github.io/iot-cursus/img/example_schematic.png)
 
