@@ -47,14 +47,14 @@ Inhoudstafel
 
 # Termen en Afkortingen
 
-| Term            | Omschrijving                                                 |
-| --------------- | ------------------------------------------------------------ |
-| PoA             | Port of Antwerp; Haven van Antwerpen                         |
-| MCU             | Microcontroller                                              |
+| Term            | Omschrijving                                                                                                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| PoA             | Port of Antwerp; Haven van Antwerpen                                                                                                                                           |
+| MCU             | Microcontroller                                                                                                                                                                |
 | eCO<sub>2</sub> | CO<sub>2</sub>-eq koolstofdioxide equivalent om het gas te kunnen vergelijken met ander ebroeikasgassen, de omrekening is gebaseerd op het Global Warming Potential (GWP). [2] |
-| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht. |
-| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). [3] |
-| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU. |
+| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht.                                                     |
+| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). [3]                                                                                      |
+| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU.                                                                                                               |
 
 # Opdrachtgever
 
@@ -452,21 +452,21 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 
 > Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze gebruikt wordt in de voorgestelde oplossing in de analyse. Geef ook mogelijke alternatieven. Geef deze informatie in het volgend formaat:
 
-| **Blok**          | Component                            | **Argumentatie**                                             | **Alternatieven**                               |
-| ----------------- | ------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
-| CPU               | ATSAMD21G18A-AUT                     | De grootste troef van de SAMD21 is dat het een zeer zuinige chip is. De SAMD21 verbruikt maximaal 6.32mA, de ESP32 daarentegen kan tot wel 500mA verbruiken. De MCU is krachtig en heeft zeer veel I/O pinnen. De bootloader moeten we initieel zelf nog branden. | ESP32 WROVER                                    |
-| Batterij          | Li-Po 2 Cell                         | De Li-Po batterij heeft een goede capaciteit en zeer lange levensspan. Voorts is haar relatief gewicht laag t.o.v. haar volume. Ze is veel flexibeler dan een lithium-ion batterij. Tenslotte is ze beschikbaar in ons school. | Lithium-ion batterij                            |
-| Voltage converter | LD1117                               | De LD1117 heeft het exacte bereik dat we nodig hebben. We kunnen van onze 7.4V batterij spanning naar 3.3V en 5V converteren. | MIC5219-3.3YM5-TR, MIC5219-5.0YM5-TR            |
-| MicroSD-Lezer     | SparkFun microSD Transflash breakout | We hebben gekozen voor de SparkFun kaartlezen omdat we deze zeker beschikbaar hebben op school. Deze module is zeer klein dus dat komt goed van pas. | Eender welke Arduino compatibele microSD-Lezer. |
-| Temperatuur       | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. Het bereik is perfect voor de temperaturen in België. | LM35, DHT22                                     |
-| Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. | MPX4115A                                        |
-| Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. | DHT22                                           |
-| CO²               | MH-Z19                               | De positieve zaken van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART. | MQ-135, Adafruit SGP30                          |
-| eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden. | Adafruit SGP30                                  |
-| TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden. | Adafruit SGP30                                  |
-| Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid. | PPD42NS                                         |
+| **Blok**          | Component                            | **Argumentatie**                                                                                                                                                                                                                                                         | **Alternatieven**                               |
+| ----------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| CPU               | ATSAMD21G18A-AUT                     | De grootste troef van de SAMD21 is dat het een zeer zuinige chip is. De SAMD21 verbruikt maximaal 6.32mA, de ESP32 daarentegen kan tot wel 500mA verbruiken. De MCU is krachtig en heeft zeer veel I/O pinnen. De bootloader moeten we initieel zelf nog branden.        | ESP32 WROVER                                    |
+| Batterij          | Li-Po 2 Cell                         | De Li-Po batterij heeft een goede capaciteit en zeer lange levensspan. Voorts is haar relatief gewicht laag t.o.v. haar volume. Ze is veel flexibeler dan een lithium-ion batterij. Tenslotte is ze beschikbaar in ons school.                                           | Lithium-ion batterij                            |
+| Voltage converter | LD1117                               | De LD1117 heeft het exacte bereik dat we nodig hebben. We kunnen van onze 7.4V batterij spanning naar 3.3V en 5V converteren.                                                                                                                                            | MIC5219-3.3YM5-TR, MIC5219-5.0YM5-TR            |
+| MicroSD-Lezer     | SparkFun microSD Transflash breakout | We hebben gekozen voor de SparkFun kaartlezen omdat we deze zeker beschikbaar hebben op school. Deze module is zeer klein dus dat komt goed van pas.                                                                                                                     | Eender welke Arduino compatibele microSD-Lezer. |
+| Temperatuur       | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. Het bereik is perfect voor de temperaturen in België.                                 | LM35, DHT22                                     |
+| Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                       | MPX4115A                                        |
+| Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                       | DHT22                                           |
+| CO²               | MH-Z19                               | De positieve zaken van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART.                                                                   | MQ-135, Adafruit SGP30                          |
+| eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                       | Adafruit SGP30                                  |
+| TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                       | Adafruit SGP30                                  |
+| Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid.                                                                                                                                        | PPD42NS                                         |
 | LoRA              | RN2483A-I/RM104                      | We gebruiken deze module om data van onze luchtkwaliteitssensor naar de online database te sturen over het LoRaWAN netwerk van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | MKL62BA                                         |
-| NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen. |                                                 |
+| NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen.                                                                                              |                                                 |
 
 ### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema) ![Elektrisch Schema](https://luytsm.github.io/iot-cursus/img/example_schematic.png)
 
@@ -476,7 +476,7 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 > 
 > Het aangeven van welke data eer specifiek in een bepaald blok ingaat of uitkomt geef je weer met volgend format:
 
-#### 1.1.1.1    [Data in / Out](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=data-in-out)
+### [Data in / Out](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=data-in-out)
 
 | **Blok**                             | **Data In**                                                                                                                                                                                                             | Data Uit                                                                                                                           |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -489,21 +489,59 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 | BME280                               | Setup signaal, wake-up signaal, sleep signaal, data aanvraag                                                                                                                                                            | Temperatuur, luchtdruk en luchtvochtigheidswaarden                                                                                 |
 | MH-Z19                               | Setup signaal, connect signaal, sleep signaal, data aanvraag                                                                                                                                                            | CO² waarde                                                                                                                         |
 | SparkFun microSD Transflash breakout | LoraFormat data, data verstuur signaal                                                                                                                                                                                  | Data opgeslagen signaal                                                                                                            |
-| SGP41-D-R4                           | Wake-up Signaal, Sleep signaal, data aanvraag                                                                                                                                                                           | NOx waarde                                                                                                                         |
+| SGP41-D-R4                           | Wake-up Signaal, sleep signaal, data aanvraag                                                                                                                                                                           | NOx waarde                                                                                                                         |
 
-Statediagram
+### Statediagram
 
 Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veranderingen met hun impact.  Hieronder vind je een voorbeeld:
 
 ![State Diagram nRF24L01](https://luytsm.github.io/iot-cursus/img/state_diagram_advanced.png)
 
-> Flowchart
-> 
-> Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
-> 
-> Voorbeeld:
+### Flowchart
 
-![Flowchart](https://luytsm.github.io/iot-cursus/img/flowchart.png)IoT
+> Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
+
+#### ATSAMD21G18A-AUT
+
+<figure>
+<img src="./assets/FlowChart-ATSAMD.svg" alt="Flow Chart ATSAMD"/>
+<figcaption >Figuur x: Flow Chart ATSAMD</figcaption>
+</figure>
+
+#### **RN2483A-I/RM104**
+
+<figure>
+<img src="./assets/FlowChart-RN2483.svg" alt="Flow Chart RN2483A-I/RM104"/>
+<figcaption >Figuur x: Flow Chart RN2483A-I/RM104</figcaption>
+</figure>
+
+#### **Li-Po 2 Cell**
+
+<figure>
+<img src="./assets/FlowChart-LiPO2Cell.svg" alt="Flow Chart Li-Po 2 Cell"/>
+<figcaption >Figuur x: Flow Chart  Li-Po 2 Cell</figcaption>
+</figure>
+
+#### **CCS811**
+
+<figure>
+<img src="./assets/FlowChart-CCS811.svg" alt="Flow Chart CCS811"/>
+<figcaption >Figuur x: Flow Chart CCS811</figcaption>
+</figure>
+
+#### **SDS011**
+
+#### **BME280**
+
+#### **MH-Z19**
+
+#### **SparkFun microSD Transflash breakout**
+
+#### SGP41-D-R4
+
+#### Generate Seed
+
+
 
 # Beschrijving van de mogelijke interfaces
 
