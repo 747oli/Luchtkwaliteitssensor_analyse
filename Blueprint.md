@@ -553,12 +553,27 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 # Beschrijving van de mogelijke interfaces
 
 > - *[Beschrijf de mogelijke interfaces van je project en hoe de communicatie gebeurt.]*
-> 
 > - *[TIP ! Gebruik een context DFD om te verduidelijken en zoek nog eens op wat een context DFD ook al weer is.]*
-> 
 > - Als er een grafische interface nodig, dienen hiervoor mock ups gemaakt worden, moeten nog geen kunstwerken zijn.
 
-- ![Mockup](https://luytsm.github.io/iot-cursus/img/mockup.png)
+Als dashboard om de meetgegevens van onze sensoren weer te geven maken we gebruik van Grafana. Grafana is een open source tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook onze NodeRED omgeving in draait kan ook Grafana hosten. 
+
+Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor onze soort gegevens zeker uitgebreid genoeg. De interface kan je al eens uittesten via [play.grafana.org](https://play.grafana.org/).
+
+<figure>
+<img src="./assets/GrafanaDashboard1.png" alt="GrafanaDashboard1"/>
+<figcaption >Figuur x: Grafana Dashboard 1</figcaption>
+</figure>
+
+<figure>
+<img src="./assets/GrafanaDashboard2.png" alt="GrafanaDashboard2"/>
+<figcaption >Figuur x: Grafana Dashboard 2</figcaption>
+</figure>
+
+<figure>
+<img src="./assets/GrafanaDashboard3.png" alt="GrafanaDashboard3"/>
+<figcaption >Figuur x: Grafana Dashboard 3</figcaption>
+</figure>
 
 # Beschrijving van eventuele datamigratie
 
