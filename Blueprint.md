@@ -540,6 +540,11 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 
 #### **BME280**
 
+<figure>
+<img src="./assets/FlowChart-BME280.svg" alt="Flow Chart BME280"/>
+<figcaption >Figuur x: Flow Chart BME280</figcaption>
+</figure>
+
 #### **MH-Z19**
 
 #### **SparkFun microSD Transflash breakout**
@@ -547,8 +552,6 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 #### SGP41-D-R4
 
 #### Generate Seed
-
-
 
 # Beschrijving van de mogelijke interfaces
 
