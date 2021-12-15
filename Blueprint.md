@@ -468,7 +468,14 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 | LoRA              | RN2483A-I/RM104                      | We gebruiken deze module om data van onze luchtkwaliteitssensor naar de online database te sturen over het LoRaWAN netwerk van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | MKL62BA                                         |
 | NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen.                                                                                              |                                                 |
 
-### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema) ![Elektrisch Schema](https://luytsm.github.io/iot-cursus/img/example_schematic.png)
+### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema)
+
+Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de derdejaars. De GPS module is weggehaald, de NOx sensor SGP41 is toegevoegd en de ESP32 MCU is vervangen door de ATSAMD21 die we zullen gebruiken.  
+
+<figure>
+<img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
+<figcaption >Figuur x: Elektrisch schema</figcaption>
+</figure>
 
 ## [**Smart Object (Software Analyse)**](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=smart-object-hardware-analyse)
 
