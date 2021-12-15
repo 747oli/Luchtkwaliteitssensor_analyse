@@ -100,7 +100,7 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 > *[TIP ! Dit kan m.b.v. diagrammen zoals activiteitsdiagrammen voor processen, BPMN, toestandsdiagrammen voor toestandsveranderingen, sequentiediagrammen… Kan ook blokdiagram zijn]*
 
-### *Probleemstelling:*
+### Probleemstelling:
 
 > *[Beschrijven aan de hand van dit huidig proces. Wat zijn de problemen dat opgelost moeten worden*
 
@@ -466,7 +466,7 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 | TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                       | Adafruit SGP30                                  |
 | Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid.                                                                                                                                        | PPD42NS                                         |
 | LoRA              | RN2483A-I/RM104                      | We gebruiken deze module om data van onze luchtkwaliteitssensor naar de online database te sturen over het LoRaWAN netwerk van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | MKL62BA                                         |
-| NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen.                                                                                              |                                                 |
+| NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen.                                                                                              | Industrial Nitric Oxide (NO) Sensor             |
 
 ### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema)
 
@@ -515,53 +515,58 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 <figcaption >Figuur x: Flow Chart ATSAMD</figcaption>
 </figure>
 
-#### **RN2483A-I/RM104**
+#### RN2483A-I/RM104
 
 <figure>
 <img src="./assets/FlowChart-RN2483.svg" alt="Flow Chart RN2483A-I/RM104"/>
 <figcaption >Figuur x: Flow Chart RN2483A-I/RM104</figcaption>
 </figure>
 
-#### **Li-Po 2 Cell**
+#### Li-Po 2 Cell
 
 <figure>
 <img src="./assets/FlowChart-LiPO2Cell.svg" alt="Flow Chart Li-Po 2 Cell"/>
 <figcaption >Figuur x: Flow Chart  Li-Po 2 Cell</figcaption>
 </figure>
 
-#### **CCS811**
+#### CCS811
 
 <figure>
 <img src="./assets/FlowChart-CCS811.svg" alt="Flow Chart CCS811"/>
 <figcaption >Figuur x: Flow Chart CCS811</figcaption>
 </figure>
 
-#### **SDS011**
+#### SDS011
 
 <figure>
 <img src="./assets/FlowChart-SDS011.svg" alt="Flow Chart SDS011"/>
 <figcaption >Figuur x: Flow Chart SDS011</figcaption>
 </figure>
 
-#### **BME280**
+#### BME280
 
 <figure>
 <img src="./assets/FlowChart-BME280.svg" alt="Flow Chart BME280"/>
 <figcaption >Figuur x: Flow Chart BME280</figcaption>
 </figure>
 
-#### **MH-Z19**
+#### MH-Z19
 
 <figure>
 <img src="./assets/FlowChart-MH-Z19.svg" alt="Flow Chart MH-Z19"/>
 <figcaption >Figuur x: Flow Chart MH-Z19</figcaption>
 </figure>
 
-#### **SparkFun microSD Transflash breakout**
+#### SparkFun microSD Transflash breakout
 
 #### SGP41-D-R4
 
-#### Generate Seed
+#### Seed Generator
+
+<figure>
+<img src="./assets/FlowChart-SeedGenerator.svg" alt="Flow Chart Seed Generator"/>
+<figcaption >Figuur x: Flow Chart Seed Generator</figcaption>
+</figure>
 
 # Beschrijving van de mogelijke interfaces
 
