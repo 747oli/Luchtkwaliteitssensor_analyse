@@ -538,6 +538,11 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 
 #### **SDS011**
 
+<figure>
+<img src="./assets/FlowChart-SDS011.svg" alt="Flow Chart SDS011"/>
+<figcaption >Figuur x: Flow Chart SDS011</figcaption>
+</figure>
+
 #### **BME280**
 
 <figure>
@@ -546,6 +551,11 @@ Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veran
 </figure>
 
 #### **MH-Z19**
+
+<figure>
+<img src="./assets/FlowChart-MH-Z19.svg" alt="Flow Chart MH-Z19"/>
+<figcaption >Figuur x: Flow Chart MH-Z19</figcaption>
+</figure>
 
 #### **SparkFun microSD Transflash breakout**
 
