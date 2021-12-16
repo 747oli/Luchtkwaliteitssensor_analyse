@@ -10,13 +10,16 @@
             Begeleiders:
         </p>
         <h4>
-            Prof. Maarten Luyts
+            Maarten Luyts
         </h4>
         <h4>
-            Prof. Patrick Van Houtven
+            Patrick Van Houtven
         </h4>
     </div>
     <div style="text-align:right">
+        <p>
+            Gemaakt door:
+        </p>
         <h4>
             Daan Dekoning Krekels
         </h4>
@@ -60,7 +63,7 @@ Inhoudstafel
 
 > *[De opdrachtgevers van het project en hun rol in het project. Meneer Luyts blijkbaar]*
 
-Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor heeft de Port of Antwerp een zeer grote interesse in de luchtkwaliteit in de haven. PoA verlangt ernaar om de luchtkwaliteit van de volledige haven in kaart te brengen. Dit willen zij doen door op een tiental locaties sensoren op te hangen die wij zullen voorzien. Er is een LoRaWAN beschikbaar waar de verschillende sensoren van gebruik moeten maken zodat ze op een zuinige manier hun sensordata kunnen doorgeven. 
+Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor heeft de Port of Antwerp een zeer grote interesse in de luchtkwaliteit in de haven. PoA verlangt ernaar om de luchtkwaliteit van de volledige haven in kaart te brengen. Dit zal gedaan worden door op een tiental locaties sensoren op te hangen. Er is een LoRaWAN beschikbaar waar de verschillende sensoren van gebruik moeten maken zodat ze op een zuinige manier hun sensordata kunnen doorgeven. 
 
 # Samenvatting
 
@@ -68,7 +71,7 @@ Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor h
 > 
 > Nog is opnieuw bekijken! Aanpassingen voorstellen
 
-Onze medestudenten van het 3de jaar elektronica-ICT bouwen momenteel een module om de luchtkwaliteit in de haven van Antwerpen te meten. Zij hebben verschillende sensoren gebruikt waarmee zij diverse luchtkwaliteitsparameters opslaan, verwerken en analyseren.
+De studenten van het 3de jaar elektronica-ICT bouwen momenteel een module om de luchtkwaliteit in de haven van Antwerpen te meten. Zij hebben verschillende sensoren gebruikt waarmee zij diverse luchtkwaliteitsparameters opslaan, verwerken en analyseren.
 
 Wij zullen de efficiëntie, gebruiksvriendelijkheid en dataverwerkingscapaciteit verbeteren van deze module om op deze manier de huidige tekortkomingen weg te werken. 
 
@@ -79,8 +82,9 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 - De huidige module is alleen capabel tot korte afstandscommunicatie via wifi of door gebruik te maken van een SD-kaart.
 
 - De maximale batterijduur bedraagt momenteel minder dan 1 maand.
+  
 
-- Buiten deze tekortkomingen zouden wij graag nog extra functionaliteiten toevoegen of verwijderen die als volgende punten kunnen samengevat worden:
+Buiten deze tekortkomingen zouden wij graag nog extra functionaliteiten toevoegen of verwijderen die als volgende punten kunnen samengevat worden:
 
 - Het verminderen van het aantal onnodige temperatuurmeettoestellen.
 
@@ -94,33 +98,37 @@ Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 - Het voorstellen van de data op een gebruiksvriendelijke interface.
 
+# Probleemstelling
+
+De haven van Antwerpen vindt dat de sensor langdurig op batterij moet kunnen werken. Dit omdat de sensoren op locaties zullen hangen waar er geen stroomvoorziening voor handen is. Voorts is er een vraag gekomen om NOx'n te meten in de lucht om zo te kunnen onderzoeken of er schadelijke stoffen aanwezig zijn. 
+
+Tenslotte is er de vereiste gekomen om de data op een andere manier te communiceren. In plaats van de huidige manier van het manueel vergaren van de data via een SD kaart moet deze draadloos doorgestuurd kunnen worden. Hierbij komende dat wifi of bluetooth zal hiervoor niet beschikbaar zijn door de locatie van de sensoren.
+
 # Situatie As-Is
 
 > *[De beschrijving van het huidig project of de huidige werkwijze en probleemstelling. Werkwijze kan ook manuele handelingen zijn. Wat bestaat er al en wat is de noodzaak tot de verandering]*
 
 > *[TIP ! Dit kan m.b.v. diagrammen zoals activiteitsdiagrammen voor processen, BPMN, toestandsdiagrammen voor toestandsveranderingen, sequentiediagrammen… Kan ook blokdiagram zijn]*
 
-### Probleemstelling:
+Momenteel is het project al redelijk ver gevorderd [1]. Het vorige doel was om een mobiele sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken, zijn positie weergeven op een kaart en in verbinding staan met een databank. De sensor moest beschikken over een communicatietechniek die weinig stroom verbruikt en een groot bereik heeft. De eerste prototypes zijn al afgeleverd en lijken te werken.
 
-> *[Beschrijven aan de hand van dit huidig proces. Wat zijn de problemen dat opgelost moeten worden*
-
-Momenteel is het project, dankzij de studenten van het 3de jaar al redelijk ver gevorderd [1]. Hun doel was om een mobile sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken en in verbinding staan met een databank. De eerste prototypes zijn al afgeleverd en lijken te werken. De sensor moet beschikken over een communicatietechniek die weinig stroom verbruikt en een goot bereik heeft. De eerste prototypes van de sensor werken.
-
-In figuur 1 is de mindmap van de sensor te zien. Je kan zien dat de hardware en software vereisten al zijn ingevuld. De basis zal bij ons grotendeels hetzelfde zijn. 
+In figuur 1 is de mindmap van de huidge staat van de sensor te zien. Je kan zien dat de hardware en software vereisten al zijn ingevuld. De basis zal bij ons grotendeels hetzelfde zijn. 
 
 <figure>
 <img src="./assets/Mindmap.jpg" alt="Mindmap"/>
 <figcaption >Figuur 1: Mindmap</figcaption>
 </figure>
 
-In het hardware schema is uitgebreid weergegeven hoe de verschillende sensoren en componenten van de juiste spanning worden voorzien en hoe ze zullen communiceren met de gekozen ESP32 module. 
+Vervolgens hebben we het huidig hardware schema. Hierin is uitgebreid weergegeven hoe de verschillende sensoren en componenten van de juiste spanning worden voorzien en hoe ze momenteel communiceren met de ESP32 module. 
 
 <figure>
 <img src="./assets/Hardware-schema.jpg" alt="Mindmap"/>
 <figcaption >Figuur 2: Hardware schema</figcaption>
 </figure>
 
-Er is gekozen voor een ESP32-WROVER omdat deze beschikt over genoeg opslag en I/O aansluitingen. Er is een kans dat er nog wordt overgeschakeld op de ATSAMD21G18A-AUT voor zijn low-power eigenschappen. De keuze van modules en sensoren is ook gemaakt met stroomverbruik in het achterhoofd. De sensoren en modules zijn in onderstaande tabel terug te vinden. 
+Er was destijds gekozen voor een ESP32-WROVER omdat deze beschikte over genoeg opslag en I/O aansluitingen. Deze werd beter ondersteund ondanks dat hij meer stroom verbruikte in vergelijking met de ATSAMD21G18A-AUT die bekend staat voor zijn low-power eigenschappen. Echter was de implementatie van de ATSAMD21 moeilijk en werd deze dan in die fase van het project niet gebruikt. 
+
+Wel is er bij de keuze van modules en sensoren wel rekening gehouden met met stroomverbruik. De huidige sensoren en modules zijn in onderstaande tabel terug te vinden. 
 
 | Naam                                             | Eigenschappen                                                                                                                                                                                                                                                                                                           | Argumentatie                                                                                                                                                                                                                                                                                                                                                                                             | Links                                                                                                                                                                                                                                                                                                                                                             |
 | ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -132,74 +140,32 @@ Er is gekozen voor een ESP32-WROVER omdat deze beschikt over genoeg opslag en I/
 | BME280                                           | **Temperatuur, Barometer & Luchtvochtigheid** Vcc = 3.3V                Imax = 4.5mA; [I²C](https://en.wikipedia.org/wiki/I²C) protocol 3.3V; Meetbereik temperatuur: -40°C ~ +85°C; Meetbereik luchtvochtigheid: 0% ~ 100%; Meetbereik luchtdruk: 300hPa ~ 1100hPa; Leessnelheid: 1Hz (1s)                             | Deze IC heeft een tal van metingen aan boord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  te integreren op een pcb.                                                                                                                                                                                                                                              | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)             [Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)             [Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                    |
 | MHZ19                                            | **CO²** Vcc = 4.9V - 5.1V; Imax = 125mA                [UART](https://en.wikipedia.org/wiki/Universal_asynchronous_receiver-transmitter) protocol 3.3V; Meetbereik: 400ppm ~ 2000ppm; opwarmtijd: ~1min; leessnelheid: 1Hz (1s)                                                                                         | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig.                                                                                                                                                                                                                                                              | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)             [Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared Gas Sensor/NDIR CO2 SENSOR/MH-Z19 CO2 Ver1.0.pdf)             [Bibliotheek](https://github.com/strange-v/MHZ19)                                                                              |
 
-Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Nog niet alle metingen zijn accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
+Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Echt zijn nog niet alle metingen accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
 
 # Situatie To-Be
 
 > *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
 
-Onze opgave is een klein beetje anders dan die waar de derdejaars momenteel aan werken. Daarom zullen wij een aantal aspecten van de sensor anders aanpakken. Bij de opgave van vorig jaar was het doel om een mobiele sensor te hebben die in en rond Antwerpen de luchtkwaliteit kan meten. De uiteindelijke sensor was bedoeld voor studenten chemie. Onze opgave is om sensoren te maken die een vaste plaats krijgen en daar een hele tijd op batterij zullen moeten werken. 
+De functionele vereisten van de luchtkwaliteitssensor zijn sinds dit jaar aangepast. Daarom zullen er ook een aantal aspecten van de sensor moeten veranderen. 
 
-Ons idee is om, omdat de locatie van de sensor vast staat, de GPS module te verwijderen. Dit kan ons ook voordelen opleveren op vlak van stroomgebruik. Het OLED display is voor ons project ook niet nodig dus die component zullen we ook laten vallen. Metingen die we nog moeten toevoegen is NO<sub>X</sub> (Stikstofoxiden). 
+Terwijl er vorig jaar de noodzaak was om een mobiele sensor te hebben die in en rond Antwerpen de luchtkwaliteit kon meten, is dit nu niet meer het geval. Er is nu de vraag gekomen om sensoren te maken die hetzelfde meten maar een vaste plaats zullen krijgen en daar voor een lange periode op batterij moeten kunnen werken. 
 
-De communicatie via LoRaWAN is bij ons ook nog steeds een vereiste. 
+Daarom zal de GPS module verwijderd worden aangezien het niet nodig is om live locatie informatie te krijgen. Dit zal voordelen opleveren op vlak van een verminderd stroomgebruik. 
 
-Figuur 1 is onze mindmap die gebaseerd is op het ontwerp van de derdejaars. De grijze ballonnen zijn in ons project weggelaten, groene ballonnen zijn nieuw toegevoegd. Bij de metingen is Stikstofoxiden toegevoegd en er zijn verschillende modules weggehaald die we niet nodig hebben.
+Voorts is het OLED display niet meer noodzakelijk door de draadloze communicatie dus zal ook die component verwijderd worden. Ook hierbij zal er een verminderd stroomverbruik zijn. 
+
+Hiernaast is er de eis gekomen om stikstofoxiden te meten. Hiervoor zullen wij een interne sensor voorzien die in onze huidige architectuur zal passen. 
+
+De communicatie via LoRaWAN is heden ook nog steeds een vereiste. 
+
+Tenslotte zal er de overstap gemaakt worden naar de ATSAMD21G18A-AUT als microcontroller omdat deze een zeer laag stroomverbruik heeft. Zoals eerder gezegd heeft die wel als nadeel dat het gebruik van deze MCU ingewikkelder is in vergelijking met de ESP32 die meer ondersteuning heeft.
+
+Onderstaande figuur toont een mindmap van de huidige staat waarop de veranderingen die zullen gebeuren te vinden zijn. De grijze ballonnen zijn de componenten die weggelaten worden en groene ballonnen degene die toegevoegd worden.
 
 <figure>
 <img src="./assets/Mindmap.drawio.svg" alt="Mindmap"/>
 <figcaption >Figuur 1: Mindmap</figcaption>
 </figure>
-
-Als microcontroller willen we ons focussen op de ATSAMD21G18A-AUT omdat deze een zeer laag stroomverbruik heeft. Het enige nadeel is dat het gebruik van deze MCU ingewikkelder is in vergelijking met de ESP32 die meer ondersteuning heeft. Indien de integratie van de haalbaar ATSAMD21G18A-AUT zou zijn,dan zou dit een zeer groot voordeel opleveren qua batterijleven. 
-
-### Epics
-
-Zoals eerder gezegd zullen we bij het project in het 2de semester met agile werken. Hieronder volgt een korte beschrijving van de verschillende epics waarin het project in onderverdeeld.
-
-#### Componenten onderzoeken, testen en documenteren
-
-Bij elk individuele component zullen we afzonderlijk moeten onderzoeken op welke manier we deze kunnen integreren. Dat wil zeggen dat we features van deze component moeten testen en de code en schakeling ervoor moeten ontwikkelen om deze te implementeren in ons project. Vervolgens moeten we uitvoerig testen of de werking ervan correct is. Tenslotte zullen we de implementatie documenteren.
-
-#### Componenten toevoegen aan het project
-
-Nadat de component getest en correct bevonden is, moeten we deze implementeren in ons project. Dit is natuurlijk een wederkerend proces voor elke nieuwe component. We bekijken de samenwerking van de componenten en lossen problemen op die voorkomen. Dit wordt gedaan een breadbord of dergelijke.
-
-#### PCB ontwikkelen
-
-Pas wanneer, bij de vorige stap, het gehele project aan onze eisen voldoet, zullen we een PCB maken van de huidige staat van het project. Opnieuw zullen we verschillende testen ondernemen om een correcte werking te garanderen. De PCB's zullen dan besteld worden wat redelijk wat tijd in beslag zal nemen.
-
-#### UI software onderzoeken en testen
-
-Nadat we zeker zijn dat alle componenten correct werken in ons project zullen we de User Interface ontwikkelen die de waardes van ons project op een visuele manier voorstellen. Deze wordt aangepast wanneer er nieuwe componenten toegevoegd worden aan het project.
-
-#### Ontwikkeling case
-
-De case is een zeer belangrijk deel van ons project omdat het de integriteit van onze schakeling waarborgt. Bij elke nieuwe PCB moeten we kijken of onze huidige case nog voldoet aan de vereisten en zo niet updaten en opnieuw printen.
-
-#### Live testen project
-
-Tenslotte zullen we ter plaatste ons project meerdere keren moeten uittesten om te zien of het correct werkt.
-
-### MVP
-
-Een stationaire sensor met behuizing voor buiten gebruik waarin onderstaande metingen gebeuren:
-
-- Omgevingstemperatuur
-
-- Luchtvochtigheid
-
-- Luchtdruk
-
-- CO²/eCO²
-
-- TVOC/eTVOC
-
-- Fijnstof
-
-- Stikstofoxiden
-
-Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd en weergegeven worden op een UI. 
 
 ## Projectdefinitie
 
@@ -217,27 +183,7 @@ Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd e
 > 
 > - Geef mee waaraan het aan moet voldoen en niet het component exact
 
-#### Luchtkwaliteitssensor
-
-##### Onderdelen
-
-- CCS81: Temperatuur, eCO2 en TVOC
-
-- SDS011: Fijnstof
-
-- BME280: Temperatuur, luchtdruk en luchtvochtigheid
-
-- Batterij: Voltage
-
-- MHZ19: CO²
-
-- RN483A-I/RM104: LoRa
-
-- xxxx: NOx
-
-- ATSAMD21G18A-AUT: MCU
-
-##### Functionaliteiten
+#### Vereiste functionaliteiten luchtkwaliteitssensor
 
 - Op interval doorsturen van metingen naar een server via een LoRaWAN netwerk.
 
@@ -259,59 +205,63 @@ Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd e
 
 - Het intern batterij voltage weergeven.
 
-- Capaciteit om terug te vallen op SD-opslag bij mislukte verzending via LoRa.
+- De capaciteit hebben om terug te vallen op SD-opslag bij mislukte verzending via LoRa.
 
 - Het lezen van waardes via de seriële monitor voor test doeleinden.
 
-<figure>
-<img src="./assets/DataflowDiagram-SituationToBe.svg" alt="DFD-STB"/>
-<figcaption >Figuur 2 : Dataflow Diagram Situation-to-be</figcaption>
-</figure>
 
-#### Luchtkwaliteit monitoring dashboard
 
-##### Onderdelen
+#### Vereiste functionaliteiten monitoring dashboard
 
-- NodeRed: Opensource visuele tool voor het verbinden van hardware devices voor IoT.
-
-- Grafana: visueel voorstellen van gegevens in grafieken.
-
-- InfluxDB: database voor het opslaan van gegevens voor real-time applicaties in IoT.
-
-##### Functionaliteiten
-
-- Gegevens van server omzetten in grafieken
+- Gegevens van de server omzetten in grafieken
 
 - Het weergeven van grafieken op een internet dashboard.
 
-- De positie weergeven van de sensor op een kaart op het dashboard.
+- De positie weergeven van de sensor op een kaart op het dashboard (zonder live data van de locatie).
 
-<figure>
-<img src="./assets/UseCase-SituationToBe.svg" alt="UseCaseSTB"/>
-<figcaption >Figuur 3 : Use Case Situation-to-be</figcaption>
-</figure>
+
 
 ### Niet in Scope
 
-> - *[Expliciet vernoemen wat niet tot de draagwijdte (scope) van het project hoort, bv. het aanleveren van onderdelen,  opleiding, maintenance, onderhoud van servers, … Wat gaan we niet realisere.
+> *[Expliciet vernoemen wat niet tot de draagwijdte (scope) van het project hoort, bv. het aanleveren van onderdelen,  opleiding, maintenance, onderhoud van servers, … Wat gaan we niet realiseren.
 
 #### Een zelf ontwikkeld dashboard
 
-De LORAPayload gaat door NodeRed in een database geplaatst worden. De Database wordt influx-DB. Vanuit deze data gaan Grafana onze gegevens ophalen om de visualisaties te doen. Het dashboard zal qua design dus niet in huis ontwikkeld worden.
+De LORAPayload gaat door NodeRed in een database geplaatst worden. De Database wordt influx-DB. Vanuit deze data gaat Grafana de gegevens ophalen om de visualisaties te doen. Het dashboard zal qua design dus niet binnenshuis ontwikkeld worden.
 
 #### LoRaWAN netwerk opzetten
 
-We zullen het LoRaWAN netwerk van de haven gebruiken om onze data te communiceren naar de server. Het opzetten en onderhouden van het LoRaWAN netwerk ligt niet binnen onze scope.
+Het LoRaWAN netwerk van de haven zal gebruikt worden om de data te communiceren naar de server. Het opzetten en onderhouden van het LoRaWAN netwerk ligt niet binnen de scope.
 
 #### Onderhoud en updates vanaf 2023
 
-Vanaf 2023 zullen het onderhoud en de updates van zowel het dashboard als de luchtkwaliteitssensor niet meer door ons gedaan worden.
+Vanaf 2023 zal het onderhoud en de updates van zowel het dashboard als de luchtkwaliteitssensor niet meer gewaarborgd worden.
+
+#### Minimum Viable Product
+
+Een stationaire sensor met behuizing voor buiten gebruik waarin onderstaande metingen gebeuren:
+
+- Omgevingstemperatuur
+
+- Luchtvochtigheid
+
+- Luchtdruk
+
+- CO²/eCO²
+
+- TVOC/eTVOC
+
+- Fijnstof
+
+- Stikstofoxiden
+
+Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd en weergegeven worden op een UI.
 
 # Planning
 
 > *[Agile of Waterfall? Scrum of Kanban?* *Wekelijkse sprints of per maand? Hoe omgaan met stories die niet goedgekeurd zijn op demo? Welke tools om alles op te volgen? We hebben nog 6 weken ofzo. Gaat over de analyse. Kaban zit in github]*
 
-We gebruiken een kaban board in GitKraken om onze planning bij te houden. Dit board is ook gesyncroniseerd met "GitHub issues" waardoor we een beter overzicht krijgen van onze afgewerkte en nog af te werken onderdelen.
+Er zal een kaban board in GitKraken gebruikt worden om de planning bij te houden. Dit board is ook gesynchroniseerd met "GitHub issues" waardoor men een beter overzicht zal krijgen van de afgewerkte en nog af te werken onderdelen.
 
 In het kaban board zijn de mogelijke statussen van de individuele delen zichtbaar als kolommen om elk deel apart te kunnen opvolgen.  De mogelijkheden zijn de volgende:
 
@@ -325,11 +275,9 @@ In het kaban board zijn de mogelijke statussen van de individuele delen zichtbaa
 
 - Done
 
-Het project bestaat uit 2 fase's: de pré-review en de review fase. De eerste 2 statussen (To do en In progress) worden door ons aan elk onderdeel toegekend tijdens de pré-review fase. Hierna  geven wij de controle van dat deel over onze begeleiders tijdens de Review fase. Zij zullen deze onderdelen vervolgens beoordelen en feedback doorsturen naar ons waarop wij terug aanpassingen zullen maken.
+Tijdens het project worden er 2 fases gehanteerd voor het maken van updates: de pré-review en de review fase. De eerste 2 statussen (To do en In progress) worden door het team aan elk onderdeel toegekend tijdens de pré-review fase. Hierna wordt de controle van dat deel over gegeven aan de begeleiders tijdens de Review fase. Zij zullen deze updates vervolgens beoordelen en feedback terugsturen waarop er terug aanpassingen zullen gemaakt worden.
 
-Elk individueel onderdeel bevat 3 taken: Raw, Semi-Raw en Polished. Deze taken tonen ons de staat van het onderdeel vóór de review fase's zoals hierboven uitgelegd. Hierdoor hebben wij een overzicht over de vooruitgang van elk onderdeel  in ons project.
-
-Onze methodologie voor de gehele analyse is Waterfall omdat we met een strak tijdschema rekening moeten houden en elk deel van analyse apart in zijn volledigheid afgewerkt kan worden zonder dat het invloed heeft op de andere delen van het project.
+De methodologie die voor het project zal gebruikt worden is agile. We zullen constant nieuwe updates doen bij elke module om de luchtkwaliteitssensor efficiënter en beter te maken. 
 
 <figure>
 <img src="./assets/2021-11-25-12-13-25-image.png" alt="Kaban Dashboard"/>
@@ -340,33 +288,57 @@ Onze methodologie voor de gehele analyse is Waterfall omdat we met een strak tij
 
 > *[Korte beschrijving van de planning met de grootste deadlines.]*
 
-De planning werkt met wekelijkse of 2-wekelijkse deadlines. Hierbij wordt er een volledige "Polished" versie van bepaalde onderdelen verwacht. De planning houdt niet rekening met de andere taken zoals Raw en Semi-Raw. Er wordt verwacht dat deze taken afzonderlijk afgewerkt worden voor de "Polished" versie doorgestuurd wordt.
+De planning werkt met wekelijkse of 2-wekelijkse deadlines. 
 
 Zoals reeds eerder gezegd wordt onze planning door het kaban board in GitKraken bij gehouden, onder "Detailplanning" kan u ons volledig tijdsschema terugvinden.
 
-De algemene deadline voor het project staat op 23/12/2021.    
+## Epics
+
+> *[Indien de planning in fases of iteraties verloopt, bespreek dan kort hoe deze opgebouwd zijn.]*
+
+Zoals eerder gezegd zal er tijdens dit project met agile gewerkt worden. Hieronder volgt een korte beschrijving van de verschillende epics waarin het project zal onderverdeeld zijn.
+
+#### Componenten onderzoeken, testen en documenteren
+
+Bij elk individuele component zal er afzonderlijk onderzocht moeten worden op welke manier deze te integreren valt. Dat wil zeggen dat de features van deze component getest zullen worden en vervolgens de code en schakeling ervoor ontwikkelt zal worden om deze te implementeren in het project. Vervolgens moet er uitvoerig getest worden om de correcte werking te garanderen. Tenslotte zal de implementatie ervan gedocumenteerd worden.
+
+#### Componenten toevoegen aan het project
+
+Nadat de component getest is en correct bevonden is, moet deze geïmplementeerd worden in het project. Dit is natuurlijk een wederkerend proces voor elke nieuwe component. De samenwerking van de componenten wordt bekeken en voorkomende problemen zullen opgelost worden. Dit wordt hoogstwaarschijnlijk gedaan een breadbord.
+
+#### PCB ontwikkelen
+
+Pas wanneer, bij de vorige stap, het gehele project aan de eisen voldoet, zal er een PCB gemaakt worden van de huidige staat van het project. Opnieuw zullen er verschillende testen plaats vinden om een correcte werking ervan te garanderen. De PCB's zullen dan besteld worden wat redelijk wat tijd in beslag zal nemen.
+
+#### UI software onderzoeken en testen
+
+Nadat er zekerheid is dat alle componenten correct werken zal de User Interface ontwikkeld worden die de gemeten waardes van de sensoren op een visuele manier kan voorstellen. Deze wordt aangepast wanneer er nieuwe componenten toegevoegd worden aan het project.
+
+#### Ontwikkeling case
+
+De case is een zeer belangrijk deel van ons project omdat het de integriteit van onze schakeling waarborgt. Bij elke nieuwe PCB moet er gekeken worden of de huidige case nog voldoet aan de vereisten en zo niet moet deze opnieuw geüpdatet en geprint worden.
+
+#### Live testen project
+
+Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitgetest om te zien of de werking correct is.
+
+## Detailplanning
+
+> - *[TIP ! Kan een Gantt Chart zijn of een tabel.] Milestones*
 
 <figure>
 <img src="./assets/2021-11-25-12-12-58-image.png" alt="Kaban Timeline"/>
 <figcaption >Figuur x: Kaban Timeline</figcaption>
 </figure>
 
-## Toelichting fases
-
-> *[Indien de planning in fases of iteraties verloopt, bespreek dan kort hoe deze opgebouwd zijn.]*
-
-Er zijn geen fase's voor het gehele project, alleen voor de individuele onderdelen.
-
-## Detailplanning
-
-> - *[TIP ! Kan een Gantt Chart zijn of een tabel.] Milestones*
-
 # Functioneel design
 
 > - [*Beschrijf hier wat er in het ontwerp reeds opgenomen worden m.b.t. functionaliteit, bv. alle schermen moeten volgens de huisstijl opgebouwd zijn, verduidelijkingen van business rules en beslissingen. Wat is de algemene lay-out, welke automatische acties moeten er achter je knoppen/processen zitten?]*
 > - *[TIP ! Denk aan wireframes,mock-ups, toestandsdiagrammen, beslissingstabellen, activitydiagrammen.]*
 
-In onderstaande diagram is de abstracte architectuur van ons ontwerp te zien. Deze diagram toont onze luchtkwaliteitssensor als draadloos apparaat dat verbonden is met een *gateway* of toegangspunt. Uiteraard is het de bedoeling dat er meerdere verschillende luchtkwaliteitssensoren verbonden zijn met een gateway. De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal op zijn beurt de de informatie verwerken en op de juiste manier in onze *database* opslaan. Gebruikers kunnen het dashboard raadplegen met visualisaties van de gebeurde metingen. Het dashboard haalt deze gegevens rechtstreeks uit de database. 
+In onderstaande diagram is de abstracte architectuur van het toekomstige ontwerp te zien. Deze diagram toont de luchtkwaliteitssensor als draadloos apparaat dat verbonden is met een *gateway* of toegangspunt. Uiteraard is het de bedoeling dat er meerdere verschillende luchtkwaliteitssensoren verbonden zijn met een gateway. 
+
+De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal op zijn beurt de informatie verwerken en op de juiste manier in onze *database* opslaan. Gebruikers kunnen het dashboard raadplegen met visualisaties van de gebeurde metingen. Het dashboard haalt deze gegevens rechtstreeks uit de database. 
 
 <figure>
 <img src="./assets/AbstracteArchitectuur.svg" alt="Abstracte Architectuur"/>
@@ -401,14 +373,34 @@ In onderstaande diagram is de abstracte architectuur van ons ontwerp te zien. De
 > 
 > Hieronder kan je een voorbeeld vinden van elk diagram.
 
+## Samenvatting componenten
+
+- CCS81: Temperatuur, eCO2 en TVOC
+
+- SDS011: Fijnstof
+
+- BME280: Temperatuur, luchtdruk en luchtvochtigheid
+
+- Batterij: Voltage
+
+- MHZ19: CO²
+
+- RN483A-I/RM104: LoRa
+
+- SGP41-D-R4: NOx
+
+- ATSAMD21G18A-AUT: MCU
+
+- SparkFun microSD Transflash breakout: SD-kaart
+
 ### [Blokdiagram](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=blokdiagram)
 
 > In het blokdiagram deel je het hardware probleem op in grote delen en kan je zien hoe ze met elkaar gelinkt zijn.
 
 De data van de MCU wordt verstuurd via 3 protocollen: UART, I²C en SPI.
-Aangezien verschillende modules met dezelfde aansluitingen verbonden zijn, zullen we elke module een ander adres geven om te zorgen dat de data de juiste module bereikt.
+Aangezien verschillende modules met dezelfde aansluitingen verbonden zijn, zal elke module een ander adres krijgen om te zorgen dat de data de juiste module bereikt.
 
-De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onze componenten waardoor we 2 lineaire serie regelaars nodig hebben om het voltage te verlagen. We verlagen de 7.4V naar zowel 5V als 3.3V. We sturen vervolgens de verschillende voltages uit naar de juiste modules.
+De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onze componenten waardoor er 2 lineaire serie regelaars nodig zijn om het voltage te verlagen. Het verlaagt de 7.4V naar zowel 5V als 3.3V. Vervolgens worden de verschillende voltages naar de juiste modules uitgestuurd.
 
 <figure>
 <img src="./assets/BlokDiagram-TechnischDesign.svg" alt="Blokdiagram"/>
@@ -468,9 +460,9 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 | LoRA              | RN2483A-I/RM104                      | We gebruiken deze module om data van onze luchtkwaliteitssensor naar de online database te sturen over het LoRaWAN netwerk van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | MKL62BA                                         |
 | NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen.                                                                                              | Industrial Nitric Oxide (NO) Sensor             |
 
-### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema)
+#### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema)
 
-Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de derdejaars. De GPS module is weggehaald, de NOx sensor SGP41 is toegevoegd en de ESP32 MCU is vervangen door de ATSAMD21 die we zullen gebruiken.  
+Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de huidige toestand van het project. De GPS module is echter weggehaald, het OLED scherm is verwijdert, de NOx sensor SGP41 is toegevoegd en de ESP32 MCU is vervangen door de ATSAMD21 zal gebruikt worden.  
 
 <figure>
 <img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
@@ -498,15 +490,21 @@ Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de derd
 | SparkFun microSD Transflash breakout | LoraFormat data, data verstuur signaal                                                                                                                                                                                  | Data opgeslagen signaal                                                                                                            |
 | SGP41-D-R4                           | Wake-up Signaal, sleep signaal, data aanvraag                                                                                                                                                                           | NOx waarde                                                                                                                         |
 
-# 
+![DFD-STB](./assets/DataflowDiagram-SituationToBe.svg)
 
-### Flowchart
+Figuur 2 : Dataflow Diagram Situation-to-be
+
+### Flowcharts
 
 > Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
 
 #### Legende
 
+Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillende componenten te kunnen scheiden van elkaar. De hoofdprogramma gebruikt de functies van de componenten door elkaar waardoor het met deze legende makkelijker is om een inzicht te krijgen waar de data precies vandaan komt. Ook is dit handig om te bekijken in welke component het programma op elk specifiek moment aan het werk is. 
 
+<figure>
+<img src="./assets/FlowChart-Legende.svg" alt="Legende"/>
+</figure>
 
 #### ATSAMD21G18A-AUT
 
@@ -574,9 +572,19 @@ Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de derd
 > - *[TIP ! Gebruik een context DFD om te verduidelijken en zoek nog eens op wat een context DFD ook al weer is.]*
 > - Als er een grafische interface nodig, dienen hiervoor mock ups gemaakt worden, moeten nog geen kunstwerken zijn.
 
-Als dashboard om de meetgegevens van onze sensoren weer te geven maken we gebruik van Grafana. Grafana is een open source tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook onze NodeRED omgeving in draait kan ook Grafana hosten. 
+## Samenvatting componenten
 
-Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor onze soort gegevens zeker uitgebreid genoeg. De interface kan je al eens uittesten via [play.grafana.org](https://play.grafana.org/).
+- NodeRed: Opensource visuele tool voor het verbinden van hardware devices voor IoT.
+
+- Grafana: visueel voorstellen van gegevens in grafieken.
+
+- InfluxDB: database voor het opslaan van gegevens voor real-time applicaties in IoT.
+
+## De componenten in detail
+
+Als dashboard om de meetgegevens van onze sensoren weer te geven zal er gebruik worden gemaakt van Grafana. Grafana is een open source tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook de NodeRED omgeving in draait kan ook Grafana hosten. 
+
+Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwachte soort gegevens zeker uitgebreid genoeg. De interface kan uitgetest worden door op de volgende link te klikken: [play.grafana.org](https://play.grafana.org/).
 
 <figure>
 <img src="./assets/GrafanaDashboard1.png" alt="GrafanaDashboard1"/>
@@ -592,6 +600,13 @@ Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor onze soor
 <img src="./assets/GrafanaDashboard3.png" alt="GrafanaDashboard3"/>
 <figcaption >Figuur x: Grafana Dashboard 3</figcaption>
 </figure>
+
+## De interactie met de UI door de gebruiker
+
+![UseCaseSTB](./assets/UseCase-SituationToBe.svg)
+
+Figuur 3 : Use Case Situation-to-be
+
 
 # Beschrijving van eventuele datamigratie
 
