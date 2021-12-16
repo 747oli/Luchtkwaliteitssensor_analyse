@@ -504,64 +504,68 @@ Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de derd
 
 > Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
 
+#### Legende
+
+
+
 #### ATSAMD21G18A-AUT
 
 <figure>
 <img src="./assets/FlowChart-ATSAMD.svg" alt="Flow Chart ATSAMD"/>
-<figcaption >Figuur x: Flow Chart ATSAMD</figcaption>
 </figure>
 
 #### RN2483A-I/RM104
 
 <figure>
 <img src="./assets/FlowChart-RN2483.svg" alt="Flow Chart RN2483A-I/RM104"/>
-<figcaption >Figuur x: Flow Chart RN2483A-I/RM104</figcaption>
 </figure>
 
 #### Li-Po 2 Cell
 
 <figure>
 <img src="./assets/FlowChart-LiPO2Cell.svg" alt="Flow Chart Li-Po 2 Cell"/>
-<figcaption >Figuur x: Flow Chart  Li-Po 2 Cell</figcaption>
 </figure>
 
 #### CCS811
 
 <figure>
 <img src="./assets/FlowChart-CCS811.svg" alt="Flow Chart CCS811"/>
-<figcaption >Figuur x: Flow Chart CCS811</figcaption>
 </figure>
 
 #### SDS011
 
 <figure>
 <img src="./assets/FlowChart-SDS011.svg" alt="Flow Chart SDS011"/>
-<figcaption >Figuur x: Flow Chart SDS011</figcaption>
 </figure>
 
 #### BME280
 
 <figure>
 <img src="./assets/FlowChart-BME280.svg" alt="Flow Chart BME280"/>
-<figcaption >Figuur x: Flow Chart BME280</figcaption>
 </figure>
 
 #### MH-Z19
 
 <figure>
 <img src="./assets/FlowChart-MH-Z19.svg" alt="Flow Chart MH-Z19"/>
-<figcaption >Figuur x: Flow Chart MH-Z19</figcaption>
 </figure>
 
 #### SparkFun microSD Transflash breakout
 
+<figure>
+<img src="./assets/FlowChart-Sparky.svg" alt="Flow Chart Sparky"/>
+</figure>
+
 #### SGP41-D-R4
+
+<figure>
+<img src="./assets/FlowChart-SGP41-D-R4.svg" alt="Flow Chart SGP41-D-R4"/>
+</figure>
 
 #### Seed Generator
 
 <figure>
 <img src="./assets/FlowChart-SeedGenerator.svg" alt="Flow Chart Seed Generator"/>
-<figcaption >Figuur x: Flow Chart Seed Generator</figcaption>
 </figure>
 
 # Beschrijving van de mogelijke interfaces
