@@ -498,11 +498,7 @@ Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de derd
 | SparkFun microSD Transflash breakout | LoraFormat data, data verstuur signaal                                                                                                                                                                                  | Data opgeslagen signaal                                                                                                            |
 | SGP41-D-R4                           | Wake-up Signaal, sleep signaal, data aanvraag                                                                                                                                                                           | NOx waarde                                                                                                                         |
 
-### Statediagram
-
-Maak een statediagram van je voorgestelde oplossing. Alle menu’s en alle veranderingen met hun impact.  Hieronder vind je een voorbeeld:
-
-![State Diagram nRF24L01](https://luytsm.github.io/iot-cursus/img/state_diagram_advanced.png)
+# 
 
 ### Flowchart
 
