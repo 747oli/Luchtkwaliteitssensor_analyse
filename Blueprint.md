@@ -7,7 +7,7 @@
 <div>
     <div style="float:left">
         <p>
-            Begeleiders:
+Begeleiders:
         </p>
         <h4>
             Maarten Luyts
@@ -33,37 +33,42 @@
     </div>
 </div>
 
-Inhoudstafel
+
+<div style="page-break-after: always; break-after: page;"></div>
+<h2>Inhoudstafel</h2
 
 [TOC]
 
+
+<div style="page-break-after: always; break-after: page;"></div>
 # Versiebeheer
 
 > [Het versiebeheer laat alle versies van het document zien met de daarbij horende wijzigingen. Denk eraan dat tijdelijke versies een nummer 0.x meekrijgen en dat de eerste finale versie het volgnummer 1.00 moet krijgen. De verspreiding is altijd naar personen, geen bedrijven.
 > 
 > Vergeet deze en andere cursief gedrukte sjabloontekst niet te verwijderen voor de document versies ≥ 1.0]
 
-| Nr.  | Datum      | Verspreiding              | Status           | Wijziging                                                    |
-| ---- | ---------- | ------------------------- | ---------------- | ------------------------------------------------------------ |
-| 0.01 | 09/12/2021 | Prof. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design |
-|      |            |                           |                  |                                                              |
+| Nr.  | Datum      | Verspreiding            | Status           | Wijziging                                                    |
+| ---- | ---------- | ----------------------- | ---------------- | ------------------------------------------------------------ |
+| 0.01 | 09/12/2021 | Mr. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design |
+| 0.02 | 19/12/2021 | Mr. Patrick Van Houtven | Tweede verdeling | Feedback nr0.01 toegepast, bezig aan Planning, Infrastructuur en Documentatie |
 
 # Termen en Afkortingen
 
-| Term            | Omschrijving                                                                                                                                                                   |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| PoA             | Port of Antwerp; Haven van Antwerpen                                                                                                                                           |
-| MCU             | Microcontroller                                                                                                                                                                |
-| eCO<sub>2</sub> | CO<sub>2</sub>-eq koolstofdioxide equivalent om het gas te kunnen vergelijken met ander ebroeikasgassen, de omrekening is gebaseerd op het Global Warming Potential (GWP). [2] |
-| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht.                                                     |
-| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). [3]                                                                                      |
-| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU.                                                                                                               |
+| Term            | Omschrijving                                                 |
+| --------------- | ------------------------------------------------------------ |
+| PoA             | Port of Antwerp; Haven van Antwerpen                         |
+| MCU             | Microcontroller                                              |
+| eCO<sub>2</sub> | CO<sub>2</sub>-eq koolstofdioxide equivalent om het gas te kunnen vergelijken met ander ebroeikasgassen, de omrekening is gebaseerd op het Global Warming Potential (GWP). <sup>[2]</sup> |
+| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht. |
+| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). <sup>[3]</sup> |
+| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU. |
 
+<div style="page-break-after: always; break-after: page;"></div>
 # Opdrachtgever
 
 > *[De opdrachtgevers van het project en hun rol in het project. Meneer Luyts blijkbaar]*
 
-Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor heeft de Port of Antwerp een zeer grote interesse in de luchtkwaliteit in de haven. PoA verlangt ernaar om de luchtkwaliteit van de volledige haven in kaart te brengen. Dit zal gedaan worden door op een tiental locaties sensoren op te hangen. Er is een LoRaWAN beschikbaar waar de verschillende sensoren van gebruik moeten maken zodat ze op een zuinige manier hun sensordata kunnen doorgeven. 
+Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor heeft de Port of Antwerp een zeer grote interesse in de luchtkwaliteit in de haven. PoA verlangt ernaar om de luchtkwaliteit van de volledige haven in kaart te brengen. Dit zal gedaan worden door op een tiental locaties sensoren op te hangen. Via LoRaWAN zullen de verschillende sensoren op een zuinige en veilige manier hun sensordata kunnen doorgeven. 
 
 # Samenvatting
 
@@ -71,9 +76,9 @@ Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor h
 > 
 > Nog is opnieuw bekijken! Aanpassingen voorstellen
 
-De studenten van het 3de jaar elektronica-ICT bouwen momenteel een module om de luchtkwaliteit in de haven van Antwerpen te meten. Zij hebben verschillende sensoren gebruikt waarmee zij diverse luchtkwaliteitsparameters opslaan, verwerken en analyseren.
+Derden bouwen momenteel een module om de luchtkwaliteit in de straten van Antwerpen te meten. Zij hebben verschillende sensoren gebruikt waarmee zij diverse luchtkwaliteitsparameters opslaan, verwerken en analyseren.
 
-Wij zullen de efficiëntie, gebruiksvriendelijkheid en dataverwerkingscapaciteit verbeteren van deze module om op deze manier de huidige tekortkomingen weg te werken. 
+Dit project zal de efficiëntie, gebruiksvriendelijkheid en dataverwerkingscapaciteit verbeteren van de module om op deze manier de huidige tekortkomingen weg te werken. 
 
 Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
@@ -99,9 +104,9 @@ Buiten deze tekortkomingen zouden wij graag nog extra functionaliteiten toevoege
 
 # Probleemstelling
 
-De haven van Antwerpen vindt dat de sensor langdurig op batterij moet kunnen werken. Dit omdat de sensoren op locaties zullen hangen waar er geen stroomvoorziening voor handen is. Voorts is er een vraag gekomen om NOx'n te meten in de lucht om zo te kunnen onderzoeken of er schadelijke stoffen aanwezig zijn. 
+De haven van Antwerpen vindt dat de sensor langdurig op batterij moet kunnen werken. Dit omdat de sensoren op locaties zullen hangen waar er geen stroomvoorziening voor handen is. Voorts is er een vraag gekomen om NO<sub>X</sub> te meten in de lucht om zo te kunnen onderzoeken of er schadelijke stoffen aanwezig zijn. 
 
-Tenslotte is er de vereiste gekomen om de data op een andere manier te communiceren. In plaats van de huidige manier van het manueel vergaren van de data via een SD kaart moet deze draadloos doorgestuurd kunnen worden. Hierbij komende dat wifi of bluetooth zal hiervoor niet beschikbaar zijn door de locatie van de sensoren.
+Tenslotte is er de vereiste gekomen om de data op een andere manier te communiceren. In plaats van de huidige manier van het manueel vergaren van de data via een SD kaart moet deze draadloos doorgestuurd kunnen worden. Wi-Fi of Bluetooth zal niet beschikbaar op de locatie van de sensoren.
 
 # Situatie As-Is
 
@@ -109,7 +114,7 @@ Tenslotte is er de vereiste gekomen om de data op een andere manier te communice
 
 > *[TIP ! Dit kan m.b.v. diagrammen zoals activiteitsdiagrammen voor processen, BPMN, toestandsdiagrammen voor toestandsveranderingen, sequentiediagrammen… Kan ook blokdiagram zijn]*
 
-Momenteel is het project al redelijk ver gevorderd [1]. Het vorige doel was om een mobiele sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken, zijn positie weergeven op een kaart en in verbinding staan met een databank. De sensor moest beschikken over een communicatietechniek die weinig stroom verbruikt en een groot bereik heeft. De eerste prototypes zijn al afgeleverd en lijken te werken.
+Momenteel is het project al redelijk ver gevorderd<sup>[1]</sup>. Het vorige doel was om een mobiele sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken, zijn positie weergeven op een kaart en in verbinding staan met een databank. De sensor moest beschikken over een communicatietechniek die weinig stroom verbruikt en een groot bereik heeft. De eerste prototypes zijn al afgeleverd en lijken te werken.
 
 In figuur 1 is de mindmap van de huidige staat van de sensor te zien. Je kan zien dat de hardware en software vereisten al zijn ingevuld. De basis zal tijdens dit project grotendeels hetzelfde zijn. 
 
@@ -139,21 +144,22 @@ Wel is er bij de keuze van modules en sensoren wel rekening gehouden met met str
 | BME280                                           | Deze IC heeft een tal van metingen aan boord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  te integreren op een pcb.                                                                                                                                                                                                                                              |
 | MHZ19                                            | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig.                                                                                                                                                                                                                                                              |
 
-Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Echt zijn nog niet alle metingen accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
+Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Echter zijn nog niet alle metingen accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
 
+<div style="page-break-after: always; break-after: page;"></div>
 # Situatie To-Be
 
 > *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
 
 De functionele vereisten van de luchtkwaliteitssensor zijn sinds dit jaar aangepast. Daarom zullen er ook een aantal aspecten van de sensor moeten veranderen. 
 
-Terwijl er vorig jaar de noodzaak was om een mobiele sensor te hebben die in en rond Antwerpen de luchtkwaliteit kon meten, is dit nu niet meer het geval. Er is nu de vraag gekomen om sensoren te maken die hetzelfde meten maar een vaste plaats zullen krijgen en daar voor een lange periode op batterij moeten kunnen werken. 
+Terwijl er vorig jaar de noodzaak was om een mobiele sensor te hebben die in en rond Antwerpen de luchtkwaliteit kon meten, is dit nu niet meer het geval. De sensoren zullen een vaste plaats krijgen en daar voor een lange periode op batterij moeten kunnen werken. 
 
 Daarom zal de GPS module verwijderd worden aangezien het niet nodig is om live locatie informatie te krijgen. Dit zal voordelen opleveren op vlak van een verminderd stroomgebruik. 
 
 Voorts is het OLED display niet meer noodzakelijk door de draadloze communicatie dus zal ook die component verwijderd worden. Ook hierbij zal er een verminderd stroomverbruik zijn. 
 
-Hiernaast is er de eis gekomen om stikstofoxiden te meten. Hiervoor zullen wij een interne sensor voorzien die in onze huidige architectuur zal passen. 
+Hiernaast is er de eis gekomen om stikstofoxiden te meten. Hiervoor zal er een interne sensor voorzien worden die in onze huidige architectuur zal passen. 
 
 De communicatie via LoRaWAN is heden ook nog steeds een vereiste. 
 
@@ -222,11 +228,11 @@ Onderstaande figuur toont een mindmap van de huidige staat waarop de verandering
 
 #### Een zelf ontwikkeld dashboard
 
-De LORAPayload gaat door NodeRed in een database geplaatst worden. De Database wordt influx-DB. Vanuit deze data gaat Grafana de gegevens ophalen om de visualisaties te doen. Het dashboard zal qua design dus niet binnenshuis ontwikkeld worden.
+De LORAPayload gaat door Node-RED in een database geplaatst worden. De Database wordt InfluxDB. Vanuit deze data gaat Grafana de gegevens ophalen om de visualisaties te doen. Het dashboard zal qua design dus niet binnenshuis ontwikkeld worden.
 
 #### LoRaWAN netwerk opzetten
 
-Het LoRaWAN netwerk van de haven zal gebruikt worden om de data te communiceren naar de server. Het opzetten en onderhouden van het LoRaWAN netwerk ligt niet binnen de scope.
+De LoRaWAN van de haven zal gebruikt worden om de data te communiceren naar de server. Het opzetten en onderhouden van de LoRaWAN infrastructuur ligt niet binnen de scope.
 
 #### Onderhoud en updates vanaf 2023
 
@@ -250,7 +256,7 @@ Een stationaire sensor met behuizing voor buiten gebruik waarin onderstaande met
 
 - Stikstofoxiden
 
-Deze metingen worden via het LoRaWAN netwerk van de Antwerpse haven opgestuurd en weergegeven worden op een UI.
+Deze metingen worden via LoRaWAN van de Antwerpse haven opgestuurd en weergegeven op een UI.
 
 # Planning
 
@@ -275,9 +281,10 @@ Tijdens het project worden er 2 fases gehanteerd voor het maken van updates: de 
 De methodologie die voor het project zal gebruikt worden is agile. We zullen constant nieuwe updates doen bij elke module om de luchtkwaliteitssensor efficiënter en beter te maken. 
 
 <figure>
-<img src="./assets/2021-11-25-12-13-25-image.png" alt="Kaban Dashboard"/>
+<img src="./assets/GitKraken-KanbanDashboard.png" alt="Kaban Dashboard"/>
 <figcaption >Figuur x: Kaban Dashboard</figcaption>
 </figure>
+
 
 ## Hoofdlijnen
 
@@ -285,13 +292,13 @@ De methodologie die voor het project zal gebruikt worden is agile. We zullen con
 
 De planning werkt met wekelijkse of 2-wekelijkse deadlines. 
 
-Zoals reeds eerder gezegd wordt onze planning door het kaban board in GitKraken bij gehouden, onder "Detailplanning" kan u ons volledig tijdsschema terugvinden.
+Zoals reeds gezegd wordt onze planning door het kaban board in GitKraken bijgehouden, onder "Detailplanning" kan u ons volledig tijdsschema terugvinden.
 
 ## Epics
 
 > *[Indien de planning in fases of iteraties verloopt, bespreek dan kort hoe deze opgebouwd zijn.]*
 
-Zoals eerder gezegd zal er tijdens dit project met agile gewerkt worden. Hieronder volgt een korte beschrijving van de verschillende epics waarin het project zal onderverdeeld zijn.
+Bij dit project zal met agile gewerkt worden. Hieronder volgt een korte beschrijving van de verschillende epics waarin het project zal onderverdeeld zijn.
 
 #### Componenten onderzoeken, testen en documenteren
 
@@ -326,6 +333,7 @@ Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitget
 <figcaption >Figuur x: Kaban Timeline</figcaption>
 </figure>
 
+<div style="page-break-after: always; break-after: page;"></div>
 # Functioneel design
 
 > - [*Beschrijf hier wat er in het ontwerp reeds opgenomen worden m.b.t. functionaliteit, bv. alle schermen moeten volgens de huisstijl opgebouwd zijn, verduidelijkingen van business rules en beslissingen. Wat is de algemene lay-out, welke automatische acties moeten er achter je knoppen/processen zitten?]*
@@ -340,6 +348,7 @@ De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal 
 <figcaption >Figuur x: Abstracte Architectuur</figcaption>
 </figure>
 
+<div style="page-break-after: always; break-after: page;"></div>
 # Technisch design
 
 > - *[Geen code maar algemene **architectuur** (vb. Database-Firewall-Applicatieserver), gebruikte technologieën en configuratie]*
@@ -455,6 +464,7 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 | LoRA              | RN2483A-I/RM104                      | We gebruiken deze module om data van onze luchtkwaliteitssensor naar de online database te sturen over het LoRaWAN netwerk van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | [Winkel](https://be.farnell.com/microchip/rn2483a-i-rm104/transceiver-module-300kbps-870mhz/dp/2920841)<br/>[Datasheet](https://www.farnell.com/datasheets/2648020.pdf)<br/>[Datasheet-Commands](https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf)<br/>[Bibliotheek](https://github.com/axelelettronica/sme-RN2483-library) | MKL62BA                                         |
 | NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen. | [Winkel](https://www.soselectronic.com/products/sensirion/sgp41-sgp41-d-r4-359695)<br/>[Datasheet](https://cdn.sos.sk/productdata/3c/28/3146f64d/sgp41-sgp41-d-r4.pdf)<br/>[Bibliotheek](https://github.com/Sensirion/arduino-i2c-sgp41) | Industrial Nitric Oxide (NO) Sensor             |
 
+<div style="page-break-after: always; break-after: page;"></div>
 #### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema)
 
 Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de huidige toestand van het project. De GPS module is echter weggehaald, het OLED scherm is verwijdert, de NOx sensor SGP41 is toegevoegd en de ESP32 MCU is vervangen door de ATSAMD21 zal gebruikt worden.  
@@ -561,6 +571,7 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <img src="./assets/FlowChart-SeedGenerator.svg" alt="Flow Chart Seed Generator"/>
 </figure>
 
+<div style="page-break-after: always; break-after: page;"></div>
 # Beschrijving van de mogelijke interfaces
 
 > - *[Beschrijf de mogelijke interfaces van je project en hoe de communicatie gebeurt.]*
@@ -569,15 +580,15 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 
 ## Samenvatting componenten
 
-- NodeRed: Opensource visuele tool voor het verbinden van hardware devices voor IoT.
+- Node-RED: opensource visuele tool voor het verbinden van hardware devices voor IoT.
 
-- Grafana: visueel voorstellen van gegevens in grafieken.
+- Grafana: opensource dashboard voor visueel voorstellen van gegevens in grafieken.
 
-- InfluxDB: database voor het opslaan van gegevens voor real-time applicaties in IoT.
+- InfluxDB: opensource database voor het opslaan van gegevens voor real-time applicaties in IoT.
 
 ## De componenten in detail
 
-Als dashboard om de meetgegevens van onze sensoren weer te geven zal er gebruik worden gemaakt van Grafana. Grafana is een open source tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook de NodeRED omgeving in draait kan ook Grafana hosten. 
+Als dashboard om de meetgegevens van onze sensoren weer te geven zal er gebruik worden gemaakt van Grafana. Grafana is een opensource tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook de Node-RED omgeving in draait kan ook Grafana hosten. 
 
 Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwachte soort gegevens zeker uitgebreid genoeg. De interface kan uitgetest worden door op de volgende link te klikken: [play.grafana.org](https://play.grafana.org/).
 
@@ -596,6 +607,7 @@ Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwac
 <figcaption >Figuur x: Grafana Dashboard 3</figcaption>
 </figure>
 
+<div style="page-break-after: always; break-after: page;"></div>
 ## De interactie met de UI door de gebruiker
 
 ![UseCaseSTB](./assets/UseCase-SituationToBe.svg)
@@ -614,6 +626,7 @@ Figuur 3 : Use Case Situation-to-be
 > 
 > - *[TIP ! Gebruik component- of deploymentdiagram.]*
 
+<div style="page-break-after: always; break-after: page;"></div>
 # Analyse van security en eventuele autorisatierollen
 
 > - *[Beschrijf de methode en aanpak van de security. Als het om een extern systeem gaat, leg dan uit hoe zij het aanpakken. Kan het gehackt worden?]*
@@ -621,11 +634,11 @@ Figuur 3 : Use Case Situation-to-be
 > - *Privacy*
 > - *[Beschrijf de verschillende autorisatierollen en wat ze net kunnen in het systeem]*
 
-Beveiliging is uiterst belangrijk, daarom zal hier ook vanaf het begin rekening mee gehouden worden. De sensoren registreren geen privacy gevoelige gegevens maar er moet zeker voor gezorgd worden dat derden niet zomaar toegang kunnen krijgen tot het draadloze netwerk, de database, en het dashboard. De sensoren worden bij voorkeur op een hoogte bevestigd om toegang voor derden te bemoeilijken.
-Bij LoRaWAN staat beveiliging centraal[4]. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt over de verschillende apparaten.  
-Op de server draait NodeRED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. De server moet fysiek beveiligd zijn zodat niet zomaar iedereen aan het toestel kan. SSH verbindingen moeten lopen via persoonlijke SSH Sleutels, zo kunnen enkel rechthebbende aan de terminal interface. Stricte firewall regels zullen worden ingesteld.
-Voor alle andere wachtwoorden zoals deze van NodeRED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een (goed beveiligde) password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
-Een havenmdewerker, zoals omschreven in Figuur x, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen[5].
+Beveiliging is uiterst belangrijk, daarom zal hier ook vanaf het begin rekening mee gehouden worden. De sensoren registreren geen privacy gevoelige gegevens maar er moet zeker voor gezorgd worden dat derden niet zomaar toegang kunnen krijgen tot het draadloze netwerk, de database, en het dashboard. De sensoren worden bij voorkeur op een hoogte bevestigd om toegang door derden te bemoeilijken.
+Bij LoRaWAN staat beveiliging centraal<sup>[4]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt over de verschillende apparaten.
+Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. De server moet fysiek beveiligd zijn zodat niet zomaar iedereen aan het toestel kan. SSH verbindingen moeten geautoriseerd worden via persoonlijke SSH Sleutels, zo kunnen enkel rechthebbende aan de terminal interface. Strikte firewall regels zullen worden ingesteld.
+Voor alle andere wachtwoorden zoals deze van Node-RED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een (goed beveiligde) password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
+Een havenmdewerker, zoals omschreven in Figuur x, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
 Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie en kan de database aanpassen, nieuwe sensoren toevoegen en gebruikersaccounts beheren. 
 
 
@@ -635,6 +648,7 @@ Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie 
 > 
 > - *[Zal er documentatie voorzien worden als het project opgeleverd wordt, bv. handleidingen?]*
 
+<div style="page-break-after: always; break-after: page;"></div>
 # Bronvermelding
 
 > [Vermeld hier al je bronnen volgens de APA stijlgids (https://apastyle.apa.org/). Denk eraan dat elk brontype (website/rapport/wetenschappelijk artikel/hoofdstuk uit boek/…) zijn eigen stijl heeft. ]
