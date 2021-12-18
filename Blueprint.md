@@ -35,12 +35,14 @@ Begeleiders:
 
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 <h2>Inhoudstafel</h2
 
 [TOC]
 
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Versiebeheer
 
 > [Het versiebeheer laat alle versies van het document zien met de daarbij horende wijzigingen. Denk eraan dat tijdelijke versies een nummer 0.x meekrijgen en dat de eerste finale versie het volgnummer 1.00 moet krijgen. De verspreiding is altijd naar personen, geen bedrijven.
@@ -64,6 +66,7 @@ Begeleiders:
 | I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU. |
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Opdrachtgever
 
 > *[De opdrachtgevers van het project en hun rol in het project. Meneer Luyts blijkbaar]*
@@ -147,6 +150,7 @@ Wel is er bij de keuze van modules en sensoren wel rekening gehouden met met str
 Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Echter zijn nog niet alle metingen accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Situatie To-Be
 
 > *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
@@ -334,6 +338,7 @@ Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitget
 </figure>
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Functioneel design
 
 > - [*Beschrijf hier wat er in het ontwerp reeds opgenomen worden m.b.t. functionaliteit, bv. alle schermen moeten volgens de huisstijl opgebouwd zijn, verduidelijkingen van business rules en beslissingen. Wat is de algemene lay-out, welke automatische acties moeten er achter je knoppen/processen zitten?]*
@@ -349,13 +354,14 @@ De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal 
 </figure>
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Technisch design
 
 > - *[Geen code maar algemene **architectuur** (vb. Database-Firewall-Applicatieserver), gebruikte technologieën en configuratie]*
 > 
 > - *[TIP ! Denk aan klassediagrammen, sequentiediagrammen, beslissingstabellen, toestandsdiagrammen.]*
 
-## [**Smart Object (Hardware Analyse)**](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=smart-object-hardware-analyse)
+## Smart Object (Hardware Analyse)
 
 > IoT is een hardware project. De focus ligt op het ontwikkelen van een fysiek object.  Een Smart Object kan beschreven worden aan de hand van de 4 volgende criteria.
 > 
@@ -397,7 +403,7 @@ De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal 
 
 - SparkFun microSD Transflash breakout: SD-kaart
 
-### [Blokdiagram](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=blokdiagram)
+### Blokdiagram
 
 > In het blokdiagram deel je het hardware probleem op in grote delen en kan je zien hoe ze met elkaar gelinkt zijn.
 
@@ -411,7 +417,7 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 <figcaption >Figuur x: Blokdiagram</figcaption>
 </figure>
 
-### [Specificaties](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=specificaties)
+### Specificaties
 
 > Voor elke blok in het blokdiagram van een Smart Object stel je de specificaties en/of elektrische karakteristieken op. Deze worden in het volgende formaat meegeven in de analyse.
 
@@ -444,7 +450,7 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 |                                          | Stroomverbruik      | 34µA    | 3.2mA        | 4.6mA            |
 |                                          | Stroomlimiet        | -       | -            | 100mA            |
 
-### [Onderliggende ](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=onderliggende-argumentatie)argumentatie
+### Onderliggende argumentatie
 
 > Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze gebruikt wordt in de voorgestelde oplossing in de analyse. Geef ook mogelijke alternatieven. Geef deze informatie in het volgend formaat:
 
@@ -465,7 +471,8 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 | NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen. | [Winkel](https://www.soselectronic.com/products/sensirion/sgp41-sgp41-d-r4-359695)<br/>[Datasheet](https://cdn.sos.sk/productdata/3c/28/3146f64d/sgp41-sgp41-d-r4.pdf)<br/>[Bibliotheek](https://github.com/Sensirion/arduino-i2c-sgp41) | Industrial Nitric Oxide (NO) Sensor             |
 
 <div style="page-break-after: always; break-after: page;"></div>
-#### [Elektrisch schema](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=elektrisch-schema)
+
+#### Elektrisch schema
 
 Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de huidige toestand van het project. De GPS module is echter weggehaald, het OLED scherm is verwijdert, de NOx sensor SGP41 is toegevoegd en de ESP32 MCU is vervangen door de ATSAMD21 zal gebruikt worden.  
 
@@ -474,13 +481,13 @@ Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de huid
 <figcaption >Figuur x: Elektrisch schema</figcaption>
 </figure>
 
-## [**Smart Object (Software Analyse)**](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=smart-object-hardware-analyse)
+## Smart Object (Software Analyse)
 
 > Om software /datamigratie te analyseren is een top down methodologie aangeraden. Eerst moeten de datastromen vastgelegd worden.  Als bepaalt is welke data er in en uit een specifieke blok van het systeem komt, moet eveneens het formaat bepaald worden waarin dit gebeurt. Om dit succesvol te doen moet er ook rekening gehouden worden met de hardware restricties. Bv. JSON versturen over I²C met een Arduino is gedoemd om te falen.
 > 
 > Het aangeven van welke data eer specifiek in een bepaald blok ingaat of uitkomt geef je weer met volgend format:
 
-### [Data in / Out](https://luytsm.github.io/iot-cursus/#/deliverables/analyse?id=data-in-out)
+### Data in / Out
 
 | **Blok**                             | **Data In**                                                                                                                                                                                                             | Data Uit                                                                                                                           |
 | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -572,6 +579,7 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 </figure>
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Beschrijving van de mogelijke interfaces
 
 > - *[Beschrijf de mogelijke interfaces van je project en hoe de communicatie gebeurt.]*
@@ -608,6 +616,7 @@ Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwac
 </figure>
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 ## De interactie met de UI door de gebruiker
 
 ![UseCaseSTB](./assets/UseCase-SituationToBe.svg)
@@ -627,6 +636,7 @@ Figuur 3 : Use Case Situation-to-be
 > - *[TIP ! Gebruik component- of deploymentdiagram.]*
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Analyse van security en eventuele autorisatierollen
 
 > - *[Beschrijf de methode en aanpak van de security. Als het om een extern systeem gaat, leg dan uit hoe zij het aanpakken. Kan het gehackt worden?]*
@@ -649,6 +659,7 @@ Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie 
 > - *[Zal er documentatie voorzien worden als het project opgeleverd wordt, bv. handleidingen?]*
 
 <div style="page-break-after: always; break-after: page;"></div>
+
 # Bronvermelding
 
 > [Vermeld hier al je bronnen volgens de APA stijlgids (https://apastyle.apa.org/). Denk eraan dat elk brontype (website/rapport/wetenschappelijk artikel/hoofdstuk uit boek/…) zijn eigen stijl heeft. ]
