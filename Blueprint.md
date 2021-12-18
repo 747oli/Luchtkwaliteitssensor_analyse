@@ -474,12 +474,19 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 
 #### Elektrisch schema
 
-Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de huidige toestand van het project. De GPS module is echter weggehaald, het OLED scherm is verwijdert, de NOx sensor SGP41 is toegevoegd en de ESP32 MCU is vervangen door de ATSAMD21 zal gebruikt worden.  
+Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de huidige toestand van het project. De GPS module is echter weggehaald, het OLED scherm is verwijdert, de NOx sensor SGP41 en de MicroSD lezer is toegevoegd, de ESP32 MCU is vervangen door de ATSAMD21 die gebruikt zal worden.  
+
+Om energie te besparen worden er verschillende componenten uitgeschakeld via een mosfetschakeling. Zo kan de SGP41, ventilator, MHZ-Z19, CCS811 en de SD kaart uitgeschakeld worden.
+
+Rechts onderaan in het elektrisch schema is de programmer te zien, omdat de ATSAMD21 enkel de chip is hebben we de programmer nodig om ons in staat te stellen code naar de MCU te schrijven en een seriële verbinding te starten.
 
 <figure>
 <img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
 <figcaption >Figuur x: Elektrisch schema</figcaption>
 </figure>
+
+
+
 
 ## Smart Object (Software Analyse)
 
