@@ -194,7 +194,7 @@ Onderstaande figuur toont een mindmap van de huidige staat waarop de verandering
 
 #### Vereiste functionaliteiten luchtkwaliteitssensor
 
-- Op interval doorsturen van metingen naar een server via een LoRaWAN netwerk.
+- Op interval doorsturen van metingen naar een server via LoRaWAN.
 
 - Batterijduur van meer dan 1 maand.
 
@@ -234,7 +234,7 @@ Onderstaande figuur toont een mindmap van de huidige staat waarop de verandering
 
 De LORAPayload gaat door Node-RED in een database geplaatst worden. De Database wordt InfluxDB. Vanuit deze data gaat Grafana de gegevens ophalen om de visualisaties te doen. Het dashboard zal qua design dus niet binnenshuis ontwikkeld worden.
 
-#### LoRaWAN netwerk opzetten
+#### LoRaWAN infrastructuur opzetten
 
 De LoRaWAN van de haven zal gebruikt worden om de data te communiceren naar de server. Het opzetten en onderhouden van de LoRaWAN infrastructuur ligt niet binnen de scope.
 
@@ -467,7 +467,7 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor onz
 | eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811) | Adafruit SGP30                                  |
 | TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811) | Adafruit SGP30                                  |
 | Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/nova-sds011-hoge-precisie-laser-stofsensor)<br/>[Datasheet](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)<br/>[Bibliotheek](https://www.arduinolibraries.info/libraries/sds011-sensor-library) | PPD42NS                                         |
-| LoRA              | RN2483A-I/RM104                      | We gebruiken deze module om data van onze luchtkwaliteitssensor naar de online database te sturen over het LoRaWAN netwerk van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | [Winkel](https://be.farnell.com/microchip/rn2483a-i-rm104/transceiver-module-300kbps-870mhz/dp/2920841)<br/>[Datasheet](https://www.farnell.com/datasheets/2648020.pdf)<br/>[Datasheet-Commands](https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf)<br/>[Bibliotheek](https://github.com/axelelettronica/sme-RN2483-library) | MKL62BA                                         |
+| LoRa              | RN2483A-I/RM104                      | We gebruiken deze module om data van onze luchtkwaliteitssensor naar de online database te sturen over del LoRaWAN infrastructuur van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | [Winkel](https://be.farnell.com/microchip/rn2483a-i-rm104/transceiver-module-300kbps-870mhz/dp/2920841)<br/>[Datasheet](https://www.farnell.com/datasheets/2648020.pdf)<br/>[Datasheet-Commands](https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf)<br/>[Bibliotheek](https://github.com/axelelettronica/sme-RN2483-library) | MKL62BA                                         |
 | NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen. | [Winkel](https://www.soselectronic.com/products/sensirion/sgp41-sgp41-d-r4-359695)<br/>[Datasheet](https://cdn.sos.sk/productdata/3c/28/3146f64d/sgp41-sgp41-d-r4.pdf)<br/>[Bibliotheek](https://github.com/Sensirion/arduino-i2c-sgp41) | Industrial Nitric Oxide (NO) Sensor             |
 
 <div style="page-break-after: always; break-after: page;"></div>
