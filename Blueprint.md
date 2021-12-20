@@ -509,9 +509,14 @@ Rechts onderaan in het elektrisch schema is de programmer te zien, omdat de ATSA
 | SparkFun microSD Transflash breakout | LoraFormat data, data verstuur signaal                                                                                                                                                                                  | Data opgeslagen signaal                                                                                                            |
 | SGP41-D-R4                           | Wake-up Signaal, sleep signaal, data aanvraag                                                                                                                                                                           | NOx waarde                                                                                                                         |
 
-![DFD-STB](./assets/DataflowDiagram-SituationToBe.svg)
+<figure>
+<img src="./assets/DataflowDiagram-SituationToBe.svg" alt="DataFlow Diagram"/>
+</figure>
 
-Figuur 2 : Dataflow Diagram Situation-to-be
+<figure>
+<img src="./assets/DataflowDiagram_2-SituationToBe.svg" alt="DataFlow Diagram"/>
+<figcaption >Figuur x: Dataflow Diagram</figcaption>
+</figure>
 
 ### Flowcharts
 
