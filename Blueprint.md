@@ -43,10 +43,6 @@ Begeleiders:
 
 # Versiebeheer
 
-> [Het versiebeheer laat alle versies van het document zien met de daarbij horende wijzigingen. Denk eraan dat tijdelijke versies een nummer 0.x meekrijgen en dat de eerste finale versie het volgnummer 1.00 moet krijgen. De verspreiding is altijd naar personen, geen bedrijven.
-> 
-> Vergeet deze en andere cursief gedrukte sjabloontekst niet te verwijderen voor de document versies ≥ 1.0]
-
 | Nr.  | Datum      | Verspreiding            | Status           | Wijziging                                                                     |
 | ---- | ---------- | ----------------------- | ---------------- | ----------------------------------------------------------------------------- |
 | 0.01 | 09/12/2021 | Mr. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design                  |
@@ -67,15 +63,9 @@ Begeleiders:
 
 # Opdrachtgever
 
-> *[De opdrachtgevers van het project en hun rol in het project. Meneer Luyts blijkbaar]*
-
 Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor heeft de Port of Antwerp een zeer grote interesse in de luchtkwaliteit in de haven. PoA verlangt ernaar om de luchtkwaliteit van de volledige haven in kaart te brengen. Dit zal gedaan worden door op een tiental locaties sensoren op te hangen. Via LoRaWAN zullen de verschillende sensoren op een zuinige en veilige manier hun sensordata kunnen doorgeven. 
 
 # Samenvatting
-
->   *[Korte samenvatting van het project en context, 1 of 2 alinea’s]*
-> 
-> Nog is opnieuw bekijken! Aanpassingen voorstellen
 
 Derden bouwen momenteel een module om de luchtkwaliteit in de straten van Antwerpen te meten. Zij hebben verschillende sensoren gebruikt waarmee zij diverse luchtkwaliteitsparameters opslaan, verwerken en analyseren.
 
@@ -111,10 +101,6 @@ Tenslotte is er de vereiste gekomen om de data op een andere manier te communice
 
 # Situatie As-Is
 
-> *[De beschrijving van het huidig project of de huidige werkwijze en probleemstelling. Werkwijze kan ook manuele handelingen zijn. Wat bestaat er al en wat is de noodzaak tot de verandering]*
-
-> *[TIP ! Dit kan m.b.v. diagrammen zoals activiteitsdiagrammen voor processen, BPMN, toestandsdiagrammen voor toestandsveranderingen, sequentiediagrammen… Kan ook blokdiagram zijn]*
-
 Momenteel is het project al redelijk ver gevorderd<sup>[1]</sup>. Het vorige doel was om een mobiele sensor te maken zodat de studenten van chemie er metingen mee kunnen uitvoeren in en rondom Antwerpen. De module moet voor een langere tijd mobiel kunnen werken, zijn positie weergeven op een kaart en in verbinding staan met een databank. De sensor moest beschikken over een communicatietechniek die weinig stroom verbruikt en een groot bereik heeft. De eerste prototypes zijn al afgeleverd en lijken te werken.
 
 In figuur 1 is de mindmap van de huidige staat van de sensor te zien. Je kan zien dat de hardware en software vereisten al zijn ingevuld. De basis zal tijdens dit project grotendeels hetzelfde zijn. 
@@ -135,23 +121,21 @@ Er was destijds gekozen voor een ESP32-WROVER omdat deze beschikte over genoeg o
 
 Wel is er bij de keuze van modules en sensoren wel rekening gehouden met met stroomverbruik. De huidige sensoren en modules zijn in onderstaande tabel terug te vinden. 
 
-| Naam                                             | Argumentatie                                                                                                                                                                                                                                                                                                                                                                                             |
-| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GY-NEO6MV2                                       | De GPS module GY-NEO6MV2 is een zeer snelle, kleine en  compacte module om de locatie te bepalen. Het is makkelijk  implementeerbaar en makkelijk te coderen.                                                                                                                                                                                                                                            |
-| 0.96 inch OLED Display 128*64 pixels blauw - I2C | Een OLED display is populair om zijn compactheid en  scherpheid. Het is ondersteund door elke MCU en maakt gebruik van de 2  meest voorkomende spanningsniveaus (3.3V en 5V). Om pinnen te besparen, is het makkelijk dat we de OLED kunnen aansturen via I²C. Daarnaast is de grootte en plaats van de letters & tekens is  vrij te kiezen. Deze   functionaliteit hebben we niet bij een LCD.          |
-| RN2483A-I/RM104                                  | LoRa staat bekend om zijn low-power functionaliteiten en  zeer lange afstanden (10km en langer). Daarom gebruiken we deze module  om de data van al de sensoren naar de server te krijgen. Daarnaast is deze module simpel aan te sturen dankzij de ASCII  commando's via UART interface en ook bruikbaar bij 5V IC's zoals Arduino Nano en Uno.                                                         |
-| CCS811                                           | Een minder bekende sensor maar zeker wel bekend in IoT toepassingen. Het kan temperatuur, eCO² en eTVOC meten. Het heeft geen  opwarm tijd dus is direct bruikbaar en is ook een SMD component wat  zeker een voordeel is om het zo compact mogelijk te maken.                                                                                                                                           |
-| SDS011                                           | De SDS011 is een veel gebruikte fijnstof sensor voor  DIY-projecten. Het zal niet de nauwkeurigste zijn, maar het geeft toch  al een sterke indicatie van wat het fijnstof gehalte is in de lucht.  Daarnaast is het een goedkoop model. Het werkt met een ventilator die de lucht binnentrekt. Het zal  dus eerst moeten opgezet worden om de huidige lucht erin te trekken  vooraleer we kunnen meten. |
-| BME280                                           | Deze IC heeft een tal van metingen aan boord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  te integreren op een pcb.                                                                                                                                                                                                                                              |
-| MHZ19                                            | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig.                                                                                                                                                                                                                                                              |
+| Naam                                             | Argumentatie                                                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GY-NEO6MV2                                       | De GPS module GY-NEO6MV2 is een zeer snelle, kleine en  compacte module om de locatie te bepalen. Het is makkelijk  implementeerbaar en makkelijk te coderen.                                                                                                                                                                                                                                                  |
+| 0.96 inch OLED Display 128*64 pixels blauw - I2C | Een OLED display is populair om zijn compactheid en  scherpheid. Het is ondersteund door elke MCU en maakt gebruik van de 2  meest voorkomende spanningsniveaus (3.3V en 5V). Om pinnen te besparen, is het makkelijk dat de OLED kan aangestuurd worden via I²C. Daarnaast is de grootte en plaats van de letters & tekens is  vrij te kiezen. Deze   functionaliteit is er niet bij een LCD.                 |
+| RN2483A-I/RM104                                  | LoRa staat bekend om zijn low-power functionaliteiten en  zeer lange afstanden (10km en langer). Daarom wordt deze module gebruikt om de data van al de sensoren naar de server te krijgen. Daarnaast is deze module simpel aan te sturen dankzij de ASCII  commando's via UART interface en ook bruikbaar bij 5V IC's zoals Arduino Nano en Uno.                                                              |
+| CCS811                                           | Een minder bekende sensor maar zeker wel bekend in IoT toepassingen. Het kan temperatuur, eCO² en eTVOC meten. Het heeft geen  opwarm tijd dus is direct bruikbaar en is ook een SMD component wat  zeker een voordeel is om het zo compact mogelijk te maken.                                                                                                                                                 |
+| SDS011                                           | De SDS011 is een veel gebruikte fijnstof sensor voor  DIY-projecten. Het zal niet de nauwkeurigste zijn, maar het geeft toch  al een sterke indicatie van wat het fijnstof gehalte is in de lucht.  Daarnaast is het een goedkoop model. Het werkt met een ventilator die de lucht binnentrekt. Het zal  dus eerst moeten opgezet worden om de huidige lucht erin te trekken  vooraleer er gemeten kan worden. |
+| BME280                                           | Deze IC heeft een tal van metingen aan boord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  te integreren op een pcb.                                                                                                                                                                                                                                                    |
+| MHZ19                                            | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig.                                                                                                                                                                                                                                                                    |
 
 Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Echter zijn nog niet alle metingen accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
 # Situatie To-Be
-
-> *[Wat ga je juist maken? Indien je Agile werkt, kan je de Epics beschrijven, het Minimal Viable Product, … Leg duidelijk het verschil uit met de As-Is situatie door bv. het nieuwe proces uit te tekenen. Een activiteitsdiagram van To-Be kan beschrijven welk stuk er anders is dan in het activiteitsdiagram van de As-Is.]*
 
 De functionele vereisten van de luchtkwaliteitssensor zijn sinds dit jaar aangepast. Daarom zullen er ook een aantal aspecten van de sensor moeten veranderen. 
 
@@ -171,44 +155,40 @@ Onderstaande figuur toont een mindmap van de huidige staat waarop de verandering
 
 <figure>
 <img src="./assets/Mindmap.drawio.svg" alt="Mindmap"/>
-<figcaption >Figuur 1: Mindmap</figcaption>
+<figcaption >Figuur 1: Mindmap van te maken aanpassingen</figcaption>
 </figure>
 
 ## Projectdefinitie
 
 ### Doelstelling
 
-> *[Uitschrijven van de doelstellingen van het voorgestelde project]*
+De doelstelling van het project is om de bestaande luchtkwaliteitssensor uit te breiden en te verbeteren waardoor het de luchtkwaliteit kan opmeten in de haven van Antwerpen voor een lange periode. 
+
+Vervolgens zal deze data op een intuïtieve manier voorgesteld worden op een online dashboard die de bevoegde personen kunnen bekijken. 
+
+Hierdoor kunnen zij tot nieuwe inlichtingen komen om de de luchtkwaliteit te verbeteren.
 
 ### Scope
 
-> - *[Opsommen van de functionaliteit en onderdelen dit bij het uitvoeren van het project horen. Probeer dit zo sluitend mogelijk te doen, dit voorkomt discussies.]*
-> 
-> - *Maak assumpties indien nodig.*
-> 
-> - *[TIP ! Gebruik use case diagram en use case scenario’s]*
-> 
-> - Geef mee waaraan het aan moet voldoen en niet het component exact
-
 #### Vereiste functionaliteiten luchtkwaliteitssensor
 
-- Op interval doorsturen van metingen naar een server via LoRaWAN.
+- Het op interval doorsturen van metingen naar een server via LoRaWAN.
 
-- Batterijduur van meer dan 1 maand.
+- Een batterijduur van meer dan 1 maand.
 
-- Externe temperatuur meten.
+- Externe temperatuur meten (-15°C tot 50°C).
 
-- Externe CO² waardes meten.
+- Externe CO² waardes meten (0-5000ppm).
 
-- Externe TVOC waardes meten.
+- Externe TVOC waardes meten (0-1000ppb).
 
-- Externe fijnstof waardes meten.
+- Externe fijnstof waardes meten (0-999.9 µgram/m²).
 
-- Externe luchtdruk waardes meten.
+- Externe luchtdruk waardes meten (900-1087hPA).
 
-- Externe luchtvochtigheid waardes meten.
+- Externe luchtvochtigheid waardes meten (0-100RH%).
 
-- Externe stikstofoxiden waardes meten.
+- Externe stikstofoxiden waardes meten (150-300ppb).
 
 - Het intern batterij voltage weergeven.
 
@@ -225,8 +205,6 @@ Onderstaande figuur toont een mindmap van de huidige staat waarop de verandering
 - De positie weergeven van de sensor op een kaart op het dashboard (zonder live data van de locatie).
 
 ### Niet in Scope
-
-> *[Expliciet vernoemen wat niet tot de draagwijdte (scope) van het project hoort, bv. het aanleveren van onderdelen,  opleiding, maintenance, onderhoud van servers, … Wat gaan we niet realiseren.
 
 #### Een zelf ontwikkeld dashboard
 
@@ -262,8 +240,6 @@ Deze metingen worden via LoRaWAN van de Antwerpse haven opgestuurd en weergegeve
 
 # Planning
 
-> *[Agile of Waterfall? Scrum of Kanban?* *Wekelijkse sprints of per maand? Hoe omgaan met stories die niet goedgekeurd zijn op demo? Welke tools om alles op te volgen? We hebben nog 6 weken ofzo. Gaat over de analyse. Kaban zit in github]*
-
 Er zal een kaban board in GitKraken gebruikt worden om de planning bij te houden. Dit board is ook gesynchroniseerd met "GitHub issues" waardoor men een beter overzicht zal krijgen van de afgewerkte en nog af te werken onderdelen.
 
 In het kaban board zijn de mogelijke statussen van de individuele delen zichtbaar als kolommen om elk deel apart te kunnen opvolgen.  De mogelijkheden zijn de volgende:
@@ -289,15 +265,11 @@ De methodologie die voor het project zal gebruikt worden is agile. Er zullen con
 
 ## Hoofdlijnen
 
-> *[Korte beschrijving van de planning met de grootste deadlines.]*
-
 De planning werkt met wekelijkse of 2-wekelijkse deadlines. 
 
 Zoals reeds gezegd wordt de planning door het kaban board in GitKraken bijgehouden, onder "Detailplanning" kan u het volledige tijdsschema terugvinden.
 
 ## Epics
-
-> *[Indien de planning in fases of iteraties verloopt, bespreek dan kort hoe deze opgebouwd zijn.]*
 
 Bij dit project zal met agile gewerkt worden. Hieronder volgt een korte beschrijving van de verschillende epics waarin het project zal onderverdeeld zijn.
 
@@ -338,9 +310,6 @@ Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitget
 
 # Functioneel design
 
-> - [*Beschrijf hier wat er in het ontwerp reeds opgenomen worden m.b.t. functionaliteit, bv. alle schermen moeten volgens de huisstijl opgebouwd zijn, verduidelijkingen van business rules en beslissingen. Wat is de algemene lay-out, welke automatische acties moeten er achter je knoppen/processen zitten?]*
-> - *[TIP ! Denk aan wireframes,mock-ups, toestandsdiagrammen, beslissingstabellen, activitydiagrammen.]*
-
 In onderstaande diagram is de abstracte architectuur van het toekomstige ontwerp te zien. Deze diagram toont de luchtkwaliteitssensor als draadloos apparaat dat verbonden is met een *gateway* of toegangspunt. Uiteraard is het de bedoeling dat er meerdere verschillende luchtkwaliteitssensoren verbonden zijn met een gateway. 
 
 De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal op zijn beurt de informatie verwerken en op de juiste manier de *database* opslaan. Gebruikers kunnen het dashboard raadplegen met visualisaties van de gebeurde metingen. Het dashboard haalt deze gegevens rechtstreeks uit de database. 
@@ -354,33 +323,9 @@ De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal 
 
 # Technisch design
 
-> - *[Geen code maar algemene **architectuur** (vb. Database-Firewall-Applicatieserver), gebruikte technologieën en configuratie]*
-> 
-> - *[TIP ! Denk aan klassediagrammen, sequentiediagrammen, beslissingstabellen, toestandsdiagrammen.]*
-
 ## Smart Object (Hardware Analyse)
 
-> IoT is een hardware project. De focus ligt op het ontwikkelen van een fysiek object.  Een Smart Object kan beschreven worden aan de hand van de 4 volgende criteria.
-> 
-> 1. Monitoring
-> 2. Controle
-> 3. Optimalisatie
-> 4. Autonomie
-> 
-> De criteria zijn geordend volgens stijgende complexiteit. Monitoring is eenvoudiger dan een object volledig autonoom te maken. Hierdoor kan je de criteria ook gebruiken als leidraad doorheen het iteratief proces dat we gebruiken in IoT. Als je prototype ontwikkelt zorg er eerst voor dat het al data kan verzamelen vooraleer dat het volledig autonoom is.
-> 
-> Aan de hand van bovenstaand criteria wordt er een of meerdere Smart Objects gedefinieerd die een oplossing biedt voor de probleemstelling in het project.
-> 
-> Beschrijf in dit deel de nodige Smart Objects voor jullie project. Naast de beschrijving voorzie ook het volgende:
-> 
-> - Blokdiagram
-> - Specificaties
-> - Argumentatie
-> - Elektrisch schema
-> 
-> Hieronder kan je een voorbeeld vinden van elk diagram.
-
-## Samenvatting componenten
+### Samenvatting componenten
 
 - CCS81: Temperatuur, eCO2 en TVOC
 
@@ -402,8 +347,6 @@ De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal 
 
 ### Blokdiagram
 
-> In het blokdiagram deel je het hardware probleem op in grote delen en kan je zien hoe ze met elkaar gelinkt zijn.
-
 De data van de MCU wordt verstuurd via 3 protocollen: UART, I²C en SPI.
 Aangezien verschillende modules met dezelfde aansluitingen verbonden zijn, zal elke module een ander adres krijgen om te zorgen dat de data de juiste module bereikt.
 
@@ -415,8 +358,6 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 </figure>
 
 ### Specificaties
-
-> Voor elke blok in het blokdiagram van een Smart Object stel je de specificaties en/of elektrische karakteristieken op. Deze worden in het volgende formaat meegeven in de analyse.
 
 | **Blok**                                 | **Specificatie**    | **Min** | **Nominaal** | **Max**          |
 | ---------------------------------------- | ------------------- | ------- | ------------ | ---------------- |
@@ -449,8 +390,6 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 
 ### Onderliggende argumentatie
 
-> Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze gebruikt wordt in de voorgestelde oplossing in de analyse. Geef ook mogelijke alternatieven. Geef deze informatie in het volgend formaat:
-
 | **Blok**          | Component                            | **Argumentatie**                                                                                                                                                                                                                                                        | Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | **Alternatieven**                               |
 | ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | CPU               | ATSAMD21G18A-AUT                     | De grootste troef van de SAMD21 is dat het een zeer zuinige chip is. De SAMD21 verbruikt maximaal 6.32mA, de ESP32 daarentegen kan tot wel 500mA verbruiken. De MCU is krachtig en heeft zeer veel I/O pinnen. De bootloader moeten initieel zelf nog gebrand worden.   | [Winkel](https://www.mouser.be/ProductDetail/Microchip-Technology-Atmel/ATSAMD21G18A-AUT?qs=KLFHFgXTQiBkLYobE%2Fq9Qw==&gclid=CjwKCAiAh_GNBhAHEiwAjOh3ZHG8WOdRiM5K4oojQNa1EaOKMm-MsoXjzRuqgLk8DAMAHz1NB0ujaBoCesEQAvD_BwE)<br>[Datasheet](https://www.mouser.be/datasheet/2/268/SAM_D21_DA1_Family_Data_Sheet_DS40001882H-2580554.pdf)                                                                                                                                                                                                                                                                                                                           | ESP32 WROVER                                    |
@@ -469,13 +408,13 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-#### Elektrisch schema
+### Elektrisch schema
 
 Onderstaand elektrisch schema is grotendeels gebaseerd op het schema van de huidige toestand van het project. De GPS module is echter weggehaald, het OLED scherm is verwijdert, de NOx sensor SGP41 en de MicroSD lezer is toegevoegd, de ESP32 MCU is vervangen door de ATSAMD21 die gebruikt zal worden.  
 
-Om energie te besparen worden er verschillende componenten uitgeschakeld via een mosfetschakeling. Zo kan de SGP41, ventilator, MHZ-Z19, CCS811 en de SD kaart uitgeschakeld worden.
+Om energie te besparen worden er verschillende componenten uitgeschakeld via een mosfet schakeling. Zo kan de SGP41, MHZ-Z19, CCS811 en de SD kaart uitgeschakeld worden.
 
-Rechts onderaan in het elektrisch schema is de programmer te zien, omdat de ATSAMD21 enkel de chip is hebben we de programmer nodig om ons in staat te stellen code naar de MCU te schrijven en een seriële verbinding te starten.
+Rechts onderaan in het elektrisch schema is de programmer te zien. Omdat de ATSAMD21 enkel maar de chip is, is er een programmer nodig om ons in staat te stellen code naar de MCU te schrijven en een seriële verbinding te starten.
 
 <figure>
 <img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
@@ -483,10 +422,6 @@ Rechts onderaan in het elektrisch schema is de programmer te zien, omdat de ATSA
 </figure>
 
 ## Smart Object (Software Analyse)
-
-> Om software /datamigratie te analyseren is een top down methodologie aangeraden. Eerst moeten de datastromen vastgelegd worden.  Als bepaalt is welke data er in en uit een specifieke blok van het systeem komt, moet eveneens het formaat bepaald worden waarin dit gebeurt. Om dit succesvol te doen moet er ook rekening gehouden worden met de hardware restricties. Bv. JSON versturen over I²C met een Arduino is gedoemd om te falen.
-> 
-> Het aangeven van welke data eer specifiek in een bepaald blok ingaat of uitkomt geef je weer met volgend format:
 
 ### Data in / Out
 
@@ -513,8 +448,6 @@ Rechts onderaan in het elektrisch schema is de programmer te zien, omdat de ATSA
 </figure>
 
 ### Flowcharts
-
-> Het wisselen van de verschillende states beschrijf je best in flowchart. Maak voor elke transistion een flowchart.
 
 #### Legende
 
@@ -624,10 +557,6 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 
 # Beschrijving van de mogelijke interfaces
 
-> - *[Beschrijf de mogelijke interfaces van je project en hoe de communicatie gebeurt.]*
-> - *[TIP ! Gebruik een context DFD om te verduidelijken en zoek nog eens op wat een context DFD ook al weer is.]*
-> - Als er een grafische interface nodig, dienen hiervoor mock ups gemaakt worden, moeten nog geen kunstwerken zijn.
-
 ## Samenvatting componenten
 
 - Node-RED: opensource visuele tool voor het verbinden van hardware devices voor IoT.
@@ -667,43 +596,37 @@ Figuur 3 : Use Case Situation-to-be
 
 # Beschrijving van eventuele datamigratie
 
-> - *[Beschrijf de aanpak van de datamigratie en hoe de scripts opgebouwd zijn.]*
-> 
-> - *[TIP ! Je kan hiervoor ERD gebruiken, activiteitsdiagrammen.]*
+Aangezien de data die tot heden verzameld is, tijdens vorige projectfases, geen enkele connectie heeft met de haven van Antwerpen, zal er geen datamigratie aan te pas komen. Deze data zal volledig verwijderd worden voor de implementatie van dit project.
 
 # Beschrijving van eventuele impact op de huidige infrastructuur
 
-> - *[Beschrijf de impact op de infrastructuur. Dienen er servers aangekocht te worden,geherinstalleerd, of gewijzigd te worden? Worden er andere systemen in het landschap voorzien of verwijderd?]*
-> 
-> - *[TIP ! Gebruik component- of deploymentdiagram.]*
+De implementatie van het project zal volgende impact hebben:
+
+- Een online database moet aangemaakt worden om data op te slaan.
+
+- Er moet een connectie komen de LoRaWAN gateway en de database.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
 # Analyse van security en eventuele autorisatierollen
 
-> - *[Beschrijf de methode en aanpak van de security. Als het om een extern systeem gaat, leg dan uit hoe zij het aanpakken. Kan het gehackt worden?]*
-> - *BCP*
-> - *Privacy*
-> - *[Beschrijf de verschillende autorisatierollen en wat ze net kunnen in het systeem]*
-
 Beveiliging is uiterst belangrijk, daarom zal hier ook vanaf het begin rekening mee gehouden worden. De sensoren registreren geen privacy gevoelige gegevens maar er moet zeker voor gezorgd worden dat derden niet zomaar toegang kunnen krijgen tot het draadloze netwerk, de database, en het dashboard. De sensoren worden bij voorkeur op een hoogte bevestigd om toegang door derden te bemoeilijken.
-Bij LoRaWAN staat beveiliging centraal<sup>[4]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt over de verschillende apparaten.
-Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. De server moet fysiek beveiligd zijn zodat niet zomaar iedereen aan het toestel kan. SSH verbindingen moeten geautoriseerd worden via persoonlijke SSH Sleutels, zo kunnen enkel rechthebbende aan de terminal interface. Strikte firewall regels zullen worden ingesteld.
-Voor alle andere wachtwoorden zoals deze van Node-RED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een (goed beveiligde) password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
-Een havenmdewerker, zoals omschreven in Figuur x, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
+
+Bij LoRaWAN staat beveiliging centraal<sup>[4]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt worden over de verschillende apparaten. Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. De server zal hierdoor fysiek beveiligd zijn zodat niet zomaar iedereen aan het toestel kan. SSH verbindingen moeten geautoriseerd worden via persoonlijke SSH Sleutels. Zo kunnen enkel rechthebbende aan de terminal interface. Strikte firewall regels zullen worden ingesteld. Voor alle andere wachtwoorden zoals deze van Node-RED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een (goed beveiligde) password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
+
+Een havenmedewerker, zoals omschreven in Figuur x, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
+
 Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie en kan de database aanpassen, nieuwe sensoren toevoegen en gebruikersaccounts beheren. 
 
 # Documentatie
 
-> - *[Hoe wordt documentatie in de code voorzien?]*
-> 
-> - *[Zal er documentatie voorzien worden als het project opgeleverd wordt, bv. handleidingen?]*
+Er zal van het project een GitHub repository bestaan waar er documentatie op te vinden zal zijn van het project. Dit gaat vooral over de algemene structuur van het project en de individuele componenten.
+
+Een user manual zal niet geschreven worden van het project
 
 <div style="page-break-after: always; break-after: page;"></div>
 
 # Bronvermelding
-
-> [Vermeld hier al je bronnen volgens de APA stijlgids (https://apastyle.apa.org/). Denk eraan dat elk brontype (website/rapport/wetenschappelijk artikel/hoofdstuk uit boek/…) zijn eigen stijl heeft. ]
 
 | Nummer | APA-brondvermelding                                                                                                                                                                                             |
 | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
