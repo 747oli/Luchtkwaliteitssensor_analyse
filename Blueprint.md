@@ -33,13 +33,11 @@ Begeleiders:
     </div>
 </div>
 
-
 <div style="page-break-after: always; break-after: page;"></div>
 
 <h2>Inhoudstafel</h2
 
 [TOC]
-
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -49,21 +47,21 @@ Begeleiders:
 > 
 > Vergeet deze en andere cursief gedrukte sjabloontekst niet te verwijderen voor de document versies ≥ 1.0]
 
-| Nr.  | Datum      | Verspreiding            | Status           | Wijziging                                                    |
-| ---- | ---------- | ----------------------- | ---------------- | ------------------------------------------------------------ |
-| 0.01 | 09/12/2021 | Mr. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design |
+| Nr.  | Datum      | Verspreiding            | Status           | Wijziging                                                                     |
+| ---- | ---------- | ----------------------- | ---------------- | ----------------------------------------------------------------------------- |
+| 0.01 | 09/12/2021 | Mr. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design                  |
 | 0.02 | 19/12/2021 | Mr. Patrick Van Houtven | Tweede verdeling | Feedback nr0.01 toegepast, bezig aan Planning, Infrastructuur en Documentatie |
 
 # Termen en Afkortingen
 
-| Term            | Omschrijving                                                 |
-| --------------- | ------------------------------------------------------------ |
-| PoA             | Port of Antwerp; Haven van Antwerpen                         |
-| MCU             | Microcontroller                                              |
+| Term            | Omschrijving                                                                                                                                                                              |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| PoA             | Port of Antwerp; Haven van Antwerpen                                                                                                                                                      |
+| MCU             | Microcontroller                                                                                                                                                                           |
 | eCO<sub>2</sub> | CO<sub>2</sub>-eq koolstofdioxide equivalent om het gas te kunnen vergelijken met ander ebroeikasgassen, de omrekening is gebaseerd op het Global Warming Potential (GWP). <sup>[2]</sup> |
-| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht. |
-| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). <sup>[3]</sup> |
-| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU. |
+| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht.                                                                |
+| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). <sup>[3]</sup>                                                                                      |
+| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU.                                                                                                                          |
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -137,15 +135,15 @@ Er was destijds gekozen voor een ESP32-WROVER omdat deze beschikte over genoeg o
 
 Wel is er bij de keuze van modules en sensoren wel rekening gehouden met met stroomverbruik. De huidige sensoren en modules zijn in onderstaande tabel terug te vinden. 
 
-| Naam                                             | Argumentatie                                                 |
-| ------------------------------------------------ | ------------------------------------------------------------ |
-| GY-NEO6MV2                                       | De GPS module GY-NEO6MV2 is een zeer snelle, kleine en  compacte module om de locatie te bepalen. Het is makkelijk  implementeerbaar en makkelijk te coderen. |
-| 0.96 inch OLED Display 128*64 pixels blauw - I2C | Een OLED display is populair om zijn compactheid en  scherpheid. Het is ondersteund door elke MCU en maakt gebruik van de 2  meest voorkomende spanningsniveaus (3.3V en 5V). Om pinnen te besparen, is het makkelijk dat we de OLED kunnen aansturen via I²C. Daarnaast is de grootte en plaats van de letters & tekens is  vrij te kiezen. Deze   functionaliteit hebben we niet bij een LCD. |
-| RN2483A-I/RM104                                  | LoRa staat bekend om zijn low-power functionaliteiten en  zeer lange afstanden (10km en langer). Daarom gebruiken we deze module  om de data van al de sensoren naar de server te krijgen. Daarnaast is deze module simpel aan te sturen dankzij de ASCII  commando's via UART interface en ook bruikbaar bij 5V IC's zoals Arduino Nano en Uno. |
-| CCS811                                           | Een minder bekende sensor maar zeker wel bekend in IoT toepassingen. Het kan temperatuur, eCO² en eTVOC meten. Het heeft geen  opwarm tijd dus is direct bruikbaar en is ook een SMD component wat  zeker een voordeel is om het zo compact mogelijk te maken. |
+| Naam                                             | Argumentatie                                                                                                                                                                                                                                                                                                                                                                                             |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GY-NEO6MV2                                       | De GPS module GY-NEO6MV2 is een zeer snelle, kleine en  compacte module om de locatie te bepalen. Het is makkelijk  implementeerbaar en makkelijk te coderen.                                                                                                                                                                                                                                            |
+| 0.96 inch OLED Display 128*64 pixels blauw - I2C | Een OLED display is populair om zijn compactheid en  scherpheid. Het is ondersteund door elke MCU en maakt gebruik van de 2  meest voorkomende spanningsniveaus (3.3V en 5V). Om pinnen te besparen, is het makkelijk dat we de OLED kunnen aansturen via I²C. Daarnaast is de grootte en plaats van de letters & tekens is  vrij te kiezen. Deze   functionaliteit hebben we niet bij een LCD.          |
+| RN2483A-I/RM104                                  | LoRa staat bekend om zijn low-power functionaliteiten en  zeer lange afstanden (10km en langer). Daarom gebruiken we deze module  om de data van al de sensoren naar de server te krijgen. Daarnaast is deze module simpel aan te sturen dankzij de ASCII  commando's via UART interface en ook bruikbaar bij 5V IC's zoals Arduino Nano en Uno.                                                         |
+| CCS811                                           | Een minder bekende sensor maar zeker wel bekend in IoT toepassingen. Het kan temperatuur, eCO² en eTVOC meten. Het heeft geen  opwarm tijd dus is direct bruikbaar en is ook een SMD component wat  zeker een voordeel is om het zo compact mogelijk te maken.                                                                                                                                           |
 | SDS011                                           | De SDS011 is een veel gebruikte fijnstof sensor voor  DIY-projecten. Het zal niet de nauwkeurigste zijn, maar het geeft toch  al een sterke indicatie van wat het fijnstof gehalte is in de lucht.  Daarnaast is het een goedkoop model. Het werkt met een ventilator die de lucht binnentrekt. Het zal  dus eerst moeten opgezet worden om de huidige lucht erin te trekken  vooraleer we kunnen meten. |
-| BME280                                           | Deze IC heeft een tal van metingen aan boord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  te integreren op een pcb. |
-| MHZ19                                            | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig. |
+| BME280                                           | Deze IC heeft een tal van metingen aan boord (temperatuur,  luchtvochtigheid en druk) en het is een SMD component, dus makkelijk  te integreren op een pcb.                                                                                                                                                                                                                                              |
+| MHZ19                                            | Het is een sensor dat enkel en alleen is ontworpen om CO² te meten. Het zal dus zeer nauwkeurig zijn. Enkel heeft het een opwarmtijd nodig.                                                                                                                                                                                                                                                              |
 
 Momenteel worden volgende metingen gedaan: temperatuur, CO², eCO², eTVOC, fijnstof, luchtdruk, luchtvochtigheid. Echter zijn nog niet alle metingen accuraat genoeg, zo meet de temperatuursensor te hoge waardes omdat de microcontroller warmte ontwikkelt. Het toestel beschikt over een GPS module en een OLED scherm.
 
@@ -288,7 +286,6 @@ De methodologie die voor het project zal gebruikt worden is agile. Er zullen con
 <img src="./assets/GitKraken-KanbanDashboard.png" alt="Kaban Dashboard"/>
 <figcaption >Figuur x: Kaban Dashboard</figcaption>
 </figure>
-
 
 ## Hoofdlijnen
 
@@ -454,21 +451,21 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 
 > Voor elk blok van het blokdiagram moet je ook een argumentatie geven waarom deze gebruikt wordt in de voorgestelde oplossing in de analyse. Geef ook mogelijke alternatieven. Geef deze informatie in het volgend formaat:
 
-| **Blok**          | Component                            | **Argumentatie**                                             | Links                                                        | **Alternatieven**                               |
-| ----------------- | ------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ----------------------------------------------- |
-| CPU               | ATSAMD21G18A-AUT                     | De grootste troef van de SAMD21 is dat het een zeer zuinige chip is. De SAMD21 verbruikt maximaal 6.32mA, de ESP32 daarentegen kan tot wel 500mA verbruiken. De MCU is krachtig en heeft zeer veel I/O pinnen. De bootloader moeten initieel zelf nog gebrand worden. | [Winkel](https://www.mouser.be/ProductDetail/Microchip-Technology-Atmel/ATSAMD21G18A-AUT?qs=KLFHFgXTQiBkLYobE%2Fq9Qw==&gclid=CjwKCAiAh_GNBhAHEiwAjOh3ZHG8WOdRiM5K4oojQNa1EaOKMm-MsoXjzRuqgLk8DAMAHz1NB0ujaBoCesEQAvD_BwE)<br>[Datasheet](https://www.mouser.be/datasheet/2/268/SAM_D21_DA1_Family_Data_Sheet_DS40001882H-2580554.pdf) | ESP32 WROVER                                    |
-| Batterij          | Li-Po 2 Cell                         | De Li-Po batterij heeft een goede capaciteit en zeer lange levensspan. Voorts is haar relatief gewicht laag t.o.v. haar volume. Ze is veel flexibeler dan een lithium-ion batterij. | [Winkel](https://www.conrad.be/p/conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60-1344133?WT.srch=1&gclid=CjwKCAiAh_GNBhAHEiwAjOh3ZODyQpj1PCOdHiGXfnYxeG0l__VZOiLFqiP5MSZwps0pyi__jmN_WhoC9LsQAvD_BwE&gclsrc=aw.ds&insert=8J&t=1&tid=13894944235_122657379817_pla-301443522443_pla-1344133&utm_campaign=shopping-feed&utm_content=free-google-shopping-clicks&utm_medium=surfaces&utm_source=google&utm_term=1344133&vat=true)<br/>[Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001344133SD01/veiligheidsvoorschriften-1344133-conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60.pdf) | Lithium-ion batterij                            |
-| Voltage converter | LD1117                               | De LD1117 heeft het exacte bereik dat nodig is. De spanning van de 7.4V batterij zal naar 3.3V en 5V geconverteerd worden. | [Winkel](https://www.conrad.be/p/stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a-1184973?searchTerm=LD1117&searchType=suggest&searchSuggest=product)<br/>[Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001184973DS01/datablad-1184973-stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a.pdf) | MIC5219-3.3YM5-TR, MIC5219-5.0YM5-TR            |
-| MicroSD-Lezer     | SparkFun microSD Transflash breakout | Er is gekozen voor de SparkFun kaartlezen omdat deze zeker beschikbaar is. Deze module is zeer klein dus dat komt goed van pas. | [Winkel](https://www.sparkfun.com/products/544)<br/>[Datasheet](https://www.sparkfun.com/datasheets/Prototyping/microSD_Socket.pdf)<br/>[Bibliotheek](https://github.com/arduino-libraries/SD) | Eender welke Arduino compatibele microSD-Lezer. |
-| Temperatuur       | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. Het bereik is perfect voor de temperaturen in België. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library) | LM35, DHT22                                     |
-| Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library) | MPX4115A                                        |
-| Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library) | DHT22                                           |
-| CO²               | MH-Z19                               | De positieve zaken van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)<br/>[Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared Gas Sensor/NDIR CO2 SENSOR/MH-Z19 CO2 Ver1.0.pdf)<br/>[Bibliotheek](https://github.com/strange-v/MHZ19) | MQ-135, Adafruit SGP30                          |
-| eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811) | Adafruit SGP30                                  |
-| TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811) | Adafruit SGP30                                  |
-| Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid. | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/nova-sds011-hoge-precisie-laser-stofsensor)<br/>[Datasheet](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)<br/>[Bibliotheek](https://www.arduinolibraries.info/libraries/sds011-sensor-library) | PPD42NS                                         |
-| LoRa              | RN2483A-I/RM104                      | Deze module wordt gebruikt om data van de luchtkwaliteitssensor naar de database te sturen over de LoRaWAN infrastructuur van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | [Winkel](https://be.farnell.com/microchip/rn2483a-i-rm104/transceiver-module-300kbps-870mhz/dp/2920841)<br/>[Datasheet](https://www.farnell.com/datasheets/2648020.pdf)<br/>[Datasheet-Commands](https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf)<br/>[Bibliotheek](https://github.com/axelelettronica/sme-RN2483-library) | MKL62BA                                         |
-| NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen. | [Winkel](https://www.soselectronic.com/products/sensirion/sgp41-sgp41-d-r4-359695)<br/>[Datasheet](https://cdn.sos.sk/productdata/3c/28/3146f64d/sgp41-sgp41-d-r4.pdf)<br/>[Bibliotheek](https://github.com/Sensirion/arduino-i2c-sgp41) | Industrial Nitric Oxide (NO) Sensor             |
+| **Blok**          | Component                            | **Argumentatie**                                                                                                                                                                                                                                                        | Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | **Alternatieven**                               |
+| ----------------- | ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| CPU               | ATSAMD21G18A-AUT                     | De grootste troef van de SAMD21 is dat het een zeer zuinige chip is. De SAMD21 verbruikt maximaal 6.32mA, de ESP32 daarentegen kan tot wel 500mA verbruiken. De MCU is krachtig en heeft zeer veel I/O pinnen. De bootloader moeten initieel zelf nog gebrand worden.   | [Winkel](https://www.mouser.be/ProductDetail/Microchip-Technology-Atmel/ATSAMD21G18A-AUT?qs=KLFHFgXTQiBkLYobE%2Fq9Qw==&gclid=CjwKCAiAh_GNBhAHEiwAjOh3ZHG8WOdRiM5K4oojQNa1EaOKMm-MsoXjzRuqgLk8DAMAHz1NB0ujaBoCesEQAvD_BwE)<br>[Datasheet](https://www.mouser.be/datasheet/2/268/SAM_D21_DA1_Family_Data_Sheet_DS40001882H-2580554.pdf)                                                                                                                                                                                                                                                                                                                           | ESP32 WROVER                                    |
+| Batterij          | Li-Po 2 Cell                         | De Li-Po batterij heeft een goede capaciteit en zeer lange levensspan. Voorts is haar relatief gewicht laag t.o.v. haar volume. Ze is veel flexibeler dan een lithium-ion batterij.                                                                                     | [Winkel](https://www.conrad.be/p/conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60-1344133?WT.srch=1&gclid=CjwKCAiAh_GNBhAHEiwAjOh3ZODyQpj1PCOdHiGXfnYxeG0l__VZOiLFqiP5MSZwps0pyi__jmN_WhoC9LsQAvD_BwE&gclsrc=aw.ds&insert=8J&t=1&tid=13894944235_122657379817_pla-301443522443_pla-1344133&utm_campaign=shopping-feed&utm_content=free-google-shopping-clicks&utm_medium=surfaces&utm_source=google&utm_term=1344133&vat=true)<br/>[Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001344133SD01/veiligheidsvoorschriften-1344133-conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60.pdf) | Lithium-ion batterij                            |
+| Voltage converter | LD1117                               | De LD1117 heeft het exacte bereik dat nodig is. De spanning van de 7.4V batterij zal naar 3.3V en 5V geconverteerd worden.                                                                                                                                              | [Winkel](https://www.conrad.be/p/stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a-1184973?searchTerm=LD1117&searchType=suggest&searchSuggest=product)<br/>[Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001184973DS01/datablad-1184973-stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a.pdf)                                                                                                                                                                                                                                                                              | MIC5219-3.3YM5-TR, MIC5219-5.0YM5-TR            |
+| MicroSD-Lezer     | SparkFun microSD Transflash breakout | Er is gekozen voor de SparkFun kaartlezen omdat deze zeker beschikbaar is. Deze module is zeer klein dus dat komt goed van pas.                                                                                                                                         | [Winkel](https://www.sparkfun.com/products/544)<br/>[Datasheet](https://www.sparkfun.com/datasheets/Prototyping/microSD_Socket.pdf)<br/>[Bibliotheek](https://github.com/arduino-libraries/SD)                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Eender welke Arduino compatibele microSD-Lezer. |
+| Temperatuur       | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. Het bereik is perfect voor de temperaturen in België.                                | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                  | LM35, DHT22                                     |
+| Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                  | MPX4115A                                        |
+| Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/ bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                  | DHT22                                           |
+| CO²               | MH-Z19                               | De positieve zaken van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART.                                                                  | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)<br/>[Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared Gas Sensor/NDIR CO2 SENSOR/MH-Z19 CO2 Ver1.0.pdf)<br/>[Bibliotheek](https://github.com/strange-v/MHZ19)                                                                                                                                                                                                                                                                                                                                                                                            | MQ-135, Adafruit SGP30                          |
+| eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811)                                                                                                                                                                                                                                                                                                                                                                                       | Adafruit SGP30                                  |
+| TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811)                                                                                                                                                                                                                                                                                                                                                                                       | Adafruit SGP30                                  |
+| Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid.                                                                                                                                       | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/nova-sds011-hoge-precisie-laser-stofsensor)<br/>[Datasheet](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)<br/>[Bibliotheek](https://www.arduinolibraries.info/libraries/sds011-sensor-library)                                                                                                                                                                                                                                                                                                                                                                                   | PPD42NS                                         |
+| LoRa              | RN2483A-I/RM104                      | Deze module wordt gebruikt om data van de luchtkwaliteitssensor naar de database te sturen over de LoRaWAN infrastructuur van de haven.  De module is redelijk goed ondersteunt en is niet moeilijk om aan te sturen. Ook is ze perfect combineerbaar met de de SAMD21. | [Winkel](https://be.farnell.com/microchip/rn2483a-i-rm104/transceiver-module-300kbps-870mhz/dp/2920841)<br/>[Datasheet](https://www.farnell.com/datasheets/2648020.pdf)<br/>[Datasheet-Commands](https://ww1.microchip.com/downloads/en/DeviceDoc/40001784B.pdf)<br/>[Bibliotheek](https://github.com/axelelettronica/sme-RN2483-library)                                                                                                                                                                                                                                                                                                                       | MKL62BA                                         |
+| NOx               | SGP41-D-R4                           | De prijskwaliteitsverhouding is zeer goed bij deze sensor die zowel NOx en VOC meet. Gespecialiseerde NOx sensoren zijn zeer duur en zou de projectkosten doen verdubbelen.                                                                                             | [Winkel](https://www.soselectronic.com/products/sensirion/sgp41-sgp41-d-r4-359695)<br/>[Datasheet](https://cdn.sos.sk/productdata/3c/28/3146f64d/sgp41-sgp41-d-r4.pdf)<br/>[Bibliotheek](https://github.com/Sensirion/arduino-i2c-sgp41)                                                                                                                                                                                                                                                                                                                                                                                                                        | Industrial Nitric Oxide (NO) Sensor             |
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -484,9 +481,6 @@ Rechts onderaan in het elektrisch schema is de programmer te zien, omdat de ATSA
 <img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
 <figcaption >Figuur x: Elektrisch schema</figcaption>
 </figure>
-
-
-
 
 ## Smart Object (Software Analyse)
 
@@ -536,10 +530,18 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <img src="./assets/FlowChart-ATSAMD.svg" alt="Flow Chart ATSAMD"/>
 </figure>
 
+<figure>
+<img src="./assets/FlowChart-ATSAMD_2.svg" alt="Flow Chart ATSAMD2"/>
+</figure>
+
 #### RN2483A-I/RM104
 
 <figure>
 <img src="./assets/FlowChart-RN2483.svg" alt="Flow Chart RN2483A-I/RM104"/>
+</figure>
+
+<figure>
+<img src="./assets/FlowChart-RN2482_02.svg" alt="Flow Chart RN2483A-I/RM104_2"/>
 </figure>
 
 #### Li-Po 2 Cell
@@ -554,10 +556,22 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <img src="./assets/FlowChart-CCS811.svg" alt="Flow Chart CCS811"/>
 </figure>
 
+<figure>
+<img src="./assets/FlowChart-CCS811_2.svg" alt="Flow Chart CCS811_2"/>
+</figure>
+
+<figure>
+<img src="./assets/FlowChart-CCS811_3.svg" alt="Flow Chart CCS811_3"/>
+</figure>
+
 #### SDS011
 
 <figure>
 <img src="./assets/FlowChart-SDS011.svg" alt="Flow Chart SDS011"/>
+</figure>
+
+<figure>
+<img src="./assets/FlowChart-SDS011_2.svg" alt="Flow Chart SDS011_2"/>
 </figure>
 
 #### BME280
@@ -566,10 +580,18 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <img src="./assets/FlowChart-BME280.svg" alt="Flow Chart BME280"/>
 </figure>
 
+<figure>
+<img src="./assets/FlowChart-BME280_2.svg" alt="Flow Chart BME280_2"/>
+</figure>
+
 #### MH-Z19
 
 <figure>
 <img src="./assets/FlowChart-MH-Z19.svg" alt="Flow Chart MH-Z19"/>
+</figure>
+
+<figure>
+<img src="./assets/FlowChart-MH-Z19_2.svg" alt="Flow Chart MH-Z19_2"/>
 </figure>
 
 #### SparkFun microSD Transflash breakout
@@ -578,10 +600,18 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <img src="./assets/FlowChart-Sparky.svg" alt="Flow Chart Sparky"/>
 </figure>
 
+<figure>
+<img src="./assets/FlowChart-Sparky_2.svg" alt="Flow Chart Sparky"/>
+</figure>
+
 #### SGP41-D-R4
 
 <figure>
 <img src="./assets/FlowChart-SGP41-D-R4.svg" alt="Flow Chart SGP41-D-R4"/>
+</figure>
+
+<figure>
+<img src="./assets/FlowChart-SGP41-D-R4_2.svg" alt="Flow Chart SGP41-D-R4_2"/>
 </figure>
 
 #### Seed Generator
@@ -663,7 +693,6 @@ Voor alle andere wachtwoorden zoals deze van Node-RED, InfluxBD en Grafana moet 
 Een havenmdewerker, zoals omschreven in Figuur x, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
 Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie en kan de database aanpassen, nieuwe sensoren toevoegen en gebruikersaccounts beheren. 
 
-
 # Documentatie
 
 > - *[Hoe wordt documentatie in de code voorzien?]*
@@ -676,11 +705,11 @@ Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie 
 
 > [Vermeld hier al je bronnen volgens de APA stijlgids (https://apastyle.apa.org/). Denk eraan dat elk brontype (website/rapport/wetenschappelijk artikel/hoofdstuk uit boek/…) zijn eigen stijl heeft. ]
 
-| Nummer | APA-brondvermelding                                          |
-| ------ | ------------------------------------------------------------ |
-| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/ |
-| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent |
-| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox |
+| Nummer | APA-brondvermelding                                                                                                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/                                              |
+| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent  |
+| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox                          |
 | [4]    | LoRa Alliance. (2020, 17 november). LoRaWAN® Is Secure (but Implementation Matters). Geraadpleegd op 17 december 2021, van https://lora-alliance.org/resource_hub/lorawan-is-secure-but-implementation-matters/ |
-| [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/ |
-| Nummer | APA-brondvermelding                                          |
+| [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/                        |
+| Nummer | APA-brondvermelding                                                                                                                                                                                             |
