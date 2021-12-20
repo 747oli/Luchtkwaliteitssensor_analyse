@@ -621,19 +621,38 @@ Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie 
 
 # Documentatie
 
-Er zal van het project een GitHub repository bestaan waar er documentatie op te vinden zal zijn van het project. Dit gaat vooral over de algemene structuur van het project en de individuele componenten.
+Documentatie is zeer belangrijk om op een later moment een project verder te kunnen zetten of om een project door te kunnen geven aan een eventueel nieuw team. Er zal van het project een GitHub repository bestaan waar er documentatie op te vinden is. Dit gaat vooral over de algemene structuur van het project en de individuele componenten. Dit document is al een zeer goede referentie voor de rest van het project. Bij aanpassingen aan de infrastructuur is het de bedoeling dat de diagrammen mee worden aangepast. Op deze manier is er altijd een duidelijk high-level overzicht van de verschillende componenten. 
 
-Een user manual zal niet geschreven worden van het project
+Als er een release wordt aangemaakt zal er in de beschrijving worden toegevoegd wat de aanpassingen zijn, dat zal gebeuren in volgende categorieën: `new`, `improved`, `fixed`. Zo is het snel duidelijk wat de aanpassingen zijn in vergelijking met een vorige release.
+
+Bij ingewikkelde stukken code, grote klassen en grote functies zal het nodig zijn om een korte omschrijving te maken van de code. Dit kan door bijvoorbeeld gebruik te maken van gestructureerde docstrings. Doxygen<sup>[6]</sup> is een voorbeeld van zo een gestructureerd systeem. Als de docstrings op de juiste wijze worden aangemaakt dan ka Doxygen eventueel zelf documentatie genereren om de werking van functies en klassen toe te lichten. Zie hieronder een voorbeeld van hoe een docstring voor een C++ functie eruit kan zien.
+
+````C++
+/**
+ * Calculates the Area of the circle.
+ * Formula: Area = PI*r^2
+ * @param[in] radius
+ * @param[out] area
+ */ 
+float calculate_area(float radius)
+{
+    float area;
+    area = PI * radius * radius;
+    return area;
+}
+````
+
+Een user manual zal niet geschreven worden van het project omdat de interface over hat algemeen duidelijk zal zijn. Grafana (het dashboard systeem) heeft een zeer uitgebreide documentatie waar gebruikers terecht kunnen. 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
 # Bronvermelding
 
-| Nummer | APA-brondvermelding                                                                                                                                                                                             |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/                                              |
-| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent  |
-| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox                          |
+| Nummer | APA-brondvermelding                                          |
+| ------ | ------------------------------------------------------------ |
+| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/ |
+| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent |
+| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox |
 | [4]    | LoRa Alliance. (2020, 17 november). LoRaWAN® Is Secure (but Implementation Matters). Geraadpleegd op 17 december 2021, van https://lora-alliance.org/resource_hub/lorawan-is-secure-but-implementation-matters/ |
-| [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/                        |
-| Nummer | APA-brondvermelding                                                                                                                                                                                             |
+| [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/ |
+| [6]    | Van Heesch, D. (z.d.). Doxygen: Doxygen. Doxygen. Geraadpleegd op 20 december 2021, van https://www.doxygen.nl/index.html |
