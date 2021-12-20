@@ -4,8 +4,8 @@
 
 <h3>Gemaakt voor de haven van Antwerpen</h3>
 
-<div>
-    <div style="float:left">
+<div style="display: flex;">
+    <div style="flex:50%;">
         <p>
 Begeleiders:
         </p>
@@ -16,7 +16,7 @@ Begeleiders:
             Patrick Van Houtven
         </h4>
     </div>
-    <div style="text-align:right">
+    <div style="flex:50%;text-align:right">
         <p>
             Gemaakt door:
         </p>
@@ -32,6 +32,7 @@ Begeleiders:
         </p>
     </div>
 </div>
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
