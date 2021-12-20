@@ -156,8 +156,9 @@ Onderstaande figuur toont een mindmap van de huidige staat waarop de verandering
 
 <figure>
 <img src="./assets/Mindmap.drawio.svg" alt="Mindmap"/>
-<figcaption >Figuur 1: Mindmap van te maken aanpassingen</figcaption>
+<figcaption >Figuur 3: Mindmap van te maken aanpassingen</figcaption>
 </figure>
+
 
 ## Projectdefinitie
 
@@ -261,8 +262,9 @@ De methodologie die voor het project zal gebruikt worden is agile. Er zullen con
 
 <figure>
 <img src="./assets/GitKraken-KanbanDashboard.png" alt="Kaban Dashboard"/>
-<figcaption >Figuur x: Kaban Dashboard</figcaption>
+<figcaption >Figuur 4: Kaban Dashboard</figcaption>
 </figure>
+
 
 ## Hoofdlijnen
 
@@ -304,8 +306,9 @@ Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitget
 
 <figure>
 <img src="./assets/2021-11-25-12-12-58-image.png" alt="Kaban Timeline"/>
-<figcaption >Figuur x: Kaban Timeline</figcaption>
+<figcaption >Figuur 5: Kaban Timeline</figcaption>
 </figure>
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -317,8 +320,9 @@ De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal 
 
 <figure>
 <img src="./assets/AbstracteArchitectuur.svg" alt="Abstracte Architectuur"/>
-<figcaption >Figuur x: Abstracte Architectuur</figcaption>
+<figcaption >Figuur 6: Abstracte Architectuur</figcaption>
 </figure>
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -355,8 +359,9 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 
 <figure>
 <img src="./assets/BlokDiagram-TechnischDesign.svg" alt="Blokdiagram"/>
-<figcaption >Figuur x: Blokdiagram</figcaption>
+<figcaption >Figuur 7: Blokdiagram</figcaption>
 </figure>
+
 
 ### Specificaties
 
@@ -419,8 +424,9 @@ Rechts onderaan in het elektrisch schema is de programmer te zien. Omdat de ATSA
 
 <figure>
 <img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
-<figcaption >Figuur x: Elektrisch schema</figcaption>
+<figcaption >Figuur 8: Elektrisch schema</figcaption>
 </figure>
+
 
 ## Smart Object (Software Analyse)
 
@@ -442,11 +448,11 @@ Rechts onderaan in het elektrisch schema is de programmer te zien. Omdat de ATSA
 <figure>
 <img src="./assets/DataflowDiagram-SituationToBe.svg" alt="DataFlow Diagram"/>
 </figure>
-
 <figure>
 <img src="./assets/DataflowDiagram_2-SituationToBe.svg" alt="DataFlow Diagram"/>
-<figcaption >Figuur x: Dataflow Diagram</figcaption>
+<figcaption >Figuur 9: Dataflow Diagram</figcaption>
 </figure>
+
 
 ### Flowcharts
 
@@ -574,26 +580,30 @@ Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwac
 
 <figure>
 <img src="./assets/GrafanaDashboard1.png" alt="GrafanaDashboard1"/>
-<figcaption >Figuur x: Grafana Dashboard 1</figcaption>
+<figcaption >Figuur 10: Grafana Dashboard 1</figcaption>
 </figure>
 
 <figure>
 <img src="./assets/GrafanaDashboard2.png" alt="GrafanaDashboard2"/>
-<figcaption >Figuur x: Grafana Dashboard 2</figcaption>
+<figcaption >Figuur 11: Grafana Dashboard 2</figcaption>
 </figure>
 
 <figure>
 <img src="./assets/GrafanaDashboard3.png" alt="GrafanaDashboard3"/>
-<figcaption >Figuur x: Grafana Dashboard 3</figcaption>
+<figcaption >Figuur 12: Grafana Dashboard 3</figcaption>
 </figure>
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
 ## De interactie met de UI door de gebruiker
 
-![UseCaseSTB](./assets/UseCase-SituationToBe.svg)
+<figure>
+<img src="./assets/UseCase-SituationToBe.svg" alt="Blokdiagram"/>
+<figcaption >Figuur 13: Use Case Situation-to-be</figcaption>
+</figure>
 
-Figuur 3 : Use Case Situation-to-be
+
 
 # Beschrijving van eventuele datamigratie
 
@@ -615,7 +625,7 @@ Beveiliging is uiterst belangrijk, daarom zal hier ook vanaf het begin rekening 
 
 Bij LoRaWAN staat beveiliging centraal<sup>[4]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt worden over de verschillende apparaten. Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. De server zal hierdoor fysiek beveiligd zijn zodat niet zomaar iedereen aan het toestel kan. SSH verbindingen moeten geautoriseerd worden via persoonlijke SSH Sleutels. Zo kunnen enkel rechthebbende aan de terminal interface. Strikte firewall regels zullen worden ingesteld. Voor alle andere wachtwoorden zoals deze van Node-RED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een (goed beveiligde) password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
 
-Een havenmedewerker, zoals omschreven in Figuur x, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
+Een havenmedewerker, zoals omschreven in Figuur 13, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
 
 Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie en kan de database aanpassen, nieuwe sensoren toevoegen en gebruikersaccounts beheren. 
 
@@ -625,7 +635,7 @@ Documentatie is zeer belangrijk om op een later moment een project verder te kun
 
 Als er een release wordt aangemaakt zal er in de beschrijving worden toegevoegd wat de aanpassingen zijn, dat zal gebeuren in volgende categorieën: `new`, `improved`, `fixed`. Zo is het snel duidelijk wat de aanpassingen zijn in vergelijking met een vorige release.
 
-Bij ingewikkelde stukken code, grote klassen en grote functies zal het nodig zijn om een korte omschrijving te maken van de code. Dit kan door bijvoorbeeld gebruik te maken van gestructureerde docstrings. Doxygen<sup>[6]</sup> is een voorbeeld van zo een gestructureerd systeem. Als de docstrings op de juiste wijze worden aangemaakt dan ka Doxygen eventueel zelf documentatie genereren om de werking van functies en klassen toe te lichten. Zie hieronder een voorbeeld van hoe een docstring voor een C++ functie eruit kan zien.
+Bij ingewikkelde stukken code, grote klassen en grote functies zal het nodig zijn om een korte omschrijving te maken van de code. Dit kan door bijvoorbeeld gebruik te maken van gestructureerde docstrings. Doxygen<sup>[6]</sup> is een voorbeeld van zo een gestructureerd systeem. Als de docstrings op de juiste wijze worden aangemaakt dan kan Doxygen eventueel zelf documentatie genereren om de werking van functies en klassen toe te lichten. Zie hieronder een voorbeeld van hoe een docstring voor een C++ functie eruit kan zien.
 
 ````C++
 /**
