@@ -305,9 +305,10 @@ Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitget
 > - *[TIP ! Kan een Gantt Chart zijn of een tabel.] Milestones*
 
 <figure>
-<img src="./assets/2021-11-25-12-12-58-image.png" alt="Kaban Timeline"/>
+<img src="./assets/GitKraken-KanbanTimeline.png" alt="Kaban Timeline"/>
 <figcaption >Figuur 5: Kaban Timeline</figcaption>
 </figure>
+
 
 
 <div style="page-break-after: always; break-after: page;"></div>
