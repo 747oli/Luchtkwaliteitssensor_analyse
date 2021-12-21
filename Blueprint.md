@@ -71,8 +71,6 @@ Derden bouwen momenteel een module om de luchtkwaliteit in de straten van Antwer
 
 Dit project zal de efficiëntie, gebruiksvriendelijkheid en dataverwerkingscapaciteit verbeteren van de module om op deze manier de huidige tekortkomingen weg te werken. 
 
-
-
 Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
 - De hitte ontwikkeling in de module leidt tot foutieve temperatuurmetingen.
@@ -642,9 +640,9 @@ Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie 
 
 # Documentatie
 
-Documentatie is zeer belangrijk om op een later moment een project verder te kunnen zetten of om een project door te kunnen geven aan een eventueel nieuw team. Er zal van het project een GitHub repository bestaan waar er documentatie op te vinden is. Dit document gaat vooral over de algemene structuur van het project en de individuele componenten waar het al een zeer goede referentie zal zijn voor de rest van het project. 
+Documentatie is zeer belangrijk om op een later moment een project verder te kunnen zetten of om een project door te kunnen geven aan een eventueel nieuw team. Er zal van het project een GitHub repository bestaan waarop er documentatie te vinden is. Dit document gaat vooral over de algemene structuur van het project en de individuele componenten waardoor het een zeer goede referentie zal zijn voor de rest van het project. 
 
-Bij aanpassingen aan de infrastructuur is het de bedoeling dat de diagrammen mee worden aangepast. Op deze manier is er altijd een duidelijk high-level overzicht van de verschillende componenten. 
+Bij aanpassingen aan de infrastructuur zullen de diagrammen mee worden aangepast. Op deze manier is er altijd een duidelijk high-level overzicht van de verschillende componenten. 
 
 Als er een release wordt aangemaakt zal er in de beschrijving worden toegevoegd wat de aanpassingen zijn, dat zal gebeuren aan de hand van volgende categorieën: `new`, `improved`, `fixed`. Zo is het snel duidelijk wat de aanpassingen zijn in vergelijking met een vorige release.
 
@@ -667,7 +665,7 @@ float calculate_area(float radius)
 }
 ```
 
-Een user manual zal niet geschreven worden van het project omdat de interface over hat algemeen duidelijk zal zijn. Grafana (het dashboard systeem) heeft een zeer uitgebreide documentatie waar gebruikers terecht kunnen. 
+Een user manual zal niet geschreven worden van het project omdat de interface over het algemeen duidelijk zal zijn. Grafana (het dashboard systeem) heeft voorts een zeer uitgebreide documentatie waar gebruikers terecht kunnen. 
 
 <div style="page-break-after: always; break-after: page;"></div>
 
