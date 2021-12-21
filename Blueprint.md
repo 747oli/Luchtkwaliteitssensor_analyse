@@ -33,7 +33,6 @@ Begeleiders:
     </div>
 </div>
 
-
 <div style="page-break-after: always; break-after: page;"></div>
 
 <h2>Inhoudstafel</h2
@@ -71,6 +70,8 @@ Er is een als maar groeiende vraag naar data over onze luchtkwaliteit daardoor h
 Derden bouwen momenteel een module om de luchtkwaliteit in de straten van Antwerpen te meten. Zij hebben verschillende sensoren gebruikt waarmee zij diverse luchtkwaliteitsparameters opslaan, verwerken en analyseren.
 
 Dit project zal de efficiëntie, gebruiksvriendelijkheid en dataverwerkingscapaciteit verbeteren van de module om op deze manier de huidige tekortkomingen weg te werken. 
+
+
 
 Deze tekortkomingen kunnen als volgt voorgesteld worden:
 
@@ -158,7 +159,6 @@ Onderstaande figuur toont een mindmap van de huidige staat waarop de verandering
 <img src="./assets/Mindmap.drawio.svg" alt="Mindmap"/>
 <figcaption >Figuur 3: Mindmap van te maken aanpassingen</figcaption>
 </figure>
-
 
 ## Projectdefinitie
 
@@ -265,7 +265,6 @@ De methodologie die voor het project zal gebruikt worden is agile. Er zullen con
 <figcaption >Figuur 4: Kaban Dashboard</figcaption>
 </figure>
 
-
 ## Hoofdlijnen
 
 De planning werkt met wekelijkse of 2-wekelijkse deadlines. 
@@ -309,8 +308,6 @@ Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitget
 <figcaption >Figuur 5: Kaban Timeline</figcaption>
 </figure>
 
-
-
 <div style="page-break-after: always; break-after: page;"></div>
 
 # Functioneel design
@@ -323,7 +320,6 @@ De gateway geeft de ontvangen informatie door aan de *data verwerking*, die zal 
 <img src="./assets/AbstracteArchitectuur.svg" alt="Abstracte Architectuur"/>
 <figcaption >Figuur 6: Abstracte Architectuur</figcaption>
 </figure>
-
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -362,7 +358,6 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 <img src="./assets/BlokDiagram-TechnischDesign.svg" alt="Blokdiagram"/>
 <figcaption >Figuur 7: Blokdiagram</figcaption>
 </figure>
-
 
 ### Specificaties
 
@@ -403,10 +398,10 @@ De batterij levert een voltage van 7.4V aan. Deze is natuurlijk te hoog voor de 
 | Batterij          | Li-Po 2 Cell                         | De Li-Po batterij heeft een goede capaciteit en zeer lange levensspan. Voorts is haar relatief gewicht laag t.o.v. haar volume. Ze is veel flexibeler dan een lithium-ion batterij.                                                                                     | [Winkel](https://www.conrad.be/p/conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60-1344133?WT.srch=1&gclid=CjwKCAiAh_GNBhAHEiwAjOh3ZODyQpj1PCOdHiGXfnYxeG0l__VZOiLFqiP5MSZwps0pyi__jmN_WhoC9LsQAvD_BwE&gclsrc=aw.ds&insert=8J&t=1&tid=13894944235_122657379817_pla-301443522443_pla-1344133&utm_campaign=shopping-feed&utm_content=free-google-shopping-clicks&utm_medium=surfaces&utm_source=google&utm_term=1344133&vat=true)<br/>[Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001344133SD01/veiligheidsvoorschriften-1344133-conrad-energy-lipo-accupack-74-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60.pdf) | Lithium-ion batterij                            |
 | Voltage converter | LD1117                               | De LD1117 heeft het exacte bereik dat nodig is. De spanning van de 7.4V batterij zal naar 3.3V en 5V geconverteerd worden.                                                                                                                                              | [Winkel](https://www.conrad.be/p/stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a-1184973?searchTerm=LD1117&searchType=suggest&searchSuggest=product)<br/>[Datasheet](https://asset.conrad.com/media10/add/160267/c1/-/en/001184973DS01/datablad-1184973-stmicroelectronics-ld1117av33-spanningsregelaar-lineair-to-220ab-positief-vast-1-a.pdf)                                                                                                                                                                                                                                                                              | MIC5219-3.3YM5-TR, MIC5219-5.0YM5-TR            |
 | MicroSD-Lezer     | SparkFun microSD Transflash breakout | Er is gekozen voor de SparkFun kaartlezen omdat deze zeker beschikbaar is. Deze module is zeer klein dus dat komt goed van pas.                                                                                                                                         | [Winkel](https://www.sparkfun.com/products/544)<br/>[Datasheet](https://www.sparkfun.com/datasheets/Prototyping/microSD_Socket.pdf)<br/>[Bibliotheek](https://github.com/arduino-libraries/SD)                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Eender welke Arduino compatibele microSD-Lezer. |
-| Temperatuur       | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. Het bereik is perfect voor de temperaturen in België.                                | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                  | LM35, DHT22                                     |
-| Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                  | MPX4115A                                        |
-| Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                  | DHT22                                           |
-| CO²               | MH-Z19                               | De positieve zaken van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART.                                                                  | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)<br/>[Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared%20Gas%20Sensor/NDIR%20CO2%20SENSOR/MH-Z19%20CO2%20Ver1.0.pdf)<br/>[Bibliotheek](https://github.com/strange-v/MHZ19)                                                                                                                                                                                                                                                                                                                                                                                            | MQ-135, Adafruit SGP30                          |
+| Temperatuur       | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is. Het bereik is perfect voor de temperaturen in België.                                | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                   | LM35, DHT22                                     |
+| Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                   | MPX4115A                                        |
+| Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de pcb te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                   | DHT22                                           |
+| CO²               | MH-Z19                               | De positieve zaken van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART.                                                                  | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)<br/>[Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared%20Gas%20Sensor/NDIR%20CO2%20SENSOR/MH-Z19%20CO2%20Ver1.0.pdf)<br/>[Bibliotheek](https://github.com/strange-v/MHZ19)                                                                                                                                                                                                                                                                                                                                                                                | MQ-135, Adafruit SGP30                          |
 | eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811)                                                                                                                                                                                                                                                                                                                                                                                       | Adafruit SGP30                                  |
 | TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                      | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811)                                                                                                                                                                                                                                                                                                                                                                                       | Adafruit SGP30                                  |
 | Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid.                                                                                                                                       | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/nova-sds011-hoge-precisie-laser-stofsensor)<br/>[Datasheet](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)<br/>[Bibliotheek](https://www.arduinolibraries.info/libraries/sds011-sensor-library)                                                                                                                                                                                                                                                                                                                                                                                   | PPD42NS                                         |
@@ -427,7 +422,6 @@ Rechts onderaan in het elektrisch schema is de programmer te zien. Omdat de ATSA
 <img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
 <figcaption >Figuur 8: Elektrisch schema</figcaption>
 </figure>
-
 
 ## Smart Object (Software Analyse)
 
@@ -453,7 +447,6 @@ Rechts onderaan in het elektrisch schema is de programmer te zien. Omdat de ATSA
 <img src="./assets/DataflowDiagram_2-SituationToBe.svg" alt="DataFlow Diagram"/>
 <figcaption >Figuur 9: Dataflow Diagram</figcaption>
 </figure>
-
 
 ### Flowcharts
 
@@ -603,11 +596,14 @@ Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwac
 <img src="./assets/GrafanaDashboard3.png" alt="GrafanaDashboard3"/>
 <figcaption >Figuur 12: Grafana Dashboard 3</figcaption>
 </figure>
-Zoals in figuren 10 tot 12 te zien is zijn veel van de grafieken gebaseerd op informatie die gelinkt is aan een tijdreeks. Dat maakt het heel gemakkelijk om op een bepaalde tijdsschaal het verloop van bijvoorbeeld de gemeten CO<sub>2</sub> weer te geven. Bij veel grafieken is het ook mogelijk om meerdere reeksen weer te geven in één grafiek. Dat is handig om de metingen van sensoren op verschillende locaties in een oogopslag met elkaar te vergelijken zoals geïllustreerd in figuur 12. 
+
+Zoals in figuren 10 tot 12 te zien is, zijn veel van de grafieken gebaseerd op informatie die gelinkt is aan een tijdreeks. Dat maakt het heel gemakkelijk om op een bepaalde tijdsschaal het verloop van bijvoorbeeld de gemeten CO2 weer te geven. 
+
+Bij veel grafieken is het ook mogelijk om meerdere reeksen weer te geven in één grafiek. Dat is handig om de metingen van sensoren op verschillende locaties in een oogopslag met elkaar te vergelijken zoals geïllustreerd in figuur 12.
 
 Er zal, zoals figuur 11 weergeeft, per apparaat een apart dashboard beschikbaar zijn zodat er ook voor een enkele locatie metingen kunnen opgevraagd worden. 
 
-
+Tenslotte zal er ook een kaart worden weergegeven van de locaties van de verschillende sensoren.
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -617,7 +613,6 @@ Er zal, zoals figuur 11 weergeeft, per apparaat een apart dashboard beschikbaar 
 <img src="./assets/UseCase-SituationToBe.svg" alt="Blokdiagram"/>
 <figcaption >Figuur 13: Use Case Situation-to-be</figcaption>
 </figure>
-
 
 # Beschrijving van de datamigratie
 
@@ -637,7 +632,9 @@ De implementatie van het project zal volgende impact hebben:
 
 Beveiliging is uiterst belangrijk, daarom zal hier ook vanaf het begin rekening mee gehouden worden. De sensoren registreren geen privacy gevoelige gegevens maar er moet zeker voor gezorgd worden dat derden niet zomaar toegang kunnen krijgen tot het draadloze netwerk, de database, en het dashboard. De sensoren worden bij voorkeur op een hoogte bevestigd om toegang door derden te bemoeilijken.
 
-Bij LoRaWAN staat beveiliging centraal<sup>[4]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt worden over de verschillende apparaten. Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. De server zal hierdoor fysiek beveiligd zijn zodat niet zomaar iedereen aan het toestel kan. SSH verbindingen moeten geautoriseerd worden via persoonlijke SSH Sleutels. Zo kunnen enkel rechthebbende aan de terminal interface. Strikte firewall regels zullen worden ingesteld. Voor alle andere wachtwoorden zoals deze van Node-RED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een (goed beveiligde) password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
+Bij LoRaWAN staat beveiliging centraal<sup>[4]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt worden over de verschillende apparaten. Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. De server zal hierdoor fysiek beveiligd zijn zodat niet zomaar iedereen aan het toestel kan. SSH verbindingen moeten geautoriseerd worden via persoonlijke SSH Sleutels. Zo kunnen enkel rechthebbende aan de terminal interface. 
+
+Strikte firewall regels zullen worden ingesteld. Voor alle andere wachtwoorden zoals deze van Node-RED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een (goed beveiligde) password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
 
 Een havenmedewerker, zoals omschreven in Figuur 13, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
 
@@ -645,13 +642,17 @@ Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie 
 
 # Documentatie
 
-Documentatie is zeer belangrijk om op een later moment een project verder te kunnen zetten of om een project door te kunnen geven aan een eventueel nieuw team. Er zal van het project een GitHub repository bestaan waar er documentatie op te vinden is. Dit gaat vooral over de algemene structuur van het project en de individuele componenten. Dit document is al een zeer goede referentie voor de rest van het project. Bij aanpassingen aan de infrastructuur is het de bedoeling dat de diagrammen mee worden aangepast. Op deze manier is er altijd een duidelijk high-level overzicht van de verschillende componenten. 
+Documentatie is zeer belangrijk om op een later moment een project verder te kunnen zetten of om een project door te kunnen geven aan een eventueel nieuw team. Er zal van het project een GitHub repository bestaan waar er documentatie op te vinden is. Dit document gaat vooral over de algemene structuur van het project en de individuele componenten waar het al een zeer goede referentie zal zijn voor de rest van het project. 
 
-Als er een release wordt aangemaakt zal er in de beschrijving worden toegevoegd wat de aanpassingen zijn, dat zal gebeuren in volgende categorieën: `new`, `improved`, `fixed`. Zo is het snel duidelijk wat de aanpassingen zijn in vergelijking met een vorige release.
+Bij aanpassingen aan de infrastructuur is het de bedoeling dat de diagrammen mee worden aangepast. Op deze manier is er altijd een duidelijk high-level overzicht van de verschillende componenten. 
 
-Bij ingewikkelde stukken code, grote klassen en grote functies zal het nodig zijn om een korte omschrijving te maken van de code. Dit kan door bijvoorbeeld gebruik te maken van gestructureerde docstrings. Doxygen<sup>[6]</sup> is een voorbeeld van zo een gestructureerd systeem. Als de docstrings op de juiste wijze worden aangemaakt dan kan Doxygen eventueel zelf documentatie genereren om de werking van functies en klassen toe te lichten. Zie hieronder een voorbeeld van hoe een docstring voor een C++ functie eruit kan zien.
+Als er een release wordt aangemaakt zal er in de beschrijving worden toegevoegd wat de aanpassingen zijn, dat zal gebeuren aan de hand van volgende categorieën: `new`, `improved`, `fixed`. Zo is het snel duidelijk wat de aanpassingen zijn in vergelijking met een vorige release.
 
-````C++
+Bij ingewikkelde stukken code, grote klassen en grote functies zal het nodig zijn om een korte omschrijving te maken van de code. Dit kan door bijvoorbeeld gebruik te maken van gestructureerde docstrings. 
+
+Doxygen<sup>[6]</sup> is een voorbeeld van zo een gestructureerd systeem. Als de docstrings op de juiste wijze worden aangemaakt dan kan Doxygen eventueel zelf documentatie genereren om de werking van functies en klassen toe te lichten. Zie hieronder een voorbeeld van hoe een docstring voor een C++ functie eruit kan zien.
+
+```C++
 /**
  * Calculates the Area of the circle.
  * Formula: Area = PI*r^2
@@ -664,7 +665,7 @@ float calculate_area(float radius)
     area = PI * radius * radius;
     return area;
 }
-````
+```
 
 Een user manual zal niet geschreven worden van het project omdat de interface over hat algemeen duidelijk zal zijn. Grafana (het dashboard systeem) heeft een zeer uitgebreide documentatie waar gebruikers terecht kunnen. 
 
@@ -672,12 +673,12 @@ Een user manual zal niet geschreven worden van het project omdat de interface ov
 
 # Bronvermelding
 
-| Nummer | APA-brondvermelding                                          |
-| ------ | ------------------------------------------------------------ |
-| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/ |
-| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent |
-| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox |
+| Nummer | APA-brondvermelding                                                                                                                                                                                             |
+| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/                                              |
+| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent  |
+| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox                          |
 | [4]    | LoRa Alliance. (2020, 17 november). LoRaWAN® Is Secure (but Implementation Matters). Geraadpleegd op 17 december 2021, van https://lora-alliance.org/resource_hub/lorawan-is-secure-but-implementation-matters/ |
-| [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/ |
-| [6]    | Van Heesch, D. (z.d.). Doxygen: Doxygen. Doxygen. Geraadpleegd op 20 december 2021, van https://www.doxygen.nl/index.html |
-| [7]    | Grafana Labs. (z.d.). *InfluxDB data source*. Geraadpleegd op 21 december 2021, van https://grafana.com/docs/grafana/latest/datasources/influxdb/ |
+| [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/                        |
+| [6]    | Van Heesch, D. (z.d.). Doxygen: Doxygen. Doxygen. Geraadpleegd op 20 december 2021, van https://www.doxygen.nl/index.html                                                                                       |
+| [7]    | Grafana Labs. (z.d.). *InfluxDB data source*. Geraadpleegd op 21 december 2021, van https://grafana.com/docs/grafana/latest/datasources/influxdb/                                                               |
