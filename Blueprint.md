@@ -220,7 +220,7 @@ De LoRaWAN van de haven zal gebruikt worden om de data te communiceren naar de s
 
 Vanaf 2023 zal het onderhoud en de updates van zowel het dashboard als de luchtkwaliteitssensor niet meer gewaarborgd worden.
 
-#### Minimum Viable Product
+### Minimum Viable Product
 
 Een stationaire sensor met behuizing voor buiten gebruik waarin onderstaande metingen gebeuren:
 
@@ -563,7 +563,7 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-# Beschrijving van de mogelijke interfaces
+# Beschrijving van de interfaces
 
 ## Samenvatting componenten
 
@@ -605,12 +605,11 @@ Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwac
 </figure>
 
 
-
-# Beschrijving van eventuele datamigratie
+# Beschrijving van de datamigratie
 
 Aangezien de data die tot heden verzameld is, tijdens vorige projectfases, geen enkele connectie heeft met de haven van Antwerpen, zal er geen datamigratie aan te pas komen. Deze data zal volledig verwijderd worden voor de implementatie van dit project.
 
-# Beschrijving van eventuele impact op de huidige infrastructuur
+# Beschrijving van de impact op de huidige infrastructuur
 
 De implementatie van het project zal volgende impact hebben:
 
@@ -620,7 +619,7 @@ De implementatie van het project zal volgende impact hebben:
 
 <div style="page-break-after: always; break-after: page;"></div>
 
-# Analyse van security en eventuele autorisatierollen
+# Analyse van security en autorisatierollen
 
 Beveiliging is uiterst belangrijk, daarom zal hier ook vanaf het begin rekening mee gehouden worden. De sensoren registreren geen privacy gevoelige gegevens maar er moet zeker voor gezorgd worden dat derden niet zomaar toegang kunnen krijgen tot het draadloze netwerk, de database, en het dashboard. De sensoren worden bij voorkeur op een hoogte bevestigd om toegang door derden te bemoeilijken.
 
