@@ -568,14 +568,24 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 ## Samenvatting componenten
 
 - Node-RED: opensource visuele tool voor het verbinden van hardware devices voor IoT.
-
-- Grafana: opensource dashboard voor visueel voorstellen van gegevens in grafieken.
-
 - InfluxDB: opensource database voor het opslaan van gegevens voor real-time applicaties in IoT.
+- Grafana: opensource dashboard voor visueel voorstellen van gegevens in grafieken.
 
 ## De componenten in detail
 
-Als dashboard om de meetgegevens van de sensoren weer te geven zal er gebruik worden gemaakt van Grafana. Grafana is een opensource tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook de Node-RED omgeving in draait kan ook Grafana hosten. 
+### Node-RED
+
+Node-RED zal gebruikt worden om de payloads die de sensoren doorsturen via LoRaWAN naar het juiste formaat om te zetten en in de database te plaatsen. 
+
+### InfluxDB
+
+InfluxDB is een 'time series database', dat wil zeggen dat InfluxDB speciaal gebouwd is voor het opslaan en teruggeven van gegevens die onderdeel uitmaken van een tijdreeks. Op deze manier kan er gemakkelijk bij iedere meting de tijd worden bijgehouden om achteraf mee op te vragen.
+
+### Grafana
+
+Als dashboard om de meetgegevens van de sensoren weer te geven zal er gebruik worden gemaakt van Grafana. Grafana is een opensource tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook de Node-RED en InfluxDB omgeving in draait kan ook Grafana hosten. 
+
+Alle data die het dashboard zal weergeven wordt opgevraagd uit InfluxDB. Er is uitgebreide documentatie beschikbaar over het gebruik van een InfluxDB database met Grafana <sup>[7]</sup>.
 
 Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwachte soort gegevens zeker uitgebreid genoeg. De interface kan uitgetest worden door op de volgende link te klikken: [play.grafana.org](https://play.grafana.org/).
 
@@ -593,6 +603,10 @@ Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwac
 <img src="./assets/GrafanaDashboard3.png" alt="GrafanaDashboard3"/>
 <figcaption >Figuur 12: Grafana Dashboard 3</figcaption>
 </figure>
+Zoals in figuren 10 tot 12 te zien is zijn veel van de grafieken gebaseerd op informatie die gelinkt is aan een tijdreeks. Dat maakt het heel gemakkelijk om op een bepaalde tijdsschaal het verloop van bijvoorbeeld de gemeten CO<sub>2</sub> weer te geven. Bij veel grafieken is het ook mogelijk om meerdere reeksen weer te geven in één grafiek. Dat is handig om de metingen van sensoren op verschillende locaties in een oogopslag met elkaar te vergelijken zoals geïllustreerd in figuur 12. 
+
+Er zal, zoals figuur 11 weergeeft, per apparaat een apart dashboard beschikbaar zijn zodat er ook voor een enkele locatie metingen kunnen opgevraagd worden. 
+
 
 
 <div style="page-break-after: always; break-after: page;"></div>
@@ -666,3 +680,4 @@ Een user manual zal niet geschreven worden van het project omdat de interface ov
 | [4]    | LoRa Alliance. (2020, 17 november). LoRaWAN® Is Secure (but Implementation Matters). Geraadpleegd op 17 december 2021, van https://lora-alliance.org/resource_hub/lorawan-is-secure-but-implementation-matters/ |
 | [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/ |
 | [6]    | Van Heesch, D. (z.d.). Doxygen: Doxygen. Doxygen. Geraadpleegd op 20 december 2021, van https://www.doxygen.nl/index.html |
+| [7]    | Grafana Labs. (z.d.). *InfluxDB data source*. Geraadpleegd op 21 december 2021, van https://grafana.com/docs/grafana/latest/datasources/influxdb/ |
