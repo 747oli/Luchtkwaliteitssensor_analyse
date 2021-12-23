@@ -43,10 +43,11 @@ Begeleiders:
 
 # Versiebeheer
 
-| Nr.  | Datum      | Verspreiding            | Status           | Wijziging                                                                     |
-| ---- | ---------- | ----------------------- | ---------------- | ----------------------------------------------------------------------------- |
-| 0.01 | 09/12/2021 | Mr. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design                  |
-| 0.02 | 19/12/2021 | Mr. Patrick Van Houtven | Tweede verdeling | Feedback nr0.01 toegepast, bezig aan Planning, Infrastructuur en Documentatie |
+| Nr.  | Datum      | Verspreiding            | Status                | Wijziging                                                    |
+| ---- | ---------- | ----------------------- | --------------------- | ------------------------------------------------------------ |
+| 0.01 | 09/12/2021 | Mr. Patrick Van Houtven | Eerste verdeling      | Alle toevoegingen, bezig aan Functioneel en Technisch Design. |
+| 0.02 | 19/12/2021 | Mr. Patrick Van Houtven | Tweede verdeling      | Feedback nr0.01 toegepast, bezig aan Planning, Infrastructuur en Documentatie. |
+| 1    | 23/12/2021 | Mr. Patrick Van Houtven | Definitieve verdeling | Volledige afwerking en lay-out.                              |
 
 
 
@@ -335,6 +336,10 @@ In onderstaande figuur zijn de opgelegde milestones te zien. De deadlines van de
 | SD fallback integratie   | 20 mei 2022   | Metingen tijdelijk opslaan op SD kaart als LoRaWAN niet beschikbaar is. |
 | Release V1               | 30 mei 2022   | Volledige release van project.                               |
 
+
+
+<div style="page-break-after: always; break-after: page;"></div>
+
 <figure>
 <img src="./assets/GitKraken-KanbanTimeline-Detailplanning.png" alt="Kaban Timeline"/>
 <figcaption >Figuur 5: Kaban Timeline</figcaption>
@@ -502,10 +507,12 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <figure>
 <img src="./assets/FlowChart-ATSAMD.svg" alt="Flow Chart ATSAMD"/>
 </figure>
+<div style="page-break-after: always; break-after: page;"></div>
 
 <figure>
 <img src="./assets/FlowChart-ATSAMD_2.svg" alt="Flow Chart ATSAMD2"/>
 </figure>
+
 
 #### RN2483A-I/RM104
 
@@ -620,7 +627,7 @@ Als dashboard om de meetgegevens van de sensoren weer te geven zal er gebruik wo
 
 Alle data die het dashboard zal weergeven wordt opgevraagd uit InfluxDB. Er is uitgebreide documentatie beschikbaar over het gebruik van een InfluxDB database met Grafana <sup>[21]</sup>.
 
-Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwachte soort gegevens zeker uitgebreid genoeg. De interface kan uitgetest worden door op de volgende link te klikken: [play.grafana.org](https://play.grafana.org/).
+Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwachte soort gegevens zeker uitgebreid genoeg. 
 
 <figure>
 <img src="./assets/GrafanaDashboard1.png" alt="GrafanaDashboard1"/>
