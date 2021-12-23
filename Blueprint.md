@@ -50,32 +50,32 @@ Begeleiders:
 
 # Termen en Afkortingen
 
-| Term            | Omschrijving                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| PoA             | Port of Antwerp; Haven van Antwerpen                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| MCU             | Microcontroller                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| eCO<sub>2</sub> | CO<sub>2</sub>-eq koolstofdioxide equivalent om het gas te kunnen vergelijken met ander ebroeikasgassen, de omrekening is gebaseerd op het Global Warming Potential (GWP). <sup>[2]</sup>                                                                                                                                                                                                                                                                                                               |
-| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht.                                                                                                                                                                                                                                                                                                                                                                              |
-| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). <sup>[3]</sup>                                                                                                                                                                                                                                                                                                                                                                                                    |
-| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU.                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| I²C             | Met de I2C-bus u kunt veel apparaten van derden, die dit type protocol hebben, aansluiten en gebruiken om met verschillende componenten te communiceren https://www.hwlibre.com/nl/i2c-arduino/                                                                                                                                                                                                                                                                                                         |
-| OLED            | Oleds zijn het bekendst van kleine beeldschermen en displays en vormen daarmee een concurrent voor de traditionele lcd-schermen. Oleddisplays hebben het bijkomende voordeel zonder achtergrondverlichting (backlight) te kunnen, wat gunstig is voor het stroomverbruik van met name draagbare apparaten. Doordat het oledmateriaal zelf licht uitzendt is ook de kijkhoek veel groter en kunnen de beeldschermen ook bij grote formaten zeer dun worden uitgevoerd https://nl.wikipedia.org/wiki/Oled |
-| LCD             | Een plat beeldscherm met een laag energieverbruik. Hierdoor zijn lcd’s bij uitstek geschikt om te gebruiken in platte elektronische apparatuur of in draagbare apparaten die een batterij met beperkte capaciteit hebben. https://nl.wikipedia.org/wiki/Liquid-crystal_display                                                                                                                                                                                                                          |
-| LoRaWAN         | Is een specificatie voor een telecommunicatienetwerk geschikt voor langeafstandscommunicatie met weinig vermogen. https://nl.wikipedia.org/wiki/LoRaWAN                                                                                                                                                                                                                                                                                                                                                 |
-| ASCII           | Is een standaard 7-bits-tekencodering om Latijnse letters, cijfers, leestekens en enkele andere tekens en stuurcodes te representeren en aan ieder teken in die reeks een geheel getal te koppelen, waarmee dat teken kan worden aangeduid. https://nl.wikipedia.org/wiki/ASCII_(tekenset)                                                                                                                                                                                                              |
-| UART            | Is een hardwarecomponent gebruikt voor asynchrone, seriële communicatie met andere elektronische systemen. https://nl.wikipedia.org/wiki/UART                                                                                                                                                                                                                                                                                                                                                           |
-| IC              | Is een samenstel van verschillende elektronische componenten (zoals transistors, weerstanden en condensatoren) op een enkel stuk halfgeleidermateriaal. https://nl.wikipedia.org/wiki/Ge%C3%AFntegreerde_schakeling                                                                                                                                                                                                                                                                                     |
-| SMD             | In tegenstelling tot een component met aansluitdraden wordt een SMD-onderdeel niet gemonteerd met behulp van draadverbindingen door de printplaat heen, maar aan één zijde tegen de printplaat aan gesoldeerd. https://nl.wikipedia.org/wiki/Surface-mounted_device                                                                                                                                                                                                                                     |
-| PCB             | Is een plaat van isolatiemateriaal die dient als drager voor elektronische componenten, waarop koperen bedradingen, genaamd sporen, zijn aangebracht ter verbinding van die componenten. https://nl.wikipedia.org/wiki/Printplaat                                                                                                                                                                                                                                                                       |
-| ppm             | Aantal deeltjes per miljoen                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ppb             | Aantal deeltjes per miljard                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| UI              | Is de interface (intermediair) tussen een computer (of andere machine) en de mens die de computer gebruikt. De gebruikersinterface maakt interactie tussen mens en machine mogelijk. https://nl.wikipedia.org/wiki/Gebruikersomgeving                                                                                                                                                                                                                                                                   |
-| Epic            | Is een taak die te groot is om in één keer op te pakken en af te leveren. Epics kunnen opgedeeld worden in User Stories die dan op de Product Backlog kunnen worden geplaatst. https://scrumguide.nl/epic/                                                                                                                                                                                                                                                                                              |
-| Breadboard      | Is een bordje, vaak van wit of geel plastic of pertinax, dat gebruikt wordt om elektrische schakelingen tijdelijk op te bouwen. https://nl.wikipedia.org/wiki/Breadboard                                                                                                                                                                                                                                                                                                                                |
-| Case            | Het punt van een 3D geprinte case is om uw elektronische schakelingen van de weersomstandigheden te kunnen schuilen.                                                                                                                                                                                                                                                                                                                                                                                    |
-| SPI             | Is een synchrone seriële datalink tussen ten minste twee mediums. https://nl.wikipedia.org/wiki/Serial_Peripheral_Interface                                                                                                                                                                                                                                                                                                                                                                             |
-| Bootloader      | Is een computerprogramma dat zorgt voor het starten van het besturingssysteem bij de opstart (bootstrap) van een computer. https://nl.wikipedia.org/wiki/Bootloader                                                                                                                                                                                                                                                                                                                                     |
-| Programmer      | Is een stuk hardware dat je toelaat om je programma naar een MCU te schrijven.                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Term            | Omschrijving                                                 |
+| --------------- | ------------------------------------------------------------ |
+| PoA             | Port of Antwerp; Haven van Antwerpen                         |
+| MCU             | Microcontroller                                              |
+| eCO<sub>2</sub> | CO<sub>2</sub>-eq koolstofdioxide equivalent om het gas te kunnen vergelijken met ander ebroeikasgassen, de omrekening is gebaseerd op het Global Warming Potential (GWP). <sup>[2]</sup> |
+| eTVOC           | Total concentration of Volatile Organic Compounds equivalent. De equivalente waarde van organische materialen in de lucht. |
+| NO<sub>X</sub>  | Stikstofoxiden: de som van stikstofmonoxide (NO) en stikstofdioxide (NO<sub>2</sub>). <sup>[3]</sup> |
+| I/O             | Input/Output: de ingangen en uitgangen van bijvoorbeeld een MCU. |
+| I²C             | Met de I2C-bus u kunt veel apparaten van derden, die dit type protocol hebben, aansluiten en gebruiken om met verschillende componenten te communiceren. <sup>[4]</sup> |
+| OLED            | Oleds zijn het bekendst van kleine beeldschermen en displays en vormen daarmee een concurrent voor de traditionele lcd-schermen. Oleddisplays hebben het bijkomende voordeel zonder achtergrondverlichting (backlight) te kunnen, wat gunstig is voor het stroomverbruik van met name draagbare apparaten. Doordat het oledmateriaal zelf licht uitzendt is ook de kijkhoek veel groter en kunnen de beeldschermen ook bij grote formaten zeer dun worden uitgevoerd. <sup>[5]</sup> |
+| LCD             | Een plat beeldscherm met een laag energieverbruik. Hierdoor zijn lcd’s bij uitstek geschikt om te gebruiken in platte elektronische apparatuur of in draagbare apparaten die een batterij met beperkte capaciteit hebben. <sup>[6]</sup> |
+| LoRaWAN         | Is een specificatie voor een telecommunicatienetwerk geschikt voor langeafstandscommunicatie met weinig vermogen. <sup>[7]</sup> |
+| ASCII           | Is een standaard 7-bits-tekencodering om Latijnse letters, cijfers, leestekens en enkele andere tekens en stuurcodes te representeren en aan ieder teken in die reeks een geheel getal te koppelen, waarmee dat teken kan worden aangeduid. <sup>[8]</sup> |
+| UART            | Is een hardwarecomponent gebruikt voor asynchrone, seriële communicatie met andere elektronische systemen. <sup>[9]</sup> |
+| IC              | Is een samenstel van verschillende elektronische componenten (zoals transistors, weerstanden en condensatoren) op een enkel stuk halfgeleidermateriaal. <sup>[10]</sup> |
+| SMD             | In tegenstelling tot een component met aansluitdraden wordt een SMD-onderdeel niet gemonteerd met behulp van draadverbindingen door de printplaat heen, maar aan één zijde tegen de printplaat aan gesoldeerd. <sup>[11]</sup> |
+| PCB             | Is een plaat van isolatiemateriaal die dient als drager voor elektronische componenten, waarop koperen bedradingen, genaamd sporen, zijn aangebracht ter verbinding van die componenten. <sup>[12]</sup> |
+| ppm             | Aantal deeltjes per miljoen                                  |
+| ppb             | Aantal deeltjes per miljard                                  |
+| UI              | Is de interface (intermediair) tussen een computer (of andere machine) en de mens die de computer gebruikt. De gebruikersinterface maakt interactie tussen mens en machine mogelijk.<sup>[13]</sup> |
+| Epic            | Is een taak die te groot is om in één keer op te pakken en af te leveren. Epics kunnen opgedeeld worden in User Stories die dan op de Product Backlog kunnen worden geplaatst.<sup>[14]</sup> |
+| Breadboard      | Is een bordje, vaak van wit of geel plastic of pertinax, dat gebruikt wordt om elektrische schakelingen tijdelijk op te bouwen. <sup>[15]</sup> |
+| Case            | Het punt van een 3D geprinte case is om uw elektronische schakelingen van de weersomstandigheden te kunnen schuilen. |
+| SPI             | Is een synchrone seriële datalink tussen ten minste twee mediums. <sup>[16]</sup> |
+| Bootloader      | Is een computerprogramma dat zorgt voor het starten van het besturingssysteem bij de opstart (bootstrap) van een computer. <sup>[17]</sup> |
+| Programmer      | Is een stuk hardware dat je toelaat om je programma naar een MCU te schrijven. |
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -317,12 +317,26 @@ Tenslotte zal het project meerdere keren in de haven van Antwerpen worden uitget
 
 ## Detailplanning
 
-> - *[TIP ! Kan een Gantt Chart zijn of een tabel.] Milestones*
+In onderstaande figuur zijn de opgelegde milestones te zien. De deadlines van de milestones met het meeste prioriteit staan logischerwijs als eerste.  
+
+| Milestone                | Deadline      | Uitleg                                                       |
+| :----------------------- | ------------- | ------------------------------------------------------------ |
+| Overschakeling op ATSAMD | 6 maart 2022  | Alle huidige geïmplementeerde componenten moeten werken met de ATSAMD. |
+| Integrering NOx sensor   | 31 maart 2022 | De NOx sensor moet volledig werkende zijn.                   |
+| Prototype V0.1           | 13 mei 2022   | NOx sensor, ATSMAD, new case, database, GUI.                 |
+| GUI Integratie           | 31 mei 2022   | De volledige integratie van de GUI met database.             |
+| SD fallback integratie   | 20 mei 2022   | Metingen tijdelijk opslaan op SD kaart als LoRaWAN niet beschikbaar is. |
+| Release V1               | 30 mei 2022   | Volledige release van project.                               |
 
 <figure>
-<img src="./assets/GitKraken-KanbanTimeline.png" alt="Kaban Timeline"/>
+<img src="./assets/GitKraken-KanbanTimeline-Detailplanning.png" alt="Kaban Timeline"/>
 <figcaption >Figuur 5: Kaban Timeline</figcaption>
 </figure>
+
+Aan iedere milestone zullen verschillende issues gelinkt worden zodat, als de issues gesloten worden, we automatisch kunnen zien hoe ver iedere milestone gevorderd is. De milestones zullen nog geüpdatet worden, moesten er gaandeweg wijzigingen gebeuren. 
+
+
+
 
 <div style="page-break-after: always; break-after: page;"></div>
 
@@ -594,7 +608,7 @@ InfluxDB is een 'time series database', dat wil zeggen dat InfluxDB speciaal geb
 
 Als dashboard om de meetgegevens van de sensoren weer te geven zal er gebruik worden gemaakt van Grafana. Grafana is een opensource tool voor het analyseren en weergeven van verschillende soorten gegevens. Het is perfect om meetgegevens van alle apparaten te laten samenkomen. De server waar ook de Node-RED en InfluxDB omgeving in draait kan ook Grafana hosten. 
 
-Alle data die het dashboard zal weergeven wordt opgevraagd uit InfluxDB. Er is uitgebreide documentatie beschikbaar over het gebruik van een InfluxDB database met Grafana <sup>[7]</sup>.
+Alle data die het dashboard zal weergeven wordt opgevraagd uit InfluxDB. Er is uitgebreide documentatie beschikbaar over het gebruik van een InfluxDB database met Grafana <sup>[21]</sup>.
 
 Er zijn verschillende soorten grafieken beschikbaar en Grafana is voor de verwachte soort gegevens zeker uitgebreid genoeg. De interface kan uitgetest worden door op de volgende link te klikken: [play.grafana.org](https://play.grafana.org/).
 
@@ -648,11 +662,11 @@ De implementatie van het project zal volgende impact hebben:
 
 Beveiliging is uiterst belangrijk, daarom zal hier ook vanaf het begin rekening mee gehouden worden. De sensoren registreren geen privacy gevoelige gegevens maar er moet zeker voor gezorgd worden dat derden niet zomaar toegang kunnen krijgen tot het draadloze netwerk, de database, en het dashboard. De sensoren worden bij voorkeur op een hoogte bevestigd om toegang door derden te bemoeilijken.
 
-Bij LoRaWAN staat beveiliging centraal<sup>[4]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt worden over de verschillende apparaten. Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. Onze eerste verdedigingslinie zal dan ook het fysiek afschermen van de server zijn. Vervolgens moeten SSH verbindingen geautoriseerd worden via persoonlijke SSH Sleutels. Zo kunnen enkel rechthebbenden aan de terminal interface. 
+Bij LoRaWAN staat beveiliging centraal<sup>[18]</sup>. Dat wil zeggen dat het verplicht is om gebruik te maken van authenticatie en encryptie. Het is dan ook belangrijk dat geheime sleutels beveiligd worden en niet worden hergebruikt worden over de verschillende apparaten. Op de server draait Node-RED, InfluxDB en Grafana. Ook deze diensten zullen goed beveiligd moeten worden. Onze eerste verdedigingslinie zal dan ook het fysiek afschermen van de server zijn. Vervolgens moeten SSH verbindingen geautoriseerd worden via persoonlijke SSH Sleutels. Zo kunnen enkel rechthebbenden aan de terminal interface. 
 
 Strikte firewall regels zullen worden ingesteld. Voor alle andere wachtwoorden zoals die van Node-RED, InfluxBD en Grafana moet er gebruik gemaakt worden van unieke en willekeurig gegenereerde wachtwoorden die best worden bijgehouden in een goed beveiligde password manager. Waar mogelijk zal voor kritische accounts multifactorauthenticatie worden ingeschakeld. 
 
-Een havenmedewerker, zoals omschreven in Figuur 13, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[5]</sup>.
+Een havenmedewerker, zoals omschreven in Figuur 13, kan enkel inloggen op het Grafana dashboard met een gebruikersaccount dat geen rechten heeft om gegevens aan te passen. Iedere medewerker die het dasboard moet kunnen raadplegen zal een persoonlijke login hebben. In Grafana is het mogelijk om voor individuele gebruikers bepaalde rechten in of uit te schakelen<sup>[19]</sup>.
 
 Een administrator moet waar mogelijk gebruik maken van multifactorauthenticatie en kan de database aanpassen, nieuwe sensoren toevoegen en gebruikersaccounts beheren. 
 
@@ -666,7 +680,7 @@ Als er een release wordt aangemaakt zal er in de beschrijving worden toegevoegd 
 
 Bij ingewikkelde stukken code, grote klassen en grote functies zal het nodig zijn om een korte omschrijving te maken van de code. Dit kan door bijvoorbeeld gebruik te maken van gestructureerde docstrings. 
 
-Doxygen<sup>[6]</sup> is een voorbeeld van zo een gestructureerd systeem. Als de docstrings op de juiste wijze worden aangemaakt dan kan Doxygen eventueel zelf documentatie genereren om de werking van functies en klassen toe te lichten. Zie hieronder een voorbeeld van hoe een docstring voor een C++ functie eruit kan zien.
+Doxygen<sup>[20]</sup> is een voorbeeld van zo een gestructureerd systeem. Als de docstrings op de juiste wijze worden aangemaakt dan kan Doxygen eventueel zelf documentatie genereren om de werking van functies en klassen toe te lichten. Zie hieronder een voorbeeld van hoe een docstring voor een C++ functie eruit kan zien.
 
 ```C++
 /**
@@ -689,12 +703,27 @@ Een user manual zal niet geschreven worden van het project omdat de interface ov
 
 # Bronvermelding
 
-| Nummer | APA-brondvermelding                                                                                                                                                                                             |
-| ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/                                              |
-| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent  |
-| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox                          |
-| [4]    | LoRa Alliance. (2020, 17 november). LoRaWAN® Is Secure (but Implementation Matters). Geraadpleegd op 17 december 2021, van https://lora-alliance.org/resource_hub/lorawan-is-secure-but-implementation-matters/ |
-| [5]    | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/                        |
-| [6]    | Van Heesch, D. (z.d.). Doxygen: Doxygen. Doxygen. Geraadpleegd op 20 december 2021, van https://www.doxygen.nl/index.html                                                                                       |
-| [7]    | Grafana Labs. (z.d.). *InfluxDB data source*. Geraadpleegd op 21 december 2021, van https://grafana.com/docs/grafana/latest/datasources/influxdb/                                                               |
+| Nummer | APA-brondvermelding                                          |
+| ------ | ------------------------------------------------------------ |
+| [1]    | Elsermans, R., Kramp, T., & Jongenelen, B. (2021). *AirQualitySensor*. Geraadpleegd op 25 november 2021, van https://ap-it-gh.github.io/ssys21-docs-luchtsensor/#/ |
+| [2]    | Centraal Bureau voor de Statistiek. (2020, 6 mei). CO2-equivalent. Geraadpleegd op 3 december 2021, van https://www.cbs.nl/nl-nl/nieuws/2020/19/uitstoot-broeikasgassen-3-procent-lager-in-2019/co2-equivalent |
+| [3]    | Het Rijksinstituut voor Volksgezondheid en Milieu. (z.d.). Stikstof - Stikstofoxiden (NOₓ). RIVM. Geraadpleegd op 3 december 2021, van https://www.rivm.nl/stikstof/stikstofoxiden-nox |
+| [4]    | I. (2019, 10 december). *Alles over de Arduino I2C-bus*. Hardware libre. Geraadpleegd op 23 december 2021, van https://www.hwlibre.com/nl/i2c-arduino/ |
+| [5]    | Wikipedia-bijdragers. (2020, 21 oktober). *Oled*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Oled |
+| [6]    | Wikipedia-bijdragers. (2020a, september 10). *Liquid-crystal display*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Liquid-crystal_display |
+| [7]    | Wikipedia-bijdragers. (2021, 31 mei). *LoRaWAN*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/LoRaWAN |
+| [8]    | Wikipedia-bijdragers. (2020a, juni 21). *ASCII (tekenset)*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/ASCII_(tekenset) |
+| [9]    | Wikipedia-bijdragers. (2020b, juli 24). *UART*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/UART |
+| [10]   | Wikipedia-bijdragers. (2021b, november 8). *Geïntegreerde schakeling*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Ge%C3%AFntegreerde_schakeling |
+| [11]   | Wikipedia-bijdragers. (2021b, juni 29). *Surface-mounted device*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Surface-mounted_device |
+| [12]   | Wikipedia-bijdragers. (2021c, oktober 31). *Printplaat*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Printplaat |
+| [13]   | Wikipedia-bijdragers. (2021c, augustus 12). *Gebruikersomgeving*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Gebruikersomgeving |
+| [14]   | *Wat is een Epic in de Scrum methodologie?* (2020, 25 augustus). Scrumguide. Geraadpleegd op 23 december 2021, van https://scrumguide.nl/epic/ |
+| [15]   | Wikipedia-bijdragers. (2020b, juni 26). *Breadboard*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Breadboard |
+| [16]   | Wikipedia-bijdragers. (2021c, juli 20). *Serial Peripheral Interface*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Serial_Peripheral_Interface |
+| [17]   | Wikipedia-bijdragers. (2021e, augustus 29). *Bootloader*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Bootloader |
+| [18]   | LoRa Alliance. (2020, 17 november). LoRaWAN® Is Secure (but Implementation Matters). Geraadpleegd op 17 december 2021, van https://lora-alliance.org/resource_hub/lorawan-is-secure-but-implementation-matters/ |
+| [19]   | Grafana Labs. (z.d.). Manage users as a Server Admin. Geraadpleegd op 17 december 2021, van https://grafana.com/docs/grafana/latest/manage-users/server-admin/server-admin-manage-users/ |
+| [20]   | Van Heesch, D. (z.d.). Doxygen: Doxygen. Doxygen. Geraadpleegd op 20 december 2021, van https://www.doxygen.nl/index.html |
+| [21]   | Grafana Labs. (z.d.). *InfluxDB data source*. Geraadpleegd op 21 december 2021, van https://grafana.com/docs/grafana/latest/datasources/influxdb/ |
+
