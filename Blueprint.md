@@ -48,6 +48,8 @@ Begeleiders:
 | 0.01 | 09/12/2021 | Mr. Patrick Van Houtven | Eerste verdeling | Alle toevoegingen, bezig aan Functioneel en Technisch Design                  |
 | 0.02 | 19/12/2021 | Mr. Patrick Van Houtven | Tweede verdeling | Feedback nr0.01 toegepast, bezig aan Planning, Infrastructuur en Documentatie |
 
+
+
 # Termen en Afkortingen
 
 | Term            | Omschrijving                                                 |
@@ -61,6 +63,9 @@ Begeleiders:
 | I²C             | Met de I2C-bus u kunt veel apparaten van derden, die dit type protocol hebben, aansluiten en gebruiken om met verschillende componenten te communiceren. <sup>[4]</sup> |
 | OLED            | Oleds zijn het bekendst van kleine beeldschermen en displays en vormen daarmee een concurrent voor de traditionele lcd-schermen. Oleddisplays hebben het bijkomende voordeel zonder achtergrondverlichting (backlight) te kunnen, wat gunstig is voor het stroomverbruik van met name draagbare apparaten. Doordat het oledmateriaal zelf licht uitzendt is ook de kijkhoek veel groter en kunnen de beeldschermen ook bij grote formaten zeer dun worden uitgevoerd. <sup>[5]</sup> |
 | LCD             | Een plat beeldscherm met een laag energieverbruik. Hierdoor zijn lcd’s bij uitstek geschikt om te gebruiken in platte elektronische apparatuur of in draagbare apparaten die een batterij met beperkte capaciteit hebben. <sup>[6]</sup> |
+
+| Term            | Omschrijving                                                 |
+| --------------- | ------------------------------------------------------------ |
 | LoRaWAN         | Is een specificatie voor een telecommunicatienetwerk geschikt voor langeafstandscommunicatie met weinig vermogen. <sup>[7]</sup> |
 | ASCII           | Is een standaard 7-bits-tekencodering om Latijnse letters, cijfers, leestekens en enkele andere tekens en stuurcodes te representeren en aan ieder teken in die reeks een geheel getal te koppelen, waarmee dat teken kan worden aangeduid. <sup>[8]</sup> |
 | UART            | Is een hardwarecomponent gebruikt voor asynchrone, seriële communicatie met andere elektronische systemen. <sup>[9]</sup> |
@@ -116,6 +121,8 @@ Buiten deze tekortkomingen kunnen volgende functionaliteiten nog toegevoegd of v
 De haven van Antwerpen vindt dat de sensor langdurig op batterij moet kunnen werken. Dit omdat de sensoren op locaties zullen hangen waar er geen stroomvoorziening voor handen is. Voorts is er een vraag gekomen om NO<sub>X</sub> te meten in de lucht om zo te kunnen onderzoeken of er schadelijke stoffen aanwezig zijn. 
 
 Tenslotte is er de vereiste gekomen om de data op een andere manier te communiceren. In plaats van de huidige manier van het manueel vergaren van de data via een SD kaart moet deze draadloos doorgestuurd kunnen worden. Wi-Fi of Bluetooth zal niet beschikbaar op de locatie van de sensoren.
+
+<div style="page-break-after: always; break-after: page;"></div>
 
 # Situatie As-Is
 
@@ -337,9 +344,6 @@ Aan iedere milestone zullen verschillende issues gelinkt worden zodat, als de is
 
 
 
-
-<div style="page-break-after: always; break-after: page;"></div>
-
 # Functioneel design
 
 In onderstaande diagram is de abstracte architectuur van het toekomstige ontwerp te zien. Deze diagram toont de luchtkwaliteitssensor als draadloos apparaat dat verbonden is met een gateway of toegangspunt. Uiteraard is het de bedoeling dat er meerdere verschillende luchtkwaliteitssensoren verbonden zijn met een gateway. 
@@ -432,6 +436,9 @@ De batterij levert een voltage van 7.4V aan. Dat is natuurlijk te hoog voor de g
 | Luchtdruk         | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de PCB te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                        | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                   | MPX4115A                                        |
 | Luchtvochtigheid  | BME280                               | Deze sensor is een bekende en goed ondersteunde sensor die makkelijk op de PCB te integreren is. Ze heeft verschillende metingen aan boord waardoor het een kost-effectieve IC is.                                                                                        | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/temperatuur-lucht-vochtigheid/bme280-digitale-barometer-druk-en-vochtigheid-sensor-module)<br/>[Datasheet](https://www.mouser.com/datasheet/2/783/BST-BME280_DS001-11-844833.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_BME280_Library)                                                                                                                                                                                                                                                                                                                                                   | DHT22                                           |
 | CO²               | MH-Z19                               | De positieve zaken van deze sensor zijn de volgende:  Non-Dispersief InfraRood-licht waardoor ze zeer zuinig is, goede kalibratie out-of-the-box en makkelijk leesbaar uit een seriële poort via UART.                                                                    | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/winsen-mh-z19c-co2-sensor-met-kabel)<br/>[Datasheet](https://www.winsen-sensor.com/d/files/PDF/Infrared%20Gas%20Sensor/NDIR%20CO2%20SENSOR/MH-Z19%20CO2%20Ver1.0.pdf)<br/>[Bibliotheek](https://github.com/strange-v/MHZ19)                                                                                                                                                                                                                                                                                                                                                                                | MQ-135, Adafruit SGP30                          |
+
+| **Blok**          | Component                            | **Argumentatie**                                                                                                                                                                                                                                                          | Links                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | **Alternatieven**                               |
+| ----------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
 | eCO²              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                        | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811)                                                                                                                                                                                                                                                                                                                                                                                       | Adafruit SGP30                                  |
 | TVOC              | CCS811                               | Deze TVOC, eCO² en CO² sensor is heel zuinig waardoor het de batterijduur verbetert. Voorts is het een goede sensor met redelijk accurate waarden.                                                                                                                        | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/ccs811-luchtkwaliteit-sensor)<br/>[Datasheet](https://www.sciosense.com/wp-content/uploads/documents/SC-001232-DS-2-CCS811B-Datasheet-Revision-2.pdf)<br/>[Bibliotheek](https://github.com/adafruit/Adafruit_CCS811)                                                                                                                                                                                                                                                                                                                                                                                       | Adafruit SGP30                                  |
 | Fijnstof          | SDS011                               | De SDS011 is een bekende sensor die gespecialiseerd is in het meten van fijnstof. Ze heeft een goede prijs versus nauwkeurigheid.                                                                                                                                         | [Winkel](https://www.tinytronics.nl/shop/nl/sensoren/nova-sds011-hoge-precisie-laser-stofsensor)<br/>[Datasheet](https://cdn-reichelt.de/documents/datenblatt/X200/SDS011-DATASHEET.pdf)<br/>[Bibliotheek](https://www.arduinolibraries.info/libraries/sds011-sensor-library)                                                                                                                                                                                                                                                                                                                                                                                   | PPD42NS                                         |
@@ -452,6 +459,7 @@ Rechts onderaan in het elektrisch schema is de programmer te zien. Omdat de ATSA
 <img src="./assets/ElektrischSchema.svg" alt="Elektrisch schema"/>
 <figcaption >Figuur 8: Elektrisch schema</figcaption>
 </figure>
+<div style="page-break-after: always; break-after: page;"></div>
 
 ## Smart Object (Software Analyse)
 
@@ -473,10 +481,11 @@ Rechts onderaan in het elektrisch schema is de programmer te zien. Omdat de ATSA
 <figure>
 <img src="./assets/DataflowDiagram-SituationToBe.svg" alt="DataFlow Diagram"/>
 </figure>
-<figure>
-<img src="./assets/DataflowDiagram_2-SituationToBe.svg" alt="DataFlow Diagram"/>
-<figcaption >Figuur 9: Dataflow Diagram</figcaption>
+<figure style="text-align:center">
+<img src="./assets/DataflowDiagram_2-SituationToBe.svg" style="width:75vw;" alt="DataFlow Diagram"/>
+<figcaption style="text-align:left">Figuur 9: Dataflow Diagram</figcaption>
 </figure>
+
 
 ### Flowcharts
 
@@ -507,13 +516,11 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <figure>
 <img src="./assets/FlowChart-RN2482_02.svg" alt="Flow Chart RN2483A-I/RM104_2"/>
 </figure>
-
 #### Li-Po 2 Cell
 
 <figure>
 <img src="./assets/FlowChart-LiPO2Cell.svg" alt="Flow Chart Li-Po 2 Cell"/>
 </figure>
-
 #### CCS811
 
 <figure>
@@ -547,6 +554,7 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <figure>
 <img src="./assets/FlowChart-BME280_2.svg" alt="Flow Chart BME280_2"/>
 </figure>
+<div style="page-break-after: always; break-after: page;"></div>
 
 #### MH-Z19
 
@@ -557,6 +565,7 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <figure>
 <img src="./assets/FlowChart-MH-Z19_2.svg" alt="Flow Chart MH-Z19_2"/>
 </figure>
+<div style="page-break-after: always; break-after: page;"></div>
 
 #### SparkFun microSD Transflash breakout
 
@@ -567,6 +576,7 @@ Doorheen de flowcharts zijn er verschillende kleuren gebruikt om de verschillend
 <figure>
 <img src="./assets/FlowChart-Sparky_2.svg" alt="Flow Chart Sparky"/>
 </figure>
+<div style="page-break-after: always; break-after: page;"></div>
 
 #### SGP41-D-R4
 
@@ -718,6 +728,9 @@ Een user manual zal niet geschreven worden van het project omdat de interface ov
 | [11]   | Wikipedia-bijdragers. (2021b, juni 29). *Surface-mounted device*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Surface-mounted_device |
 | [12]   | Wikipedia-bijdragers. (2021c, oktober 31). *Printplaat*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Printplaat |
 | [13]   | Wikipedia-bijdragers. (2021c, augustus 12). *Gebruikersomgeving*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Gebruikersomgeving |
+
+| Nummer | APA-brondvermelding                                          |
+| ------ | ------------------------------------------------------------ |
 | [14]   | *Wat is een Epic in de Scrum methodologie?* (2020, 25 augustus). Scrumguide. Geraadpleegd op 23 december 2021, van https://scrumguide.nl/epic/ |
 | [15]   | Wikipedia-bijdragers. (2020b, juni 26). *Breadboard*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Breadboard |
 | [16]   | Wikipedia-bijdragers. (2021c, juli 20). *Serial Peripheral Interface*. Wikipedia. Geraadpleegd op 23 december 2021, van https://nl.wikipedia.org/wiki/Serial_Peripheral_Interface |
